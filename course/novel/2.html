@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>技术要点 | 小说精品屋</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script crossorigin="anonymous" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"></script>
+    <script src="/redirect.js"></script>
+    <meta name="description" content="小说精品屋项目开发文档,JAVA学习教程,JAVA开源项目,JAVA项目实战教程,手把手教你开发上线一个生产级别的小说系统">
+    
+    <link rel="preload" href="/assets/css/0.styles.f109e9b6.css" as="style"><link rel="preload" href="/assets/js/app.09e306c7.js" as="script"><link rel="preload" href="/assets/js/2.99247de7.js" as="script"><link rel="preload" href="/assets/js/12.8b56d8ab.js" as="script"><link rel="prefetch" href="/assets/js/10.0074f0b6.js"><link rel="prefetch" href="/assets/js/11.a30c50a6.js"><link rel="prefetch" href="/assets/js/13.c749534f.js"><link rel="prefetch" href="/assets/js/14.d3b12aa4.js"><link rel="prefetch" href="/assets/js/15.74294d9c.js"><link rel="prefetch" href="/assets/js/16.6da0ac7a.js"><link rel="prefetch" href="/assets/js/17.1ab88373.js"><link rel="prefetch" href="/assets/js/18.8875335c.js"><link rel="prefetch" href="/assets/js/19.4939c52f.js"><link rel="prefetch" href="/assets/js/20.34025d9d.js"><link rel="prefetch" href="/assets/js/21.7cce32ee.js"><link rel="prefetch" href="/assets/js/22.11440c86.js"><link rel="prefetch" href="/assets/js/23.e192cd17.js"><link rel="prefetch" href="/assets/js/24.45216f10.js"><link rel="prefetch" href="/assets/js/25.3be12542.js"><link rel="prefetch" href="/assets/js/26.4fbe7fce.js"><link rel="prefetch" href="/assets/js/27.ba19a09d.js"><link rel="prefetch" href="/assets/js/28.8fee7490.js"><link rel="prefetch" href="/assets/js/29.1393ab46.js"><link rel="prefetch" href="/assets/js/3.d1f014c5.js"><link rel="prefetch" href="/assets/js/30.d7fe8f4e.js"><link rel="prefetch" href="/assets/js/31.3e268b35.js"><link rel="prefetch" href="/assets/js/4.c866ff58.js"><link rel="prefetch" href="/assets/js/5.1dabba3b.js"><link rel="prefetch" href="/assets/js/6.2b9e04ea.js"><link rel="prefetch" href="/assets/js/7.da8e9de0.js"><link rel="prefetch" href="/assets/js/8.f14eb728.js"><link rel="prefetch" href="/assets/js/9.89a7523c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f109e9b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="小说精品屋" class="logo"> <span class="site-name can-hide">小说精品屋</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link router-link-active">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link router-link-active">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/course/novel/" aria-current="page" class="sidebar-link">快速开始</a></li><li><a href="/course/novel/11.html" class="sidebar-link">公众号</a></li><li><a href="/course/novel/1.html" class="sidebar-link">技术架构</a></li><li><a href="/course/novel/2.html" aria-current="page" class="active sidebar-link">技术要点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/course/novel/2.html#mysql-新特性" class="sidebar-link">MySQL 新特性</a></li><li class="sidebar-sub-header"><a href="/course/novel/2.html#jdk-新特性" class="sidebar-link">JDK 新特性</a></li><li class="sidebar-sub-header"><a href="/course/novel/2.html#springboot-新特性" class="sidebar-link">SpringBoot 新特性</a></li><li class="sidebar-sub-header"><a href="/course/novel/2.html#全新的-elasticsearch-java-api-client" class="sidebar-link">全新的 Elasticsearch Java API Client</a></li></ul></li><li><a href="/course/novel/3.html" class="sidebar-link">数据库设计</a></li><li><a href="/course/novel/4.html" class="sidebar-link">项目开发</a></li><li><a href="/course/novel/9.html" class="sidebar-link">项目优化</a></li><li><a href="/course/novel/6.html" class="sidebar-link">项目部署</a></li><li><a href="/course/novel/12.html" class="sidebar-link">更多</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="技术要点"><a href="#技术要点" class="header-anchor">#</a> 技术要点</h1> <h2 id="mysql-新特性"><a href="#mysql-新特性" class="header-anchor">#</a> MySQL 新特性</h2> <ol><li><p><code>新增 JSON 数据类型</code></p> <p>在 5.7.8 版本之后，MySQL 新增了一个原生的 JSON 数据类型，JSON 值将不再以字符串的形式存储，而是采用一种允许快速读取文本元素（document elements）的内部二进制（internal binary）格式；在 JSON 列插入或者更新的时候将会自动验证 JSON 文本，未通过验证的文本将产生一个错误信息。</p> <p>之前如果要存储 JSON 类型的数据的话我们只能自己做 JSON.stringify() 和 JSON.parse() 的操作，而且没办法针对 JSON 内的数据进行查询操作，所有的操作必须读取出来 parse 之后进行，非常的麻烦。原生的 JSON 数据类型支持之后，我们就可以直接对 JSON 进行数据查询和修改等操作了，较之前会方便非常多。</p> <p>MySQL 8 大幅改进了对 JSON 的支持，在主从复制中，新增参数 binlog_row_value_options，控制 JSON 数据的传输方式，允许对于 JSON 类型部分修改，在binlog中只记录修改的部分，减少JSON大数据在只有少量修改的情况下，对资源的占用。</p></li> <li><p><code>默认字符集由 latin1 变为 utf8mb4</code></p> <p>在 MySQL 8.0 版本之前，默认字符集为 latin1，utf8 指向的是 utf8mb3，8.0版本默认字符集为 utf8mb4，utf8 默认指向的也是 utf8mb4。</p></li> <li><p><code>MyISAM 系统表全部换成 InnoDB 表</code></p> <p>MySQL 8.0 版本之后系统表全部换成了事务型的 Innodb 表，默认的 MySQL 实例将不包含任何 MyISAM 表，除非手动创建 MyISAM 表。</p></li> <li><p><code>自增变量持久化</code></p> <p>在 MySQL 8.0 之前的版本，自增主键 AUTO_INCREMENT 的值如果大于 max(primary key)+1，在 MySQL 重启后，会重置 AUTO_INCREMENT=max(primary key)+1，这种现象在某些情况下会导致业务主键冲突或者其他难以发现的问题。</p></li> <li><p><code>DDL 原子化</code></p> <p>MySQL 8.0 版本之后 InnoDB 表的 DDL 支持事务完整性，要么成功要么回滚，例如，数据库里只有一个t1表，执行<code>drop table t1,t2</code>语句试图删除t1,t2两张表，在 5.7 中，执行报错，但是 t1 表被删除，在 8.0 中执行报错，但是 t1 表没有被删除，证明了 8.0 DDL操作的原子性，要么全部成功，要么失败回滚。</p></li> <li><p><code>参数修改持久化</code></p> <p>MySQL 8.0 版本支持在线修改全局参数并持久化，通过加上 PERSIST 关键字，可以将修改的参数持久化到新的配置文件（mysqld-auto.cnf）中，重启 MySQL 时，可以从该配置文件获取到最新的配置参数。</p></li> <li><p><code>group by 不再隐式排序</code></p> <p>MySQL 8.0 对于group by 字段不再隐式排序，如需要排序，必须显式加上 order by 子句。</p></li> <li><p><code>支持不可见索引</code></p> <p>MySQL 8.0 支持不可见索引， 使用INVISIBLE关键字在创建表或者进行表变更中设置索引是否可见，索引不可见只是在查询时优化器不使用该索引，即使使用 force index，优化器也不会使用该索引，同时优化器也不会报索引不存在的错误，因为索引仍然真实存在，在必要时，也可以快速的恢复成可见。</p></li> <li><p><code>新增 innodb_dedicated_server 参数</code></p> <p>MySQL 8.0 新增 innodb_dedicated_server 参数，能够让InnoDB根据服务器上检测到的内存大小自动配置 innodb_buffer_pool_size，innodb_log_file_size，innodb_flush_method 三个参数。</p></li> <li><p><code>增加角色管理</code></p> <p>MySQL 8.0 增加角色管理，通常，MySQL 数据库拥有多个相同权限集合的用户。以前，向多个用户授予和撤销权限的唯一方法是单独更改每个用户的权限，假如用户数量比较多的时候，这是非常耗时的，为了用户权限管理更容易，MySQL 提供了一个名为 role 的新对象，它是一个命名的特权集合。</p></li> <li><p><code>克隆功能</code></p> <p>MySQL 8.0 clone 插件提供从一个实例克隆数据的功能，克隆功能提供了更有效的方式来快速创建MySQL实例，用于自动搭建从节点，也可用于备份 innodb 表，增强了 MySQL InnoDB Cluster。</p> <p>在 MySQL 克隆功能出现之前，如果想将一个单机MySQL实例升级为高可用实例，或者一个 MySQL 节点由于硬件故障等原因需要重建时首先需要通过 xtrabackup 或mydumper 等物理或逻辑备份工具从正常的 MySQL 节点上进行一个全量备份，然后基于这个全量备份配置正确的 Binlog 相关参数，最后通过 change master to 和 start slave 等命令使新建的 MySQL 节点与所需的 MySQL 节点建立复制关系等待一系列复杂的操作。</p></li> <li><p><code>binlog 日志压缩</code></p> <p>MySQL 从 8.0.20 增加了 binlog 日志事务压缩功能，开启压缩功能后，将事务信息使用 zstd 算法进行压缩，然后再写入 binlog 日志文件，降低了原文件占用的磁盘空间和网络带宽传输。</p></li> <li><p><code>连接管理</code></p> <p>在 MySQL 8.0 版本中，对连接管理这一块，先后做了两个比较大的改变：一个是允许额外连接，另一个是专用的管理端口。在 MySQL 8.0 版本中，在当前连接数达到最大连接数时，服务端允许1个额外连接，可以让具有 CONNECTION_ADMIN 权限的用户连接进来，并且允许具有 SERVICE_CONNECTION_ADMIN 权限的用户，通过特定的 IP 和 PORT 连接上来，且没有连接数限制。</p></li> <li><p><code>取消 Query Cache</code></p> <p>MySQL 8.0 开始，取消了查询缓存，经过时间的考验，MySQL 的工程团队发现启用缓存的好处并不多。</p> <p>首先，查询缓存的效果取决于缓存的命中率，只有命中缓存的查询效果才能有改善，因此无法预测其性能；其次，查询缓存的另一个大问题是它受到单个互斥锁的保护，在具有多个内核的服务器上，大量查询会导致大量的互斥锁争用；最后，相对来说，缓存越靠近客户端，获得的好处越大。</p></li> <li><p><code>允许禁用 redo log</code></p> <p>MySQL 8.0.21 开始可以禁用 redo log 来提升数据库的写性能，但降低了安全性，适用于某些对安全要求较低的场景。</p></li></ol> <h2 id="jdk-新特性"><a href="#jdk-新特性" class="header-anchor">#</a> JDK 新特性</h2> <ol><li><p><code>引入模块</code></p> <p>Java 9 开始引入了模块（Module），目的是为了管理依赖。使用模块可以按需打包 JRE 和进一步限制类的访问权限。</p></li> <li><p><code>接口支持私有方法</code></p> <p>JAVA 9 开始，接口里可以添加私有方法，JAVA 8 对接口增加了默认方法的支持，在 JAVA 9 中对该功能又来了一次升级，现在可以在接口里定义私有方法，然后在默认方法里调用接口的私有方法。这样一来，既可以重用私有方法里的代码，又可以不公开代码。</p></li> <li><p><code>匿名内部类支持钻石（diamond）运算符</code></p> <p>JAVA 5 就引入了泛型（generic），到了 JAVA 7 开始支持钻石（diamond）运算符：&lt;&gt;，可以自动推断泛型的类型；但是这个自动推断类型的钻石运算符不支持匿名内部类，在 JAVA 9 中也对匿名内部类做了支持。</p></li> <li><p><code>增强的 try-with-resources</code></p> <p>JAVA 7 中增加了try-with-resources的支持，可以自动关闭资源，但需要声明多个资源变量时，需要在 try 中写多个变量的创建过程，JAVA 9 中对这个功能进行了增强，可以引用 try 代码块之外的变量来自动关闭。</p></li> <li><p><code>弃用 new Integer()</code></p> <p>JAVA 9 开始弃用了 new Integer() 的方式来创建 Integer 对象，推荐通过静态工厂 Integer.valueOf() 的方式来替代，其它包装类类似。</p></li> <li><p><code>局部变量的自动类型推断（var）</code></p> <p>JAVA 10 带来了一个很有意思的语法 - var，它可以自动推断局部变量的类型，以后再也不用写类型了，也不用靠 lombok 的 var 注解增强了，不过这个只是语法糖，编译后变量还是有类型的，使用时还是考虑下可维护性的问题，不然写多了可就成 JavaScript 风格了。</p></li> <li><p><code>Lambda 中的自动类型推断（var）</code></p> <p>JAVA 11 中对 Lambda 语法也支持了 var 这个自动类型推断的变量，通过 var 变量还可以增加额外的注解。</p></li> <li><p><code>java 命令增强</code></p> <p>以前编译一个 java 文件时，需要先 javac 编译为 class，然后再用 java 执行，JAVA 11 之后可以直接使用 java 命令。</p></li> <li><p><code>Java Flight Recorder 开源</code></p> <p>「Java Flight Recorder」 是个非常好用的调试诊断工具，不过之前是在 Oracle JDK 中， JAVA 11 后就开源了，OpenJDK 现在也可以用这个功能。</p></li> <li><p><code>更简洁的 switch 语法</code></p> <p>JAVA 12 和 13 分别增强了 switch 的语法。</p></li> <li><p><code>instanceof 增强</code></p> <p>之前处理动态类型碰上要强转时，需要先 instanceof 判断一下，然后再强转为该类型处理，JAVA 12 之后 instanceof 支持直接类型转换了，不需要再来一次额外的强转。</p></li> <li><p><code>文本块（Text Block）的支持</code></p> <p>JAVA 13 中帮你解决了<code>大段带换行符的字符串报文</code>的问题，增加了文本块（&quot;&quot;&quot;）的支持，可以不通过换行符换行拼字符串，而且不需要转义特殊字符，就像用模板一样。</p></li> <li><p><code>新增 record 类型</code></p> <p>JAVA 14 新增 record 类型，干掉复杂的 POJO 类，一般我们创建一个 POJO 类，需要定义属性列表，构造函数，getter/setter方法，比较麻烦，JAVA 14 为我们带来了一个便捷的创建类的方式 - record。</p> <p>不过这个只是一个语法糖，编译后还是一个 Class，和普通的 Class 区别不大。</p></li> <li><p><code>更直观的 NullPointerException 提示</code></p> <p>JAVA 14 优化了 NullPointerException 的提示，让你更容易定位到哪个对象为空。</p></li> <li><p><code>新增 jpackage 打包工具</code></p> <p>JAVA 14 新增 jpackage 打包工具，可以直接打包二进制程序，再也不用装 JRE 了。</p> <p>之前如果想构建一个可执行的程序，还需要借助三方工具，将 JRE 一起打包，或者让客户电脑也装一个 JRE 才可以运行我们的 JAVA 程序。</p> <p>现在 JAVA 直接内置了 jpackage 打包工具，帮助你一键打包二进制程序包。</p></li> <li><p><code>新增封闭（Sealed ）类</code></p> <p>JAVA 的继承目前只能选择允许继承和不允许继承（final 修饰），JAVA 15 新增了一个封闭（Sealed ）类的特性，可以指定某些类才可以继承。</p></li> <li><p><code>新增垃圾回收器</code></p> <p>JAVA 15 中，两款垃圾回收器ZGC 和 Shenandoah 正式登陆（默认 G1 ），性能更强，延迟更低。</p></li></ol> <p><strong>注：Spring Framework 6 和 Spring Boot 3 的应用程序运行时至少需要JDK 17。</strong></p> <h2 id="springboot-新特性"><a href="#springboot-新特性" class="header-anchor">#</a> SpringBoot 新特性</h2> <ol><li><p><code>优雅关机</code></p> <p>Spring Boot 2.3.0 配置关机缓冲时间后，在关闭时，Web服务器将不再允许新请求，并且将等待缓冲时间以使活动请求完成。</p> <p>目前内置的四个嵌入式 Web 服务器（Jetty，Reactor Netty，Tomcat和Undertow）以及响应式和基于 Servlet 的 Web 应用程序都支持优雅关机。</p></li> <li><p><code>Docker 支持</code></p> <p>Spring Boot 2.3.0 添加了部分功能用来帮助将 Spring Boot 应用直接打包到 Docker 镜像。</p> <ul><li><p>支持 Cloud Native Buildpacks 构建镜像；</p></li> <li><p>maven 插件 增加 spring-boot:build-image 、gradle 增加 bootBuildImage task 帮助快速构建镜像；</p></li> <li><p>支持 jar 分层，更好的优化打包镜像过程。</p></li></ul></li> <li><p><code>全新的配置文件处理</code></p> <p>使用<code>---</code>在一个 yml 文件中分割多个配置，如果启用多个配置中有一样的配置项会相互覆盖，在 Spring Boot 2.4.0 版本中声明在最后面的会覆盖前面的配置。在 Spring Boot 2.4.0 之前的版本中取决于<code>spring.profiles.active</code>中声明的顺序。</p> <p>Spring Boot 2.4.0 版本之前使用文件名<code>application-{profile}</code>的方式指定配置标识，使用<code>spring.profiles.active</code>开启配置；Spring Boot 2.4.0 版本的用法是使用<code>spring.config.activate.on-profile</code>来指定配置标识，<code>spring.profiles.active</code>不能和它配置在同一个配置块中。</p> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  profiles:
+    active: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+secret：dev-password
+</code></pre></div><p>Spring Boot 2.4.0 版本以前使用<code>spring.profiles</code>和<code>spring.profiles.include</code>配置组合，Spring Boot 2.4.0 版本之后，使用<code>spring.profiles.group</code>来配置组合。</p> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  profiles:
+    active:
+      - dev
+    group:
+      dev:
+        - devdb
+        - devmq
+      test:
+        - testdb
+        - testmq
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+secret: dev-password
+---
+spring:
+  config:
+    activate:
+      on-profile: devdb
+db: devdb
+---
+spring:
+  config:
+    activate:
+      on-profile: devmq
+mq: devmq        
+</code></pre></div></li> <li><p><code>默认禁止循环依赖</code></p> <p>我们都知道，如果两个 Bean 互相注入对方就会存在循环引用问题，Spring Boot 2.6.0 这个版本已经默认禁止 Bean 之间的循环引用，如果存在循环引用就会启动失败报错。</p></li> <li><p><code>支持自定义脱敏规则</code></p> <p>Spring Boot 2.6.0 版本可以清理 /env 和 /configprops 端点中存在的敏感值。另外，还可以通过添加类型为 SanitizingFunction 的 @Bean 类来配置自定义清理规则。</p></li> <li><p><code>重要端点变更</code></p> <p>Spring Boot 2.6.0版本的环境变量 /env 端点已经默认不开放了，另外 Spring Boot 下的 /info 端点现在可以公开 Java 运行时信息了。</p></li> <li><p><code>Redis 连接池</code></p> <p>当 commons-pool2 在类路径下时，Redis（包括：Jedis 和 Lettuce）在 Spring Boot 2.6.0 之后的版本会自动开启连接池，也可以设置禁用连接池。</p></li> <li><p><code>最低 Java 要求</code></p> <p>从Spring Boot 3.0 开始，Java 17 是最低版本，Java 8 不再被兼容。到正式版发行的时候 Java 19 也应该发行了。</p></li> <li><p><code>Jakarta EE 9</code></p> <p>Spring Boot 依赖于 Jakarta EE（原名 Java EE） 规范，3.0 已经升级到 Jakarta EE 9 版本。因此 Spring Boot 3.0 会使用 Servlet 5.0 规范和 JPA 3.0 规范。相关的三方依赖如果不支持这些规范，将减少或者移除这些依赖。所以相关的三方依赖请尽快根据 Jakarta EE 9 进行版本迭代。基于这个原因，目前不支持Jakarta EE 9 的类库将被移除，包含了一些知名三方类库，例如 EhCache3、Jersey、JOOQ、Thymeleaf 等等，直到这些类库适配 Jakarta EE 9。</p></li> <li><p><code>声明式 HTTP 客户端</code></p> <p>Spring 6（Spring Boot 3） 开始支持新的声明式 HTTP 客户端。</p></li> <li><p><code>新的 @AutoConfiguration 类</code></p> <p>Spring Boot 2.7/3 开始，@AutoConfiguration 类由 <code>META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports</code>文件而不再是 <code>META-INF/spring.factories</code> 文件配置。</p></li> <li><p><code>@ConfigurationProperties 构造函数绑定</code></p> <p>Spring 6（Spring Boot 3） 开始，@ConfigurationProperties 类支持新的构造函数绑定，而无需显式 @ConstructorBinding。</p></li></ol> <h2 id="全新的-elasticsearch-java-api-client"><a href="#全新的-elasticsearch-java-api-client" class="header-anchor">#</a> 全新的 Elasticsearch Java API Client</h2> <p>Elasticsearch Java API Client 是自 7.16 版本开始稳定发布的官方 Java API 客户端。该客户端为所有 Elasticsearch API 提供强类型请求和响应。主要特性如下：</p> <ul><li>所有 Elasticsearch API 的强类型请求和响应。</li> <li>所有 API 的阻塞和异步版本。</li> <li>在创建复杂的嵌套结构时，使用流利的构建器和功能模式允许编写简洁易读的代码。</li> <li>通过使用对象映射器（例如 Jackson）或任何 JSON-B 实现来无缝集成应用程序类。</li> <li>将协议处理委托给 http 客户端，例如 <a href="https://www.elastic.co/guide/en/elasticsearch/client/java-api-client/8.2/java-rest-low.html" target="_blank" rel="noopener noreferrer">Java Low Level REST Client <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，该客户端负责处理所有传输级别的问题：HTTP 连接池、重试、节点发现等。</li></ul> <p>Elasticsearch Java API Client 是一个全新的客户端库，与旧的 High Level Rest Client (HLRC) 没有任何关系。它提供了一个独立于 Elasticsearch 服务器代码的库，并为所有 Elasticsearch 功能提供了一个非常一致且更易于使用的 API。</p> <h3 id="安装要求"><a href="#安装要求" class="header-anchor">#</a> 安装要求</h3> <ul><li>Java 8 或更高版本。</li> <li>一个 JSON 对象映射库，允许我们应用程序类与 Elasticsearch API 无缝集成。Java API Client 支持 Jackson 或 Eclipse Yasson 等 JSON-B 库 。</li></ul> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <p>添加以下的 maven 依赖来安装 Java API Client：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependencies&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;co.elastic.clients&lt;/groupId&gt;
+      &lt;artifactId&gt;elasticsearch-java&lt;/artifactId&gt;
+      &lt;version&gt;8.2.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+      &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+      &lt;version&gt;2.12.3&lt;/version&gt;
+    &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+</code></pre></div><h3 id="连接"><a href="#连接" class="header-anchor">#</a> 连接</h3> <p>Java API Client 围绕三个主要组件构建：</p> <ul><li>API 客户端类。它们为 Elasticsearch API 提供强类型数据结构和方法。由于 Elasticsearch API 很大，它以功能组（也称为“命名空间”）的形式构成，每个组都有自己的客户端类。Elasticsearch 核心功能在 ElasticsearchClient 类中实现。</li> <li>JSON 对象映射器。将应用程序类映射到 JSON 并将它们与 API 客户端无缝集成。</li> <li>传输层实现。这是所有 HTTP 请求处理发生的地方。</li></ul> <p>以下代码片段创建并将这三个组件连接在一起：</p> <div class="language- extra-class"><pre class="language-text"><code>// 1. Create the low-level client
+RestClient restClient = RestClient.builder(
+new HttpHost(&quot;localhost&quot;, 9200)).build();
+
+// 2. Create the transport with a Jackson mapper
+ElasticsearchTransport transport = new RestClientTransport(
+restClient, new JacksonJsonpMapper());
+
+// 3. And create the API client
+ElasticsearchClient client = new ElasticsearchClient(transport);
+</code></pre></div><h3 id="spring-boot-中使用"><a href="#spring-boot-中使用" class="header-anchor">#</a> Spring Boot 中使用</h3> <ol><li>在配置文件 application.yml 中配置如下的 Elasticsearch 连接信息：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  elasticsearch:
+    uris:
+      - https://my-deployment-ce7ca3.es.us-central1.gcp.cloud.es.io:9243
+    username: elastic
+    password: qTjgYVKSuExX
+</code></pre></div><ol start="2"><li>因为我们使用的是 Spring Boot 项目，当我们引入了 Java API Client 的 maven 相关依赖时，Spring Boot 的自动配置类 <code>ElasticsearchRestClientAutoConfiguration</code> 生效，会自动为我们配置一个 RestClient。所以上一节连接三步骤的第一步<code>Create the low-level client</code>可以省略。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@AutoConfiguration
+@ConditionalOnClass({RestClientBuilder.class})
+@EnableConfigurationProperties({ElasticsearchProperties.class, ElasticsearchRestClientProperties.class})
+@Import({RestClientBuilderConfiguration.class, RestHighLevelClientConfiguration.class, RestClientFromRestHighLevelClientConfiguration.class, RestClientConfiguration.class, RestClientSnifferConfiguration.class})
+public class ElasticsearchRestClientAutoConfiguration {
+    public ElasticsearchRestClientAutoConfiguration() {
+    }
+}
+</code></pre></div><ol start="3"><li>添加我们自己的 Elasticsearch 配置类，配置一个 ElasticsearchClient 如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * elasticsearch 相关配置
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/23
+ */
+@Configuration
+@ConditionalOnProperty(prefix = &quot;spring.elasticsearch&quot;, name = &quot;enable&quot;, havingValue = &quot;true&quot;)
+@RequiredArgsConstructor
+public class EsConfig {
+
+    @Bean
+    public ElasticsearchClient elasticsearchClient(RestClient restClient) {
+
+        // Create the transport with a Jackson mapper
+        ElasticsearchTransport transport = new RestClientTransport(
+                restClient, new JacksonJsonpMapper());
+
+        // And create the API client
+        return new ElasticsearchClient(transport);
+    }
+
+}
+</code></pre></div><h3 id="使用示例"><a href="#使用示例" class="header-anchor">#</a> 使用示例</h3> <ol><li>批量插入数据</li></ol> <div class="language- extra-class"><pre class="language-text"><code>public void saveToEs() {
+        QueryWrapper&lt;BookInfo&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+        List&lt;BookInfo&gt; bookInfos;
+        long maxId = 0;
+        for(;;) {
+            queryWrapper.clear();
+            queryWrapper
+                    .orderByAsc(DatabaseConsts.CommonColumnEnum.ID.getName())
+                    .gt(DatabaseConsts.CommonColumnEnum.ID.getName(), maxId)
+                    .last(DatabaseConsts.SqlEnum.LIMIT_30.getSql());
+            bookInfos = bookInfoMapper.selectList(queryWrapper);
+            if (bookInfos.isEmpty()) {
+                break;
+            }
+            BulkRequest.Builder br = new BulkRequest.Builder();
+
+            for (BookInfo book : bookInfos) {
+                EsBookDto esBook = buildEsBook(book);
+                br.operations(op -&gt; op
+                        .index(idx -&gt; idx
+                                .index(EsConsts.IndexEnum.BOOK.getName())
+                                .id(book.getId().toString())
+                                .document(esBook)
+                        )
+                ).timeout(Time.of(t -&gt; t.time(&quot;10s&quot;)));
+                maxId = book.getId();
+            }
+
+            BulkResponse result = elasticsearchClient.bulk(br.build());
+
+            // Log errors, if any
+            if (result.errors()) {
+                log.error(&quot;Bulk had errors&quot;);
+                for (BulkResponseItem item : result.items()) {
+                    if (item.error() != null) {
+                        log.error(item.error().reason());
+                    }
+                }
+            }
+
+        }
+
+    }
+</code></pre></div><ol start="2"><li>全文检索</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@SneakyThrows
+@Override
+public RestResp&lt;PageRespDto&lt;BookInfoRespDto&gt;&gt; searchBooks(BookSearchReqDto condition) {
+
+    SearchResponse&lt;EsBookDto&gt; response = esClient.search(s -&gt; {
+
+                SearchRequest.Builder searchBuilder = s.index(EsConsts.IndexEnum.BOOK.getName());
+                buildSearchCondition(condition, searchBuilder);
+                // 排序
+                if (!StringUtils.isBlank(condition.getSort())) {
+                    searchBuilder.sort(o -&gt;
+                            o.field(f -&gt; f.field(condition.getSort()).order(SortOrder.Desc))
+                    );
+                }
+                // 分页
+                searchBuilder.from((condition.getPageNum() - 1) * condition.getPageSize())
+                        .size(condition.getPageSize());
+
+                return searchBuilder;
+            },
+            EsBookDto.class
+    );
+
+    TotalHits total = response.hits().total();
+
+    List&lt;BookInfoRespDto&gt; list = new ArrayList&lt;&gt;();
+    List&lt;Hit&lt;EsBookDto&gt;&gt; hits = response.hits().hits();
+    for (Hit&lt;EsBookDto&gt; hit : hits) {
+        EsBookDto book = hit.source();
+        list.add(BookInfoRespDto.builder()
+                .id(book.getId())
+                .bookName(book.getBookName())
+                .categoryId(book.getCategoryId())
+                .categoryName(book.getCategoryName())
+                .authorId(book.getAuthorId())
+                .authorName(book.getAuthorName())
+                .wordCount(book.getWordCount())
+                .lastChapterName(book.getLastChapterName())
+                .build());
+    }
+    return RestResp.ok(PageRespDto.of(condition.getPageNum(), condition.getPageSize(), total.value(), list));
+
+}
+
+/**
+ * 构建查询条件
+ */
+private void buildSearchCondition(BookSearchReqDto condition, SearchRequest.Builder searchBuilder) {
+
+    BoolQuery boolQuery = BoolQuery.of(b -&gt; {
+
+        if (!StringUtils.isBlank(condition.getKeyword())) {
+            // 关键词匹配
+            b.must((q -&gt; q.multiMatch(t -&gt; t
+                    .fields(&quot;bookName^2&quot;,&quot;authorName^1.8&quot;,&quot;bookDesc^0.1&quot;)
+                    .query(condition.getKeyword())
+            )
+            ));
+        }
+
+        // 精确查询
+        if (Objects.nonNull(condition.getWorkDirection())) {
+            b.must(TermQuery.of(m -&gt; m
+                    .field(&quot;workDirection&quot;)
+                    .value(condition.getWorkDirection())
+            )._toQuery());
+        }
+
+        if (Objects.nonNull(condition.getCategoryId())) {
+            b.must(TermQuery.of(m -&gt; m
+                    .field(&quot;categoryId&quot;)
+                    .value(condition.getCategoryId())
+            )._toQuery());
+        }
+
+        // 范围查询
+        if (Objects.nonNull(condition.getWordCountMin())) {
+            b.must(RangeQuery.of(m -&gt; m
+                    .field(&quot;wordCount&quot;)
+                    .gte(JsonData.of(condition.getWordCountMin()))
+            )._toQuery());
+        }
+
+        if (Objects.nonNull(condition.getWordCountMax())) {
+            b.must(RangeQuery.of(m -&gt; m
+                    .field(&quot;wordCount&quot;)
+                    .lt(JsonData.of(condition.getWordCountMax()))
+            )._toQuery());
+        }
+
+        if (Objects.nonNull(condition.getUpdateTimeMin())) {
+            b.must(RangeQuery.of(m -&gt; m
+                    .field(&quot;lastChapterUpdateTime&quot;)
+                    .gte(JsonData.of(condition.getUpdateTimeMin().getTime()))
+            )._toQuery());
+        }
+
+        return b;
+
+    });
+
+    searchBuilder.query(q -&gt; q.bool(boolQuery));
+
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">21 days ago</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/course/novel/1.html" class="prev">
+        技术架构
+      </a></span> <span class="next"><a href="/course/novel/3.html">
+        数据库设计
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div><div></div></div></div>
+    <script src="/assets/js/app.09e306c7.js" defer></script><script src="/assets/js/2.99247de7.js" defer></script><script src="/assets/js/12.8b56d8ab.js" defer></script>
+  </body>
+</html>

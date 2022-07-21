@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目开发 | 小说精品屋</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script crossorigin="anonymous" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"></script>
+    <script src="/redirect.js"></script>
+    <meta name="description" content="小说精品屋项目开发文档,JAVA学习教程,JAVA开源项目,JAVA项目实战教程,手把手教你开发上线一个生产级别的小说系统">
+    
+    <link rel="preload" href="/assets/css/0.styles.f109e9b6.css" as="style"><link rel="preload" href="/assets/js/app.09e306c7.js" as="script"><link rel="preload" href="/assets/js/2.99247de7.js" as="script"><link rel="preload" href="/assets/js/14.d3b12aa4.js" as="script"><link rel="prefetch" href="/assets/js/10.0074f0b6.js"><link rel="prefetch" href="/assets/js/11.a30c50a6.js"><link rel="prefetch" href="/assets/js/12.8b56d8ab.js"><link rel="prefetch" href="/assets/js/13.c749534f.js"><link rel="prefetch" href="/assets/js/15.74294d9c.js"><link rel="prefetch" href="/assets/js/16.6da0ac7a.js"><link rel="prefetch" href="/assets/js/17.1ab88373.js"><link rel="prefetch" href="/assets/js/18.8875335c.js"><link rel="prefetch" href="/assets/js/19.4939c52f.js"><link rel="prefetch" href="/assets/js/20.34025d9d.js"><link rel="prefetch" href="/assets/js/21.7cce32ee.js"><link rel="prefetch" href="/assets/js/22.11440c86.js"><link rel="prefetch" href="/assets/js/23.e192cd17.js"><link rel="prefetch" href="/assets/js/24.45216f10.js"><link rel="prefetch" href="/assets/js/25.3be12542.js"><link rel="prefetch" href="/assets/js/26.4fbe7fce.js"><link rel="prefetch" href="/assets/js/27.ba19a09d.js"><link rel="prefetch" href="/assets/js/28.8fee7490.js"><link rel="prefetch" href="/assets/js/29.1393ab46.js"><link rel="prefetch" href="/assets/js/3.d1f014c5.js"><link rel="prefetch" href="/assets/js/30.d7fe8f4e.js"><link rel="prefetch" href="/assets/js/31.3e268b35.js"><link rel="prefetch" href="/assets/js/4.c866ff58.js"><link rel="prefetch" href="/assets/js/5.1dabba3b.js"><link rel="prefetch" href="/assets/js/6.2b9e04ea.js"><link rel="prefetch" href="/assets/js/7.da8e9de0.js"><link rel="prefetch" href="/assets/js/8.f14eb728.js"><link rel="prefetch" href="/assets/js/9.89a7523c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f109e9b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="小说精品屋" class="logo"> <span class="site-name can-hide">小说精品屋</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link router-link-active">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link router-link-active">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/course/novel/" aria-current="page" class="sidebar-link">快速开始</a></li><li><a href="/course/novel/11.html" class="sidebar-link">公众号</a></li><li><a href="/course/novel/1.html" class="sidebar-link">技术架构</a></li><li><a href="/course/novel/2.html" class="sidebar-link">技术要点</a></li><li><a href="/course/novel/3.html" class="sidebar-link">数据库设计</a></li><li><a href="/course/novel/4.html" aria-current="page" class="active sidebar-link">项目开发</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/course/novel/4.html#开发环境" class="sidebar-link">开发环境</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#idea-插件安装" class="sidebar-link">IDEA 插件安装</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#项目初始化" class="sidebar-link">项目初始化</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#项目配置和框架集成" class="sidebar-link">项目配置和框架集成</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/course/novel/4.html#包结构创建" class="sidebar-link">包结构创建</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#通用请求-响应数据格式封装" class="sidebar-link">通用请求/响应数据格式封装</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#rest-接口响应工具及响应数据格式封装" class="sidebar-link">Rest 接口响应工具及响应数据格式封装</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#通用异常处理" class="sidebar-link">通用异常处理</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#常量类创建" class="sidebar-link">常量类创建</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#日志配置" class="sidebar-link">日志配置</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#跨域配置" class="sidebar-link">跨域配置</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#mybatis-增强工具-mybatis-plus-集成" class="sidebar-link">Mybatis 增强工具 MyBatis-Plus 集成</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#代码生成器-mybatis-plus-generator-集成" class="sidebar-link">代码生成器 Mybatis-Plus-Generator 集成</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#本地缓存-caffeine-集成和配置" class="sidebar-link">本地缓存 Caffeine 集成和配置</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#分布式缓存-redis-集成和配置" class="sidebar-link">分布式缓存 Redis 集成和配置</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#搜索引擎-elasticsearch-集成与配置" class="sidebar-link">搜索引擎 Elasticsearch 集成与配置</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#spring-amqp-集成与配置" class="sidebar-link">Spring AMQP 集成与配置</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#分布式任务调度平台-xxl-job-集成与配置" class="sidebar-link">分布式任务调度平台 XXL-JOB 集成与配置</a></li></ul></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#接口开发" class="sidebar-link">接口开发</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/course/novel/4.html#接口规约" class="sidebar-link">接口规约</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#service-dao-层方法命名规约" class="sidebar-link">Service/DAO 层方法命名规约</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#首页相关接口开发" class="sidebar-link">首页相关接口开发</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#登录注册相关接口开发" class="sidebar-link">登录注册相关接口开发</a></li><li class="sidebar-sub-header"><a href="/course/novel/4.html#小说详情页相关接口开发" class="sidebar-link">小说详情页相关接口开发</a></li></ul></li></ul></li><li><a href="/course/novel/9.html" class="sidebar-link">项目优化</a></li><li><a href="/course/novel/6.html" class="sidebar-link">项目部署</a></li><li><a href="/course/novel/12.html" class="sidebar-link">更多</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="项目开发"><a href="#项目开发" class="header-anchor">#</a> 项目开发</h1> <h2 id="开发环境"><a href="#开发环境" class="header-anchor">#</a> 开发环境</h2> <ul><li>MySQL 8.0</li> <li>Redis 7.0</li> <li>Elasticsearch 8.2.0（选装）</li> <li>RabbitMQ 3.10.2（选装）</li> <li>XXL-JOB 2.3.1（选装）</li> <li>JDK 17</li> <li>Maven 3.8.5</li> <li>IntelliJ IDEA 2021.3</li> <li>Node 16.14</li></ul> <h2 id="idea-插件安装"><a href="#idea-插件安装" class="header-anchor">#</a> IDEA 插件安装</h2> <p>使用 IntelliJ IDEA 开发的同学建议安装以下插件：</p> <ul><li><p>必装</p> <ul><li><p>Alibaba Java Code Guidelines - 阿里巴巴 Java 代码规范</p></li> <li><p>SonarLint - 代码质量检测</p></li> <li><p>Save Actions - 代码自动格式化（<a href="/course/novel/12.html#java-代码格式">Java 代码格式</a>）</p></li> <li><p>Git Commit Template - 使用规范模板创建 Git 提交消息（<a href="/course/novel/12.html#git-提交规约">Git 提交规范</a>）</p></li></ul></li> <li><p>选装</p> <ul><li><p>Translation - 翻译插件</p></li> <li><p>Maven Helper - 分析 Maven 依赖，解决 Jar 冲突</p></li> <li><p>EasyYapi - 帮助你导出文件中的 API 到 <code>yapi</code>/<code>postman</code>/<code>markdown</code> 或发起文件中的 API 请求</p></li> <li><p>Codota - 代码智能提示</p></li> <li><p>Search In Repository - 搜索 Maven 或者 NPM 的依赖信息</p></li> <li><p>CamelCase - 多种命名格式（下划线、驼峰等）之间切换</p></li> <li><p>Auto filling Java call arguments - 自动补全调用函数的参数</p></li> <li><p>GenerateO2O - 生成一个对象并自动填充另一个对象的值</p></li> <li><p>GenerateAllSetter - 一键调用一个对象的所有的set方法</p></li> <li><p>SequenceDiagram - 调用链路自动生成时序图</p></li> <li><p>Rainbow Brackets - 让你的括号变成不一样的颜色，防止错乱括号</p></li> <li><p>HighlightBracketPair - 括号开始和结尾，高亮显示</p></li> <li><p>Grep Console - 控制台日志 高亮</p></li> <li><p>Key promoter X - 鼠标操作的快捷键提示</p></li> <li><p>CodeGlance - 缩略图</p></li> <li><p>VisualGC - 实时垃圾回收监控</p></li> <li><p>arthas idea - java 在线诊断工具</p></li> <li><p>Alibaba Cloud Toolkit - 通过图形配置的方式连接到云端部署环境并将应用程序快速部署到云端</p></li></ul></li> <li><p>上班摸鱼</p> <ul><li><p>Leetcode Editor IDEA 在线刷题</p></li> <li><p>GIdeaBrowser IDEA 内嵌 Web 浏览器</p></li></ul></li></ul> <h2 id="项目初始化"><a href="#项目初始化" class="header-anchor">#</a> 项目初始化</h2> <p>我们使用 Spring Initializr 来初始化我们的项目。</p> <p><img src="/img/novel/springbootinit.png" alt="Spring Initializr"></p> <p>操作步骤如下：</p> <ol><li><p>导航到 <a href="https://start.spring.io/" target="_blank" rel="noopener noreferrer">Spring Initializr<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。该服务引入应用程序所需的所有依赖项，并自动完成大部分设置。</p></li> <li><p>选择 Gradle 或 Maven 以及要使用的语言。本项目选择 Maven 和 Java。</p></li> <li><p>选择 Spring Boot 的版本。本项目选择 3.0.0-SNAPSHOT 版本。</p></li> <li><p>填写项目元数据。本项目选择 Java 17 版本。</p></li> <li><p>单击 ADD DEPENDENCIES 并选择项目依赖项。本项目选择的依赖如上图所示。</p></li> <li><p>单击 GENERATE，下载生成的 ZIP 文件，该文件是根据我们的选择来配置的 Spring Boot 应用程序存档。</p></li> <li><p>解压 ZIP 文件后导入我们的 IDE 中即可。</p></li></ol> <p><strong>注：如果我们的 IDE 具有 Spring Initializr 集成，可以直接从 IDE 中完成此过程</strong></p> <h2 id="项目配置和框架集成"><a href="#项目配置和框架集成" class="header-anchor">#</a> 项目配置和框架集成</h2> <h3 id="包结构创建"><a href="#包结构创建" class="header-anchor">#</a> 包结构创建</h3> <p>在项目 src/main/java 下面创建如下的包结构：</p> <div class="language- extra-class"><pre class="language-text"><code>io
+ +- github
+     +- xxyopen   
+        +- novel
+            +- NovelApplication.java -- 项目启动类
+            |
+            +- core -- 项目核心模块，包括各种工具、配置和常量等
+            |   +- common -- 业务无关的通用模块
+            |   |   +- exception -- 通用异常处理
+            |   |   +- constant -- 通用常量   
+            |   |   +- req -- 通用请求数据格式封装，例如分页请求数据  
+            |   |   +- resp -- 接口响应工具及响应数据格式封装 
+            |   |   +- util -- 通用工具   
+            |   | 
+            |   +- auth -- 用户认证授权相关
+            |   +- config -- 业务相关配置
+            |   +- constant -- 业务相关常量         
+            |   +- filter -- 过滤器 
+            |   +- interceptor -- 拦截器
+            |   +- task -- 定时任务
+            |   +- util -- 业务相关工具 
+            |   +- wrapper -- 装饰器
+            |
+            +- dto -- 数据传输对象，包括对各种 Http 请求和响应数据的封装
+            |   +- req -- Http 请求数据封装
+            |   +- resp -- Http 响应数据封装
+            |
+            +- dao -- 数据访问层，与底层 MySQL 进行数据交互
+            +- manager -- 通用业务处理层，对第三方平台封装、对 Service 层通用能力的下沉以及对多个 DAO 的组合复用 
+            +- service -- 相对具体的业务逻辑服务层  
+            +- controller -- 主要是处理各种 Http 请求，各类基本参数校验，或者不复用的业务简单处理，返回 JSON 数据等
+            |   +- front -- 小说门户相关接口
+            |   +- author -- 作家管理后台相关接口
+            |   +- admin -- 平台管理后台相关接口
+            |   +- app -- app 接口
+            |   +- applet -- 小程序接口
+            |   +- open -- 开放接口，供第三方调用 
+</code></pre></div><h3 id="通用请求-响应数据格式封装"><a href="#通用请求-响应数据格式封装" class="header-anchor">#</a> 通用请求/响应数据格式封装</h3> <ol><li>在<code>io.github.xxyopen.novel.core.common.req</code>包下创建分页请求数据格式封装类：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 分页请求数据格式封装，所有分页请求的 Dto 类都应继承该类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+@Data
+public class PageReqDto {
+
+    /**
+     * 请求页码，默认第 1 页
+     * */
+    private int pageNum = 1;
+
+    /**
+     * 每页大小，默认每页 10 条
+     * */
+    private int pageSize = 10;
+
+    /**
+     * 是否查询所有，默认不查所有
+     * 为 true 时，pageNum 和 pageSize 无效
+     * */
+    private boolean fetchAll = false;
+    
+}
+</code></pre></div><ol start="2"><li>在<code>io.github.xxyopen.novel.core.common.resp</code>包下创建分页响应数据格式封装类：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 分页响应数据格式封装
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+@Getter
+public class PageRespDto&lt;T&gt; {
+
+    /**
+     * 页码
+     */
+    private final long pageNum;
+
+    /**
+     * 每页大小
+     */
+    private final long pageSize;
+
+    /**
+     * 总记录数
+     */
+    private final long total;
+
+    /**
+     * 分页数据集
+     */
+    private final List&lt;? extends T&gt; list;
+
+    /**
+     * 该构造函数用于通用分页查询的场景
+     * 接收普通分页数据和普通集合
+     */
+    public PageRespDto(long pageNum, long pageSize, long total, List&lt;T&gt; list) {
+        this.pageNum = pageNum;
+        this.pageSize = pageSize;
+        this.total = total;
+        this.list = list;
+    }
+
+    public static &lt;T&gt; PageRespDto&lt;T&gt; of(long pageNum, long pageSize, long total, List&lt;T&gt; list) {
+        return new PageRespDto&lt;&gt;(pageNum, pageSize, total, list);
+    }
+
+    /**
+     * 获取分页数
+     * */
+    public long getPages() {
+        if (this.pageSize == 0L) {
+            return 0L;
+        } else {
+            long pages = this.total / this.pageSize;
+            if (this.total % this.pageSize != 0L) {
+                ++pages;
+            }
+
+            return pages;
+        }
+    }
+}
+</code></pre></div><h3 id="rest-接口响应工具及响应数据格式封装"><a href="#rest-接口响应工具及响应数据格式封装" class="header-anchor">#</a> Rest 接口响应工具及响应数据格式封装</h3> <ol><li>在<code>io.github.xxyopen.novel.core.common.constant</code>包下创建错误码枚举类：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 错误码枚举类。
+ *
+ * 错误码为字符串类型，共 5 位，分成两个部分：错误产生来源+四位数字编号。
+ * 错误产生来源分为 A/B/C， A 表示错误来源于用户，比如参数错误，用户安装版本过低，用户支付
+ * 超时等问题； B 表示错误来源于当前系统，往往是业务逻辑出错，或程序健壮性差等问题； C 表示错误来源
+ * 于第三方服务，比如 CDN 服务出错，消息投递超时等问题；四位数字编号从 0001 到 9999，大类之间的
+ * 步长间距预留 100。
+ *
+ * 错误码分为一级宏观错误码、二级宏观错误码、三级宏观错误码。
+ * 在无法更加具体确定的错误场景中，可以直接使用一级宏观错误码。
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+@Getter
+@AllArgsConstructor
+public enum ErrorCodeEnum {
+
+    /**
+     * 正确执行后的返回
+     * */
+    OK(&quot;00000&quot;,&quot;一切 ok&quot;),
+
+    /**
+     * 一级宏观错误码，用户端错误
+     * */
+    USER_ERROR(&quot;A0001&quot;,&quot;用户端错误&quot;),
+
+    /**
+     * 二级宏观错误码，用户注册错误
+     * */
+    USER_REGISTER_ERROR(&quot;A0100&quot;,&quot;用户注册错误&quot;),
+
+    /**
+     * 二级宏观错误码，用户未同意隐私协议
+     * */
+    USER_NO_AGREE_PRIVATE_ERROR(&quot;A0101&quot;,&quot;用户未同意隐私协议&quot;),
+
+    /**
+     * 二级宏观错误码，注册国家或地区受限
+     * */
+    USER_REGISTER_AREA_LIMIT_ERROR(&quot;A0102&quot;,&quot;注册国家或地区受限&quot;),
+
+    /**
+     * 二级宏观错误码，用户请求参数错误
+     * */
+    USER_REQUEST_PARAM_ERROR(&quot;A0400&quot;,&quot;用户请求参数错误&quot;),
+
+    // ...省略若干用户端二级宏观错误码
+
+    /**
+     * 一级宏观错误码，系统执行出错
+     * */
+    SYSTEM_ERROR(&quot;B0001&quot;,&quot;系统执行出错&quot;),
+
+    /**
+     * 二级宏观错误码，系统执行超时
+     * */
+    SYSTEM_TIMEOUT_ERROR(&quot;B0100&quot;,&quot;系统执行超时&quot;),
+
+    // ...省略若干系统执行二级宏观错误码
+
+    /**
+     * 一级宏观错误码，调用第三方服务出错
+     * */
+    THIRD_SERVICE_ERROR(&quot;C0001&quot;,&quot;调用第三方服务出错&quot;),
+
+    /**
+     * 一级宏观错误码，中间件服务出错
+     * */
+    MIDDLEWARE_SERVICE_ERROR(&quot;C0100&quot;,&quot;中间件服务出错&quot;)
+
+    // ...省略若干三方服务调用二级宏观错误码    
+
+    ;
+
+    /**
+     * 错误码
+     * */
+    private String code;
+
+    /**
+     * 中文描述
+     * */
+    private String message;
+
+}
+</code></pre></div><ol start="2"><li>在<code>io.github.xxyopen.novel.core.common.resp</code>包下创建 Http Rest 响应工具及数据格式封装类：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Http Rest 响应工具及数据格式封装
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+@Getter
+public class RestResp&lt;T&gt; {
+
+    /**
+     * 响应码
+     */
+    private String code;
+
+    /**
+     * 响应消息
+     */
+    private String message;
+
+    /**
+     * 响应数据
+     */
+    private T data;
+
+    private RestResp() {
+        this.code = ErrorCodeEnum.OK.getCode();
+        this.message = ErrorCodeEnum.OK.getMessage();
+    }
+
+    private RestResp(ErrorCodeEnum errorCode) {
+        this.code = errorCode.getCode();
+        this.message = errorCode.getMessage();
+    }
+
+    private RestResp(T data) {
+        this.data = data;
+    }
+
+    /**
+     * 业务处理成功,无数据返回
+     */
+    public static RestResp&lt;Void&gt; ok() {
+        return new RestResp&lt;&gt;();
+    }
+
+    /**
+     * 业务处理成功，有数据返回
+     */
+    public static &lt;T&gt; RestResp&lt;T&gt; ok(T data) {
+        return new RestResp&lt;&gt;(data);
+    }
+
+    /**
+     * 业务处理失败
+     */
+    public static RestResp&lt;Void&gt; fail(ErrorCodeEnum errorCode) {
+        return new RestResp&lt;&gt;(errorCode);
+    }
+
+    /**
+     * 系统错误
+     */
+    public static RestResp&lt;Void&gt; error() {
+        return new RestResp&lt;&gt;(ErrorCodeEnum.SYSTEM_ERROR);
+    }
+
+    /**
+     * 判断是否成功
+     */
+    public boolean isOk() {
+        return Objects.equals(this.code, ErrorCodeEnum.OK.getCode());
+    }
+    
+}
+</code></pre></div><h3 id="通用异常处理"><a href="#通用异常处理" class="header-anchor">#</a> 通用异常处理</h3> <p>在 Spring 3.2 中，新增了 <a href="https://docs.spring.io/spring-framework/docs/6.0.0-SNAPSHOT/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html" target="_blank" rel="noopener noreferrer">@ControllerAdvice<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 注解，用于定义适用于所有 @RequestMapping 方法的 @ExceptionHandler、@InitBinder 和 @ModelAttribute 方法。Spring Boot 默认情况下会映射到 /error 进行异常处理，但是提示十分不友好。我们可以使用该注解定义 @ExceptionHandler 方法来捕获 Controller 抛出的通用异常，并统一进行处理。</p> <ol><li>在<code>io.github.xxyopen.novel.core.common.exception</code>包下创建自定义业务异常类：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 自定义业务异常，用于处理用户请求时，业务错误时抛出
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+@EqualsAndHashCode(callSuper = true)
+@Data
+public class BusinessException extends RuntimeException {
+
+    private final ErrorCodeEnum errorCodeEnum;
+
+    public BusinessException(ErrorCodeEnum errorCodeEnum) {
+        // 不调用父类 Throwable的fillInStackTrace() 方法生成栈追踪信息，提高应用性能
+        // 构造器之间的调用必须在第一行
+        super(errorCodeEnum.getMessage(), null, false, false);
+        this.errorCodeEnum = errorCodeEnum;
+    }
+
+}
+</code></pre></div><ol start="2"><li>在<code>io.github.xxyopen.novel.core.common.exception</code>包下创建通用异常处理器，处理系统异常、数据校验异常和我们自定义的业务异常：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 通用的异常处理器
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+@Slf4j
+@RestControllerAdvice
+public class CommonExceptionHandler {
+
+    /**
+     * 处理数据校验异常
+     * */
+    @ExceptionHandler(BindException.class)
+    public RestResp&lt;Void&gt; handlerBindException(BindException e){
+        log.error(e.getMessage(),e);
+        return RestResp.fail(ErrorCodeEnum.USER_REQUEST_PARAM_ERROR);
+    }
+
+    /**
+     * 处理业务异常
+     * */
+    @ExceptionHandler(BusinessException.class)
+    public RestResp&lt;Void&gt; handlerBusinessException(BusinessException e){
+        log.error(e.getMessage(),e);
+        return RestResp.fail(e.getErrorCodeEnum());
+    }
+
+    /**
+     * 处理系统异常
+     * */
+    @ExceptionHandler(Exception.class)
+    public RestResp&lt;Void&gt; handlerException(Exception e){
+        log.error(e.getMessage(),e);
+        return RestResp.error();
+    }
+
+}
+</code></pre></div><h3 id="常量类创建"><a href="#常量类创建" class="header-anchor">#</a> 常量类创建</h3> <ol><li>在<code>io.github.xxyopen.novel.core.common.constant</code>包下创建通用常量类和 API 路由常量类</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 通用常量
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+public class CommonConsts {
+
+    /**
+     * 是
+     * */
+    public static final Integer YES = 1;
+
+    /**
+     * 否
+     * */
+    public static final Integer NO = 0;
+
+    /**
+     * 性别常量
+     * */
+    public enum SexEnum{
+
+        /**
+         * 男
+         * */
+        MALE(0,&quot;男&quot;),
+
+        /**
+         * 女
+         * */
+        FEMALE(1,&quot;女&quot;);
+
+        SexEnum(int code,String desc){
+            this.code = code;
+            this.desc = desc;
+        }
+
+        private int code;
+        private String desc;
+
+        public int getCode() {
+            return code;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+    }
+
+    // ...省略若干常量
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>/**
+ * API 路由常量
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+public class ApiRouterConsts {
+
+    /**
+     * API请求路径前缀
+     */
+    String API_URL_PREFIX = &quot;/api&quot;;
+
+    /**
+     * 前台门户系统请求路径前缀
+     */
+    String API_FRONT_URL_PREFIX = API_URL_PREFIX + &quot;/front&quot;;
+
+    /**
+     * 作家管理系统请求路径前缀
+     */
+    String API_AUTHOR_URL_PREFIX = API_URL_PREFIX + &quot;/author&quot;;
+
+    /**
+     * 平台后台管理系统请求路径前缀
+     */
+    String API_ADMIN_URL_PREFIX = API_URL_PREFIX + &quot;/admin&quot;;
+
+    /**
+     * 首页模块请求路径前缀
+     * */
+    String HOME_URL_PREFIX = &quot;/home&quot;;
+
+    /**
+     * 小说模块请求路径前缀
+     * */
+    String BOOK_URL_PREFIX = &quot;/book&quot;;
+
+    /**
+     * 会员模块请求路径前缀
+     * */
+    String USER_URL_PREFIX = &quot;/user&quot;;
+
+    /**
+     * 前台门户首页API请求路径前缀
+     */
+    String API_FRONT_HOME_URL_PREFIX = API_FRONT_URL_PREFIX + HOME_URL_PREFIX;
+
+    /**
+     * 前台门户小说相关API请求路径前缀
+     */
+    String API_FRONT_BOOK_URL_PREFIX = API_FRONT_URL_PREFIX + BOOK_URL_PREFIX;
+
+    /**
+     * 前台门户会员相关API请求路径前缀
+     */
+    String API_FRONT_USER_URL_PREFIX = API_FRONT_URL_PREFIX + USER_URL_PREFIX;
+
+    // ...省略若干常量
+
+}
+</code></pre></div><ol start="2"><li>在<code>io.github.xxyopen.novel.core.constant</code>包下创建缓存常量类</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 缓存相关常量
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+public class CacheConsts {
+
+    /**
+     * 本项目 Redis 缓存前缀
+     * */
+    public static final String REDIS_CACHE_PREFIX = &quot;Cache::Novel::&quot;;
+
+
+    /**
+     * Caffeine 缓存管理器
+     * */
+    public static final String CAFFEINE_CACHE_MANAGER = &quot;caffeineCacheManager&quot;;
+
+    /**
+     * Redis 缓存管理器
+     * */
+    public static final String REDIS_CACHE_MANAGER = &quot;redisCacheManager&quot;;
+
+    /**
+     * 首页小说推荐缓存
+     * */
+    public static final String HOME_BOOK_CACHE_NAME = &quot;homeBookCache&quot;;
+
+    /**
+     * 首页友情链接缓存
+     * */
+    public static final String HOME_FRIEND_LINK_CACHE_NAME = &quot;homeFriendLinkCache&quot;;
+
+    /**
+     * 缓存配置常量
+     */
+    public enum CacheEnum {
+
+        HOME_BOOK_CACHE(1,HOME_BOOK_CACHE_NAME,0,1),
+
+        HOME_FRIEND_LINK_CACHE(2,HOME_FRIEND_LINK_CACHE_NAME,1000,1)
+
+        ;
+
+        /**
+         * 缓存类型 0-本地 1-本地和远程 2-远程
+         */
+        private int type;
+        /**
+         * 缓存的名字
+         */
+        private String name;
+        /**
+         * 失效时间（秒） 0-永不失效
+         */
+        private int ttl;
+        /**
+         * 最大容量
+         */
+        private int maxSize;
+
+        CacheEnum(int type, String name, int ttl, int maxSize) {
+            this.type = type;
+            this.name = name;
+            this.ttl = ttl;
+            this.maxSize = maxSize;
+        }
+
+        public boolean isLocal() {
+            return type &lt;= 1;
+        }
+
+        public boolean isRemote() {
+            return type &gt;= 1;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getTtl() {
+            return ttl;
+        }
+
+        public int getMaxSize() {
+            return maxSize;
+        }
+
+    }
+
+}
+</code></pre></div><h3 id="日志配置"><a href="#日志配置" class="header-anchor">#</a> 日志配置</h3> <p>Spring Boot 默认使用的是 Logback 日志实现，会自动读取类路径下的 logback-spring.xml, logback-spring.groovy, logback.xml, 或 logback.groovy 配置文件。</p> <p>我们在项目 src/resource 下面添加如下内容的日志配置文件 logback-spring.xml 即可：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;!-- 彩色日志依赖的渲染类 --&gt;
+    &lt;conversionRule conversionWord=&quot;clr&quot; converterClass=&quot;org.springframework.boot.logging.logback.ColorConverter&quot;/&gt;
+    &lt;conversionRule conversionWord=&quot;wex&quot;
+                    converterClass=&quot;org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter&quot;/&gt;
+    &lt;conversionRule conversionWord=&quot;wEx&quot;
+                    converterClass=&quot;org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter&quot;/&gt;
+    &lt;!-- 彩色日志格式 --&gt;
+    &lt;property name=&quot;CONSOLE_LOG_PATTERN&quot;
+              value=&quot;${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}&quot;/&gt;
+
+    &lt;!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,%i索引【从数字0开始递增】,,, --&gt;
+    &lt;!-- appender是configuration的子节点，是负责写日志的组件。 --&gt;
+    &lt;!-- ConsoleAppender：把日志输出到控制台 --&gt;
+    &lt;appender name=&quot;STDOUT&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;
+        &lt;encoder&gt;
+            &lt;!--
+            &lt;pattern&gt;%d %p (%file:%line\)- %m%n&lt;/pattern&gt;
+             --&gt;
+            &lt;pattern&gt;${CONSOLE_LOG_PATTERN}&lt;/pattern&gt;
+            &lt;!-- 控制台也要使用UTF-8，不要使用GBK，否则会中文乱码 --&gt;
+            &lt;charset&gt;UTF-8&lt;/charset&gt;
+        &lt;/encoder&gt;
+    &lt;/appender&gt;
+
+    &lt;!-- RollingFileAppender：滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件 --&gt;
+    &lt;!-- 以下的大概意思是：1.先按日期存日志，日期变了，将前一天的日志文件名重命名为XXX%日期%索引，新的日志仍然是demo.log --&gt;
+    &lt;!-- 2.如果日期没有发生变化，但是当前日志的文件大小超过1KB时，对当前日志进行分割 重命名 --&gt;
+    &lt;appender name=&quot;FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+
+        &lt;File&gt;logs/novel.log&lt;/File&gt;
+        &lt;!-- rollingPolicy:当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名。 --&gt;
+        &lt;!-- TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责出发滚动 --&gt;
+        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;
+            &lt;!-- 活动文件的名字会根据fileNamePattern的值，每隔一段时间改变一次 --&gt;
+            &lt;!-- 文件名：logs/demo.2017-12-05.0.log --&gt;
+            &lt;fileNamePattern&gt;logs/debug.%d.%i.log&lt;/fileNamePattern&gt;
+            &lt;!-- 每产生一个日志文件，该日志文件的保存期限为30天 --&gt;
+            &lt;maxHistory&gt;30&lt;/maxHistory&gt;
+            &lt;timeBasedFileNamingAndTriggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;&gt;
+                &lt;!-- maxFileSize:这是活动文件的大小，默认值是10MB，测试时可改成1KB看效果 --&gt;
+                &lt;maxFileSize&gt;10MB&lt;/maxFileSize&gt;
+            &lt;/timeBasedFileNamingAndTriggeringPolicy&gt;
+        &lt;/rollingPolicy&gt;
+        &lt;encoder&gt;
+            &lt;!-- pattern节点，用来设置日志的输入格式 --&gt;
+            &lt;pattern&gt;
+                %d %p (%file:%line\)- %m%n
+            &lt;/pattern&gt;
+            &lt;!-- 记录日志的编码:此处设置字符集 - --&gt;
+            &lt;charset&gt;UTF-8&lt;/charset&gt;
+        &lt;/encoder&gt;
+    &lt;/appender&gt;
+    &lt;springProfile name=&quot;dev&quot;&gt;
+        &lt;!-- ROOT 日志级别 --&gt;
+        &lt;root level=&quot;INFO&quot;&gt;
+            &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+        &lt;/root&gt;
+        &lt;!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 --&gt;
+        &lt;!-- com.maijinjie.springboot 为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是DEBUG --&gt;
+        &lt;!-- 级别依次为【从高到低】：FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE --&gt;
+        &lt;logger name=&quot;io.github.xxyopen&quot; level=&quot;DEBUG&quot; additivity=&quot;false&quot;&gt;
+            &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+        &lt;/logger&gt;
+    &lt;/springProfile&gt;
+
+    &lt;springProfile name=&quot;prod&quot;&gt;
+        &lt;!-- ROOT 日志级别 --&gt;
+        &lt;root level=&quot;INFO&quot;&gt;
+            &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+            &lt;appender-ref ref=&quot;FILE&quot;/&gt;
+        &lt;/root&gt;
+        &lt;!-- 指定项目中某个包，当有日志操作行为时的日志记录级别 --&gt;
+        &lt;!-- com.maijinjie.springboot 为根包，也就是只要是发生在这个根包下面的所有日志操作行为的权限都是DEBUG --&gt;
+        &lt;!-- 级别依次为【从高到低】：FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE --&gt;
+        &lt;logger name=&quot;io.github.xxyopen&quot; level=&quot;ERROR&quot; additivity=&quot;false&quot;&gt;
+            &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+            &lt;appender-ref ref=&quot;FILE&quot;/&gt;
+        &lt;/logger&gt;
+    &lt;/springProfile&gt;
+&lt;/configuration&gt;
+</code></pre></div><h3 id="跨域配置"><a href="#跨域配置" class="header-anchor">#</a> 跨域配置</h3> <p>跨域是指浏览器从一个域名的网页去请求另一个域名的资源时，域名、端口、协议任一不同，都是跨域。在前后端分离的模式下，前后端的域名是不一致的，此时就会发生跨域访问问题。</p> <p>跨域是出于浏览器的同源策略限制，同源策略（Sameoriginpolicy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。</p> <p>我们可以通过前端配置、后端配置或 nginx 配置来解决跨域问题。</p> <p>如果选择前端配置，我们可以使用 node 中间件 proxy 配置跨域，前端通过 node proxy 来转发我们的接口请求，和浏览器直接打交道的是 node proxy，这样可以避免浏览器的同源策略。配置示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code>proxy: {
+  '/api': {
+    target: 'http://localhost:8888',
+    // 请求改变源，此时 nginx 可以获取到真实的请求 ip
+    changeOrigin: true
+  }
+}
+</code></pre></div><p>如果通过 nginx 配置来解决跨域问题，我们在配置 location 路径转发时需要加上如下的配置：</p> <div class="language- extra-class"><pre class="language-text"><code># 允许的请求头
+add_header 'Access-Control-Allow-Methods' 'GET,OPTIONS,POST,PUT,DELETE' always;
+add_header 'Access-Control-Allow-Credentials' 'true' always;
+add_header 'Access-Control-Allow-Origin' '$http_origin' always;
+add_header Access-Control-Allow-Headers $http_access_control_request_headers;
+add_header Access-Control-Max-Age 3600;
+# 头转发
+proxy_set_header Host $host;
+proxy_set_header X-Real-Ip $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_connect_timeout 1000;
+proxy_read_timeout 1000;
+# 跨域配置
+if ($request_method = OPTIONS ) { return 200; }
+</code></pre></div><p>因为我们项目的侧重点在后端，而且 Spring MVC 提供了跨域解决方案（<a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank" rel="noopener noreferrer">CORS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>）的支持。所以我们这里通过后端配置来解决跨域问题。</p> <p>首先我们需要在 application.yml 配置文件中添加跨域相关的配置：</p> <div class="language- extra-class"><pre class="language-text"><code># 项目配置
+novel:
+  # 跨域配置
+  cors:
+    # 允许跨域的域名
+    allow-origins:
+      - http://localhost:1024
+      - http://localhost:8080
+</code></pre></div><p>然后在<code>io.github.xxyopen.novel.core.config</code>包下创建 CorsProperties 类来绑定 CORS 配置属性:</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 跨域配置属性
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/17
+ */
+@ConfigurationProperties(prefix = &quot;novel.cors&quot;)
+@Data
+public class CorsProperties {
+
+    /**
+     * 允许跨域的域名
+     * */
+    private List&lt;String&gt; allowOrigins;
+}
+</code></pre></div><p>最后在<code>io.github.xxyopen.novel.core.config</code>包下增加如下的 CORS 配置类：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 跨域配置
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/13
+ */
+@Configuration
+@EnableConfigurationProperties(CorsProperties.class)
+@RequiredArgsConstructor
+public class CorsConfig {
+
+    private final CorsProperties corsProperties;
+
+    @Bean
+    public CorsFilter corsFilter() {
+        CorsConfiguration config = new CorsConfiguration();
+        // 允许的域,不要写*，否则cookie就无法使用了
+        for (String allowOrigin : corsProperties.getAllowOrigins()) {
+            config.addAllowedOrigin(allowOrigin);
+        }
+        // 允许的头信息
+        config.addAllowedHeader(&quot;*&quot;);
+        // 允许的请求方式
+        config.addAllowedMethod(&quot;*&quot;);
+        // 是否允许携带Cookie信息
+        config.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource configurationSource = new UrlBasedCorsConfigurationSource();
+        // 添加映射路径，拦截一切请求
+        configurationSource.registerCorsConfiguration(&quot;/**&quot;,config);
+        return new CorsFilter(configurationSource);
+    }
+    
+}
+</code></pre></div><h3 id="mybatis-增强工具-mybatis-plus-集成"><a href="#mybatis-增强工具-mybatis-plus-集成" class="header-anchor">#</a> Mybatis 增强工具 MyBatis-Plus 集成</h3> <p>[MyBatis-Plus] (https://baomidou.com)是一个 MyBatis (https://www.mybatis.org/mybatis-3)的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。我们可以按照如下步骤集成到我们的项目中：</p> <ol><li>添加 mybatis-plus 的启动器依赖</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+    &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;3.5.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="2"><li>配置 MapperScan 注解</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+@MapperScan(&quot;io.github.xxyopen.novel.dao.mapper&quot;)
+public class NovelApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(NovelApplication.class, args);
+	}
+
+}
+</code></pre></div><ol start="3"><li>因为我们系统涉及分页数据查询，所以我们还需要在<code>io.github.xxyopen.novel.core.config</code>包下配置 mybatis-plus 的分页插件：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Mybatis-Plus 配置类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/16
+ */
+@Configuration
+public class MybatisPlusConfig {
+
+    /**
+     * 分页插件
+     */
+    @Bean
+    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
+        return interceptor;
+    }
+
+}
+</code></pre></div><ol start="4"><li>数据源配置</li></ol> <p>YAML 是 JSON 的超集，一种用于指定分层配置数据的便捷格式。本项目中我们统一使用 YAML 格式的配置文件，所以先将 resources 目录下的 application.properties 文件重命名为 application.yml，</p> <p>然后在 application.yml 配置文件中加入以下数据源配置：</p> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/novel?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai
+    username: root
+    password: test123456
+</code></pre></div><p><strong>注：根据实际的数据库环境来修改相应的IP、端口号、数据库名、用户名和密码</strong></p> <ol start="5"><li>为了兼容 Spring Boot 3（Spring 6），在<code>org.springframework.core</code>包下创建<code>NestedIOException</code>异常类</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 兼容 mybatis-plus 3.5.1
+ * mybatis-plus 的 MybatisSqlSessionFactoryBean 中使用到了这个异常
+ * Spring 6 开始移除了该异常
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+public class NestedIOException extends IOException {
+
+}
+</code></pre></div><h3 id="代码生成器-mybatis-plus-generator-集成"><a href="#代码生成器-mybatis-plus-generator-集成" class="header-anchor">#</a> 代码生成器 Mybatis-Plus-Generator 集成</h3> <ol><li>添加相关依赖</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+    &lt;artifactId&gt;mybatis-plus-generator&lt;/artifactId&gt;
+    &lt;version&gt;${mybatis-plus.version}&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.velocity&lt;/groupId&gt;
+    &lt;artifactId&gt;velocity-engine-core&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="2"><li>在 test/resources/templates 下面创建以下模版文件</li></ol> <p><img src="/img/novel/mybatisplusgen.png" alt="gen-templates"></p> <ol start="3"><li>在 test/java 下面创建代码生成器类</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 代码生成器
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/11
+ */
+public class Generator {
+
+    private static final String USERNAME = System.getenv().get(&quot;USER&quot;);
+
+    /**
+     * 项目信息
+     */
+    private static final String PROJECT_PATH = System.getProperty(&quot;user.dir&quot;);
+    private static final String JAVA_PATH = &quot;/src/main/java&quot;;
+    private static final String RESOURCE_PATH = &quot;/src/main/resources&quot;;
+    private static final String BASE_PACKAGE = &quot;io.github.xxyopen.novel&quot;;
+
+    /**
+     * 数据库信息
+     */
+    private static final String DATABASE_IP = &quot;127.0.0.1&quot;;
+    private static final String DATABASE_PORT = &quot;3306&quot;;
+    private static final String DATABASE_NAME = &quot;novel&quot;;
+    private static final String DATABASE_USERNAME = &quot;root&quot;;
+    private static final String DATABASE_PASSWORD = &quot;test123456&quot;;
+
+
+    public static void main(String[] args) {
+
+        // 传入需要生成的表名，多个用英文逗号分隔，所有用 all 表示
+        genCode(&quot;sys_user&quot;);
+
+    }
+
+
+    /**
+     * 代码生成
+     */
+    private static void genCode(String tables) {
+
+        // 全局配置
+        FastAutoGenerator.create(String.format(&quot;jdbc:mysql://%s:%s/%s?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;, DATABASE_IP, DATABASE_PORT, DATABASE_NAME), DATABASE_USERNAME, DATABASE_PASSWORD)
+                .globalConfig(builder -&gt; {
+                    builder.author(USERNAME) // 设置作者
+                            .fileOverride()
+                            // kotlin
+                            //.enableSwagger() // 开启 swagger 模式
+                            .fileOverride() // 覆盖已生成文件
+                            .commentDate(&quot;yyyy/MM/dd&quot;)
+                            .outputDir(PROJECT_PATH + JAVA_PATH); // 指定输出目录
+                })
+                // 包配置
+                .packageConfig(builder -&gt; builder.parent(BASE_PACKAGE) // 设置父包名
+                        .entity(&quot;dao.entity&quot;)
+                        .service(&quot;service&quot;)
+                        .serviceImpl(&quot;service.impl&quot;)
+                        .mapper(&quot;dao.mapper&quot;)
+                        .controller(&quot;controller.front&quot;)
+                        .pathInfo(Collections.singletonMap(OutputFile.mapperXml, PROJECT_PATH + RESOURCE_PATH + &quot;/mapper&quot;)))
+                // 模版配置
+                .templateConfig(builder -&gt; builder.disable(TemplateType.SERVICE)
+                        .disable(TemplateType.SERVICEIMPL)
+                        .disable(TemplateType.CONTROLLER))
+                // 策略配置
+                .strategyConfig(builder -&gt; builder.addInclude(getTables(tables)) // 设置需要生成的表名
+                        .controllerBuilder()
+                        .enableRestStyle()
+                        .serviceBuilder()
+                        .formatServiceFileName(&quot;%sService&quot;)
+                ) // 开启生成@RestController 控制器
+                //.templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
+                .execute();
+
+    }
+
+    /**
+     * 处理 all 和多表情况
+     */
+    protected static List&lt;String&gt; getTables(String tables) {
+        return &quot;all&quot;.equals(tables) ? Collections.emptyList() : Arrays.asList(tables.split(&quot;,&quot;));
+    }
+
+}
+</code></pre></div><ol start="4"><li>修改 Generator 类中数据库相关配置，选择我们需要创建的表名（all)，运行 main 方法生成代码</li></ol> <h3 id="本地缓存-caffeine-集成和配置"><a href="#本地缓存-caffeine-集成和配置" class="header-anchor">#</a> 本地缓存 Caffeine 集成和配置</h3> <p>Caffeine 是 Java 8 对 Google Guava 缓存的重写，是一个提供了近乎最佳命中率的高性能的缓存库。我们按照如下步骤集成和配置：</p> <ol><li>添加 spring-boot-starter-cache 依赖</li></ol> <p>使用 spring-boot-starter-cache “Starter” 可以快速添加基本缓存依赖项。 starter 引入了 spring-context-support。如果我们手动添加依赖项，则必须包含 spring-context-support 才能使用 JCache 或 Caffeine 支持。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-cache&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="2"><li>添加 caffeine 依赖</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.github.ben-manes.caffeine&lt;/groupId&gt;
+    &lt;artifactId&gt;caffeine&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="3"><li>自定义缓存管理器</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+    * Caffeine 缓存管理器
+    */
+@Bean
+public CacheManager caffeineCacheManager() {
+    SimpleCacheManager cacheManager = new SimpleCacheManager();
+
+    List&lt;CaffeineCache&gt; caches = new ArrayList&lt;&gt;(CacheConsts.CacheEnum.values().length);
+    for (CacheConsts.CacheEnum c : CacheConsts.CacheEnum.values()) {
+        if (c.isLocal()) {
+            Caffeine&lt;Object, Object&gt; caffeine = Caffeine.newBuilder().recordStats().maximumSize(c.getMaxSize());
+            if (c.getTtl() &gt; 0) {
+                caffeine.expireAfterWrite(Duration.ofSeconds(c.getTtl()));
+            }
+            caches.add(new CaffeineCache(c.getName(), caffeine.build()));
+        }
+    }
+
+    cacheManager.setCaches(caches);
+    return cacheManager;
+}
+</code></pre></div><ol start="4"><li>使用 @EnableCaching 注解开启缓存</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+@MapperScan(&quot;io.github.xxyopen.novel.dao.mapper&quot;)
+@EnableCaching
+@Slf4j
+public class NovelApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(NovelApplication.class, args);
+	}
+
+	@Bean
+	public CommandLineRunner commandLineRunner(ApplicationContext context){
+		return args -&gt; {
+			Map&lt;String, CacheManager&gt; beans = context.getBeansOfType(CacheManager.class);
+			log.info(&quot;加载了如下缓存管理器：&quot;);
+			beans.forEach((k,v)-&gt;{
+				log.info(&quot;{}:{}&quot;,k,v.getClass().getName());
+				log.info(&quot;缓存：{}&quot;,v.getCacheNames());
+			});
+
+		};
+	}
+
+}
+</code></pre></div><p>这样我们就可以使用 Spring Cache 的注解（例如 @Cacheable）开发了。</p> <h3 id="分布式缓存-redis-集成和配置"><a href="#分布式缓存-redis-集成和配置" class="header-anchor">#</a> 分布式缓存 Redis 集成和配置</h3> <p>本地缓存虽然有着访问速度快的优点，但无法进行大数据的存储。并且当我们集群部署多个服务节点，或者后期随着业务发展进行服务拆分后，没法共享缓存和保证缓存数据的一致性。
+本地缓存的数据还会随应用程序的重启而丢失，这样对于需要持久化的数据满足不了需求，还会导致重启后数据库瞬时压力过大。</p> <p>所以本地缓存一般适合于缓存只读数据，如统计类数据，或者每个部署节点独立的数据。其它情况就需要用到分布式缓存了。</p> <p>分布式缓存的集成步骤和本地缓存基本差不多，除了替换 caffeine 的依赖项为我们 redis 的依赖和配置上我们自定义的 redis 缓存管理器外，还要在配置文件中加入 redis 的连接配置：</p> <ol><li>加入依赖</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="2"><li>配置 redis 缓存管理器</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 缓存配置类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+@Configuration
+public class CacheConfig {
+
+    /**
+     * Caffeine 缓存管理器
+     */
+    @Bean
+    @Primary
+    public CacheManager caffeineCacheManager() {
+        SimpleCacheManager cacheManager = new SimpleCacheManager();
+
+        List&lt;CaffeineCache&gt; caches = new ArrayList&lt;&gt;(CacheConsts.CacheEnum.values().length);
+        for (CacheConsts.CacheEnum c : CacheConsts.CacheEnum.values()) {
+            if (c.isLocal()) {
+                Caffeine&lt;Object, Object&gt; caffeine = Caffeine.newBuilder().recordStats().maximumSize(c.getMaxSize());
+                if (c.getTtl() &gt; 0) {
+                    caffeine.expireAfterWrite(Duration.ofSeconds(c.getTtl()));
+                }
+                caches.add(new CaffeineCache(c.getName(), caffeine.build()));
+            }
+        }
+
+        cacheManager.setCaches(caches);
+        return cacheManager;
+    }
+
+    /**
+     * Redis 缓存管理器
+     */
+    @Bean
+    public CacheManager redisCacheManager(RedisConnectionFactory connectionFactory) {
+        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(connectionFactory);
+
+        RedisCacheConfiguration defaultCacheConfig = RedisCacheConfiguration.defaultCacheConfig()
+                .disableCachingNullValues().prefixCacheNameWith(CacheConsts.REDIS_CACHE_PREFIX);
+
+        Map&lt;String, RedisCacheConfiguration&gt; cacheMap = new LinkedHashMap&lt;&gt;(CacheConsts.CacheEnum.values().length);
+        for (CacheConsts.CacheEnum c : CacheConsts.CacheEnum.values()) {
+            if (c.isRemote()) {
+                if (c.getTtl() &gt; 0) {
+                    cacheMap.put(c.getName(), RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues()
+                            .prefixCacheNameWith(CacheConsts.REDIS_CACHE_PREFIX).entryTtl(Duration.ofSeconds(c.getTtl())));
+                } else {
+                    cacheMap.put(c.getName(), RedisCacheConfiguration.defaultCacheConfig().disableCachingNullValues()
+                            .prefixCacheNameWith(CacheConsts.REDIS_CACHE_PREFIX));
+                }
+            }
+        }
+
+        RedisCacheManager redisCacheManager = new RedisCacheManager(redisCacheWriter, defaultCacheConfig, cacheMap);
+        redisCacheManager.setTransactionAware(true);
+        redisCacheManager.initializeCaches();
+        return redisCacheManager;
+    }
+
+}
+</code></pre></div><ol start="3"><li>application.yml 中加入 redis 连接配置信息</li></ol> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+</code></pre></div><h3 id="搜索引擎-elasticsearch-集成与配置"><a href="#搜索引擎-elasticsearch-集成与配置" class="header-anchor">#</a> 搜索引擎 Elasticsearch 集成与配置</h3> <h4 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h4> <p>Elastic Stack 是一个可以帮助我们构建搜索体验、解决问题并取得成功的搜索平台。核心产品包括 Elasticsearch、Kibana、Beats 和 Logstash（也称为 <a href="https://www.elastic.co/cn/what-is/elk-stack" target="_blank" rel="noopener noreferrer">ELK Stack<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>）等等。能够安全可靠地获取任何来源、任何格式的数据，然后实时地对数据进行搜索、分析和可视化。</p> <p>Elasticsearch 和 Kibana 都是在免费开源的基础上构建而成，适用于各种各样的用例，从日志开始，到能够想到的任何项目，无一不能胜任。</p> <p>Elasticsearch 是一个基于 JSON 的分布式、RESTful 风格的搜索和数据分析引擎，能够解决不断涌现出的各种用例。 作为 Elastic Stack 的核心，它集中存储数据，帮助发现意料之中以及意料之外的情况。</p> <p>Kibana 是一个免费且开放的用户界面，能够对 Elasticsearch 数据进行可视化，并在 Elastic Stack 中进行导航。我们可以进行各种操作，从跟踪查询负载，到理解请求如何流经整个应用，都能轻松完成。</p> <h4 id="集成与配置"><a href="#集成与配置" class="header-anchor">#</a> 集成与配置</h4> <ol><li><p>Elasticsearch 和 Kibana 安装，如果不想在本地安装 Elasticsearch 和 Kibana，可以使用官方提供的免费试用版 <a href="https://www.elastic.co/cn/cloud/?elektra=home&amp;storm=cloud" target="_blank" rel="noopener noreferrer">Elastic Cloud<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>Kibana 中创建索引:</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>PUT /book
+{
+  &quot;mappings&quot; : {
+    &quot;properties&quot; : {
+      &quot;id&quot; : {
+        &quot;type&quot; : &quot;long&quot;
+      },
+      &quot;authorId&quot; : {
+        &quot;type&quot; : &quot;long&quot;
+      },
+      &quot;authorName&quot; : {
+        &quot;type&quot; : &quot;text&quot;,
+        &quot;analyzer&quot;: &quot;ik_smart&quot;
+      },
+      &quot;bookName&quot; : {
+        &quot;type&quot; : &quot;text&quot;,
+        &quot;analyzer&quot;: &quot;ik_smart&quot;
+      },
+      &quot;bookDesc&quot; : {
+        &quot;type&quot; : &quot;text&quot;,
+        &quot;analyzer&quot;: &quot;ik_smart&quot;
+      },
+      &quot;bookStatus&quot; : {
+        &quot;type&quot; : &quot;short&quot;
+      },
+      &quot;categoryId&quot; : {
+        &quot;type&quot; : &quot;integer&quot;
+      },
+      &quot;categoryName&quot; : {
+        &quot;type&quot; : &quot;text&quot;,
+        &quot;analyzer&quot;: &quot;ik_smart&quot;
+      },
+      &quot;lastChapterId&quot; : {
+        &quot;type&quot; : &quot;long&quot;
+      },
+      &quot;lastChapterName&quot; : {
+        &quot;type&quot; : &quot;text&quot;,
+        &quot;analyzer&quot;: &quot;ik_smart&quot;
+      },
+      &quot;lastChapterUpdateTime&quot; : {
+        &quot;type&quot;: &quot;long&quot;
+      },
+      &quot;picUrl&quot; : {
+        &quot;type&quot; : &quot;keyword&quot;,
+        &quot;index&quot; : false,
+        &quot;doc_values&quot; : false
+      },
+      &quot;score&quot; : {
+        &quot;type&quot; : &quot;integer&quot;
+      },
+      &quot;wordCount&quot; : {
+        &quot;type&quot; : &quot;integer&quot;
+      },
+      &quot;workDirection&quot; : {
+        &quot;type&quot; : &quot;short&quot;
+      },
+      &quot;visitCount&quot; : {
+        &quot;type&quot;: &quot;long&quot;
+      }
+    }
+  }
+}
+</code></pre></div><ol start="3"><li>项目添加如下依赖：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependencies&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;co.elastic.clients&lt;/groupId&gt;
+      &lt;artifactId&gt;elasticsearch-java&lt;/artifactId&gt;
+      &lt;version&gt;8.2.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+      &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+      &lt;version&gt;2.12.3&lt;/version&gt;
+    &lt;/dependency&gt;
+
+&lt;/dependencies&gt;
+</code></pre></div><ol start="4"><li>在 application.yml 中配置如下连接信息：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  elasticsearch:
+    uris:
+      - https://my-deployment-ce7ca3.es.us-central1.gcp.cloud.es.io:9243
+    username: elastic
+    password: qTjgYVKSuExX
+</code></pre></div><ol start="5"><li>配置 <a href="/course/novel/2.html#全新的-elasticsearch-java-api-client">Elasticsearch Java API Client</a></li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * elasticsearch 相关配置
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/23
+ */
+@Configuration
+@ConditionalOnProperty(prefix = &quot;spring.elasticsearch&quot;, name = &quot;enable&quot;, havingValue = &quot;true&quot;)
+@RequiredArgsConstructor
+public class EsConfig {
+
+    @Bean
+    public ElasticsearchClient elasticsearchClient(RestClient restClient) {
+
+        // Create the transport with a Jackson mapper
+        ElasticsearchTransport transport = new RestClientTransport(
+                restClient, new JacksonJsonpMapper());
+
+        // And create the API client
+        return new ElasticsearchClient(transport);
+    }
+
+}
+</code></pre></div><h3 id="spring-amqp-集成与配置"><a href="#spring-amqp-集成与配置" class="header-anchor">#</a> Spring AMQP 集成与配置</h3> <h4 id="介绍-2"><a href="#介绍-2" class="header-anchor">#</a> 介绍</h4> <p>AMQP（高级消息队列协议）是一个异步消息传递所使用的应用层协议规范，为面向消息的中间件设计，不受产品和开发语言的限制. Spring AMQP 将核心 Spring 概念应用于基于 AMQP 消息传递解决方案的开发。</p> <p>RabbitMQ 是基于 AMQP 协议的轻量级、可靠、可扩展、可移植的消息中间件，Spring 使用 RabbitMQ 通过 AMQP 协议进行通信。Spring Boot 为通过 RabbitMQ 使用 AMQP 提供了多种便利，包括 spring-boot-starter-amqp “Starter”。</p> <h4 id="集成与配置-2"><a href="#集成与配置-2" class="header-anchor">#</a> 集成与配置</h4> <ol><li>可通过如下 Docker 命令 安装 RabbiMQ：</li></ol> <div class="language- extra-class"><pre class="language-text"><code> docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.10-management
+</code></pre></div><ol start="2"><li>登录 RabbiMQ 的 web 管理界面，创建虚拟主机<code>novel</code>:</li></ol> <p><img src="/img/novel/rabbitmq.png" alt="RabbitMQ"></p> <ol start="3"><li>项目中加入如下的 maven 依赖：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="4"><li>在 application.yml 配置文件中加入 RabbitMQ 的连接配置：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  rabbitmq:
+    addresses: &quot;amqp://guest:guest@47.106.243.172&quot;
+    virtual-host: novel
+    template:
+      retry:
+        # 开启重试
+        enabled: true
+        # 最大重试次数
+        max-attempts: 3
+        # 第一次和第二次重试之间的持续时间
+        initial-interval: &quot;3s&quot;
+</code></pre></div><ol start="5"><li>在 Spring Beans 中注入 AmqpTemplate 发送消息</li></ol> <h3 id="分布式任务调度平台-xxl-job-集成与配置"><a href="#分布式任务调度平台-xxl-job-集成与配置" class="header-anchor">#</a> 分布式任务调度平台 XXL-JOB 集成与配置</h3> <h4 id="介绍-3"><a href="#介绍-3" class="header-anchor">#</a> 介绍</h4> <p>XXL-JOB 是一个开箱即用的开源分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。由调度模块和执行模块构成：</p> <ul><li>调度模块（调度中心）：</li></ul> <p>负责管理调度信息，按照调度配置发出调度请求，自身不承担业务代码。调度系统与任务解耦，提高了系统可用性和稳定性，同时调度系统性能不再受限于任务模块；
+支持可视化、简单且动态的管理调度信息，包括任务新建，更新，删除，GLUE开发和任务报警等，所有上述操作都会实时生效，同时支持监控调度结果以及执行日志，支持执行器Failover。</p> <ul><li>执行模块（执行器）：</li></ul> <p>负责接收调度请求并执行任务逻辑。任务模块专注于任务的执行等操作，开发和维护更加简单和高效；
+接收“调度中心”的执行请求、终止请求和日志请求等。</p> <p><img src="/img/novel/xxljob.png" alt="XXL-JOB 架构图"></p> <p>XXL-JOB 将调度行为抽象形成“调度中心”公共平台，而平台自身并不承担业务逻辑，“调度中心”负责发起调度请求。</p> <p>将任务抽象成分散的JobHandler，交由“执行器”统一管理，“执行器”负责接收调度请求并执行对应的JobHandler中业务逻辑。</p> <p>因此，“调度”和“任务”两部分可以相互解耦，提高系统整体稳定性和扩展性；</p> <p>XXL-JOB 的主要功能特性如下：</p> <ol><li>简单：支持通过 Web 页面对任务进行 CRUD 操作，操作简单，一分钟上手；</li> <li>动态：支持动态修改任务状态、启动/停止任务，以及终止运行中任务，即时生效；</li> <li>调度中心 HA（中心式）：调度采用中心式设计，“调度中心”自研调度组件并支持集群部署，可保证调度中心 HA；</li> <li>执行器 HA（分布式）：任务分布式执行，任务”执行器”支持集群部署，可保证任务执行 HA；</li> <li>注册中心: 执行器会周期性自动注册任务, 调度中心将会自动发现注册的任务并触发执行。同时，也支持手动录入执行器地址；</li> <li>弹性扩容缩容：一旦有新执行器机器上线或者下线，下次调度时将会重新分配任务；</li> <li>触发策略：提供丰富的任务触发策略，包括：Cron 触发、固定间隔触发、固定延时触发、API（事件）触发、人工触发、父子任务触发；</li> <li>调度过期策略：调度中心错过调度时间的补偿处理策略，包括：忽略、立即补偿触发一次等；</li> <li>阻塞处理策略：调度过于密集执行器来不及处理时的处理策略，策略包括：单机串行（默认）、丢弃后续调度、覆盖之前调度；</li> <li>任务超时控制：支持自定义任务超时时间，任务运行超时将会主动中断任务；</li> <li>任务失败重试：支持自定义任务失败重试次数，当任务失败时将会按照预设的失败重试次数主动进行重试；其中分片任务支持分片粒度的失败重试；</li> <li>任务失败告警；默认提供邮件方式失败告警，同时预留扩展接口，可方便的扩展短信、钉钉等告警方式；</li> <li>路由策略：执行器集群部署时提供丰富的路由策略，包括：第一个、最后一个、轮询、随机、一致性 HASH、最不经常使用、最近最久未使用、故障转移、忙碌转移等；</li> <li>分片广播任务：执行器集群部署时，任务路由策略选择”分片广播”情况下，一次任务调度将会广播触发集群中所有执行器执行一次任务，可根据分片参数开发分片任务；</li> <li>动态分片：分片广播任务以执行器为维度进行分片，支持动态扩容执行器集群从而动态增加分片数量，协同进行业务处理；在进行大数据量业务操作时可显著提升任务处理能力和速度。</li> <li>故障转移：任务路由策略选择”故障转移”情况下，如果执行器集群中某一台机器故障，将会自动Failover切换到一台正常的执行器发送调度请求。</li> <li>任务进度监控：支持实时监控任务进度；</li> <li>Rolling 实时日志：支持在线查看调度结果，并且支持以 Rolling 方式实时查看执行器输出的完整的执行日志；</li> <li>GLUE：提供Web IDE，支持在线开发任务逻辑代码，动态发布，实时编译生效，省略部署上线的过程。支持30个版本的历史版本回溯。</li> <li>脚本任务：支持以GLUE模式开发和运行脚本任务，包括 Shell、Python、NodeJS、PHP、PowerShell等类型脚本;</li> <li>命令行任务：原生提供通用命令行任务Handler（Bean任务，”CommandJobHandler”）；业务方只需要提供命令行即可；</li> <li>任务依赖：支持配置子任务依赖，当父任务执行结束且执行成功后将会主动触发一次子任务的执行, 多个子任务用逗号分隔；</li> <li>一致性：“调度中心”通过DB锁保证集群分布式调度的一致性, 一次任务调度只会触发一次执行；</li> <li>自定义任务参数：支持在线配置调度任务入参，即时生效；</li> <li>调度线程池：调度系统多线程触发调度运行，确保调度精确执行，不被堵塞；</li> <li>数据加密：调度中心和执行器之间的通讯进行数据加密，提升调度信息安全性；</li> <li>邮件报警：任务失败时支持邮件报警，支持配置多邮件地址群发报警邮件；</li> <li>推送 maven 中央仓库: 将会把最新稳定版推送到 maven 中央仓库, 方便用户接入和使用;</li> <li>运行报表：支持实时查看运行数据，如任务数量、调度次数、执行器数量等；以及调度报表，如调度日期分布图，调度成功分布图等；</li> <li>全异步：任务调度流程全异步化设计实现，如异步调度、异步运行、异步回调等，有效对密集调度进行流量削峰，理论上支持任意时长任务的运行；</li> <li>跨语言：调度中心与执行器提供语言无关的 RESTful API 服务，第三方任意语言可据此对接调度中心或者实现执行器。除此之外，还提供了 “多任务模式”和“httpJobHandler”等其他跨语言方案；</li> <li>国际化：调度中心支持国际化设置，提供中文、英文两种可选语言，默认为中文；</li> <li>容器化：提供官方 docker 镜像，并实时更新推送 dockerhub，进一步实现产品开箱即用；</li> <li>线程池隔离：调度线程池进行隔离拆分，慢任务自动降级进入”Slow”线程池，避免耗尽调度线程，提高系统稳定性；</li> <li>用户管理：支持在线管理系统用户，存在管理员、普通用户两种角色；</li> <li>权限控制：执行器维度进行权限控制，管理员拥有全量权限，普通用户需要分配执行器权限后才允许相关操作；</li></ol> <h4 id="集成与配置-3"><a href="#集成与配置-3" class="header-anchor">#</a> 集成与配置</h4> <ol><li>初始化如下的<code>调度数据库</code>：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>#
+# XXL-JOB v2.4.0-SNAPSHOT
+# Copyright (c) 2015-present, xuxueli.
+
+CREATE database if NOT EXISTS `xxl_job` default character set utf8mb4 collate utf8mb4_unicode_ci;
+use `xxl_job`;
+
+SET NAMES utf8mb4;
+
+CREATE TABLE `xxl_job_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `job_group` int(11) NOT NULL COMMENT '执行器主键ID',
+  `job_desc` varchar(255) NOT NULL,
+  `add_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `author` varchar(64) DEFAULT NULL COMMENT '作者',
+  `alarm_email` varchar(255) DEFAULT NULL COMMENT '报警邮件',
+  `schedule_type` varchar(50) NOT NULL DEFAULT 'NONE' COMMENT '调度类型',
+  `schedule_conf` varchar(128) DEFAULT NULL COMMENT '调度配置，值含义取决于调度类型',
+  `misfire_strategy` varchar(50) NOT NULL DEFAULT 'DO_NOTHING' COMMENT '调度过期策略',
+  `executor_route_strategy` varchar(50) DEFAULT NULL COMMENT '执行器路由策略',
+  `executor_handler` varchar(255) DEFAULT NULL COMMENT '执行器任务handler',
+  `executor_param` varchar(512) DEFAULT NULL COMMENT '执行器任务参数',
+  `executor_block_strategy` varchar(50) DEFAULT NULL COMMENT '阻塞处理策略',
+  `executor_timeout` int(11) NOT NULL DEFAULT '0' COMMENT '任务执行超时时间，单位秒',
+  `executor_fail_retry_count` int(11) NOT NULL DEFAULT '0' COMMENT '失败重试次数',
+  `glue_type` varchar(50) NOT NULL COMMENT 'GLUE类型',
+  `glue_source` mediumtext COMMENT 'GLUE源代码',
+  `glue_remark` varchar(128) DEFAULT NULL COMMENT 'GLUE备注',
+  `glue_updatetime` datetime DEFAULT NULL COMMENT 'GLUE更新时间',
+  `child_jobid` varchar(255) DEFAULT NULL COMMENT '子任务ID，多个逗号分隔',
+  `trigger_status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '调度状态：0-停止，1-运行',
+  `trigger_last_time` bigint(13) NOT NULL DEFAULT '0' COMMENT '上次调度时间',
+  `trigger_next_time` bigint(13) NOT NULL DEFAULT '0' COMMENT '下次调度时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `job_group` int(11) NOT NULL COMMENT '执行器主键ID',
+  `job_id` int(11) NOT NULL COMMENT '任务，主键ID',
+  `executor_address` varchar(255) DEFAULT NULL COMMENT '执行器地址，本次执行的地址',
+  `executor_handler` varchar(255) DEFAULT NULL COMMENT '执行器任务handler',
+  `executor_param` varchar(512) DEFAULT NULL COMMENT '执行器任务参数',
+  `executor_sharding_param` varchar(20) DEFAULT NULL COMMENT '执行器任务分片参数，格式如 1/2',
+  `executor_fail_retry_count` int(11) NOT NULL DEFAULT '0' COMMENT '失败重试次数',
+  `trigger_time` datetime DEFAULT NULL COMMENT '调度-时间',
+  `trigger_code` int(11) NOT NULL COMMENT '调度-结果',
+  `trigger_msg` text COMMENT '调度-日志',
+  `handle_time` datetime DEFAULT NULL COMMENT '执行-时间',
+  `handle_code` int(11) NOT NULL COMMENT '执行-状态',
+  `handle_msg` text COMMENT '执行-日志',
+  `alarm_status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '告警状态：0-默认、1-无需告警、2-告警成功、3-告警失败',
+  PRIMARY KEY (`id`),
+  KEY `I_trigger_time` (`trigger_time`),
+  KEY `I_handle_code` (`handle_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_log_report` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `trigger_day` datetime DEFAULT NULL COMMENT '调度-时间',
+  `running_count` int(11) NOT NULL DEFAULT '0' COMMENT '运行中-日志数量',
+  `suc_count` int(11) NOT NULL DEFAULT '0' COMMENT '执行成功-日志数量',
+  `fail_count` int(11) NOT NULL DEFAULT '0' COMMENT '执行失败-日志数量',
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `i_trigger_day` (`trigger_day`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_logglue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `job_id` int(11) NOT NULL COMMENT '任务，主键ID',
+  `glue_type` varchar(50) DEFAULT NULL COMMENT 'GLUE类型',
+  `glue_source` mediumtext COMMENT 'GLUE源代码',
+  `glue_remark` varchar(128) NOT NULL COMMENT 'GLUE备注',
+  `add_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_registry` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `registry_group` varchar(50) NOT NULL,
+  `registry_key` varchar(255) NOT NULL,
+  `registry_value` varchar(255) NOT NULL,
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `i_g_k_v` (`registry_group`,`registry_key`,`registry_value`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `app_name` varchar(64) NOT NULL COMMENT '执行器AppName',
+  `title` varchar(12) NOT NULL COMMENT '执行器名称',
+  `address_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '执行器地址类型：0=自动注册、1=手动录入',
+  `address_list` text COMMENT '执行器地址列表，多地址逗号分隔',
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL COMMENT '账号',
+  `password` varchar(50) NOT NULL COMMENT '密码',
+  `role` tinyint(4) NOT NULL COMMENT '角色：0-普通用户、1-管理员',
+  `permission` varchar(255) DEFAULT NULL COMMENT '权限：执行器ID列表，多个逗号分割',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `i_username` (`username`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `xxl_job_lock` (
+  `lock_name` varchar(50) NOT NULL COMMENT '锁名称',
+  PRIMARY KEY (`lock_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `xxl_job_group`(`id`, `app_name`, `title`, `address_type`, `address_list`, `update_time`) VALUES (1, 'xxl-job-executor-sample', '示例执行器', 0, NULL, '2018-11-03 22:21:31' );
+INSERT INTO `xxl_job_info`(`id`, `job_group`, `job_desc`, `add_time`, `update_time`, `author`, `alarm_email`, `schedule_type`, `schedule_conf`, `misfire_strategy`, `executor_route_strategy`, `executor_handler`, `executor_param`, `executor_block_strategy`, `executor_timeout`, `executor_fail_retry_count`, `glue_type`, `glue_source`, `glue_remark`, `glue_updatetime`, `child_jobid`) VALUES (1, 1, '测试任务1', '2018-11-03 22:21:31', '2018-11-03 22:21:31', 'XXL', '', 'CRON', '0 0 0 * * ? *', 'DO_NOTHING', 'FIRST', 'demoJobHandler', '', 'SERIAL_EXECUTION', 0, 0, 'BEAN', '', 'GLUE代码初始化', '2018-11-03 22:21:31', '');
+INSERT INTO `xxl_job_user`(`id`, `username`, `password`, `role`, `permission`) VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 1, NULL);
+INSERT INTO `xxl_job_lock` ( `lock_name`) VALUES ( 'schedule_lock');
+
+commit;
+</code></pre></div><p><strong>注：调度中心支持集群部署，集群情况下各节点务必连接同一个 mysql 实例，如果 mysql 做主从，调度中心集群节点务必强制走主库。</strong></p> <ol start="2"><li>Docker 镜像方式搭建调度中心：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+* 如需自定义 mysql 等配置，可通过 &quot;-e PARAMS&quot; 指定，参数格式 PARAMS=&quot;--key=value  --key2=value2&quot; ；
+* 如需自定义 JVM 内存参数 等配置，可通过 &quot;-e JAVA_OPTS&quot; 指定，参数格式 JAVA_OPTS=&quot;-Xmx512m&quot; ；
+*/
+docker run \
+ -e PARAMS=' \
+ --spring.datasource.url=jdbc:mysql://47.106.243.172:3306/xxl_job?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=Asia/Shanghai \
+ --spring.datasource.username=test \
+ --spring.datasource.password=test!1234 \
+ --xxl.job.accessToken=123' \
+ -p 8080:8080 \
+ -v /tmp:/data/applogs \
+ --name xxl-job-admin \
+ -d xuxueli/xxl-job-admin:{指定版本} 
+</code></pre></div><p><strong>注：如上所示，数据库密码中如果包含特殊字符(例如，&amp; 或 ！)，需要对特殊字符进行转义，PARAMS 参数值一定要使用使用单引号而不能使用双引号。</strong></p> <table><thead><tr><th style="text-align:left;">常用转义字符</th> <th style="text-align:center;">作用</th></tr></thead> <tbody><tr><td style="text-align:left;">反斜杠（\）</td> <td style="text-align:center;">使反斜杠后面的一个变量变为单纯的字符串，如果放在引号里面，是不起作用的</td></tr> <tr><td style="text-align:left;">单引号（’’）</td> <td style="text-align:center;">转义其中所有的变量为单纯的字符串</td></tr> <tr><td style="text-align:left;">双引号（&quot;&quot;）</td> <td style="text-align:center;">保留其中的变量属性，不进行转义处理</td></tr></tbody></table> <p>调度中心访问地址：http://ip:8080/xxl-job-admin (该地址执行器将会使用到，作为回调地址)</p> <p>默认登录账号 “admin/123456”，登录后如下图所示：</p> <p><img src="/img/novel/xxljob1.png" alt="XXL-JOB 首页"></p> <ol start="3"><li>项目中引入<code>xxl-job-core</code>的 maven 依赖：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.xuxueli&lt;/groupId&gt;
+    &lt;artifactId&gt;xxl-job-core&lt;/artifactId&gt;
+    &lt;version&gt;2.3.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre></div><ol start="4"><li>application.yml 中加入执行器配置：</li></ol> <div class="language- extra-class"><pre class="language-text"><code># XXL-JOB 配置
+xxl:
+  job:
+    admin:
+      ### 调度中心部署根地址 [选填]：如调度中心集群部署存在多个地址则用逗号分隔。执行器将会使用该地址进行&quot;执行器心跳注册&quot;和&quot;任务结果回调&quot;；为空则关闭自动注册；
+      addresses: http://127.0.0.1:8080/xxl-job-admin
+    executor:
+      ### 执行器AppName [选填]：执行器心跳注册分组依据；为空则关闭自动注册
+      appname: xxl-job-executor-novel
+      ### 执行器运行日志文件存储磁盘路径 [选填] ：需要对该路径拥有读写权限；为空则使用默认路径；
+      logpath: logs/xxl-job/jobhandler
+    ### xxl-job, access token
+    accessToken: 123
+</code></pre></div><ol start="5"><li>在<code>io.github.xxyopen.novel.core.config</code>包下创建 XXL-JOB 配置类配置执行器组件：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * XXL-JOB 配置类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/31
+ */
+@Configuration
+@Slf4j
+public class XxlJobConfig {
+
+    @Value(&quot;${xxl.job.admin.addresses}&quot;)
+    private String adminAddresses;
+
+    @Value(&quot;${xxl.job.accessToken}&quot;)
+    private String accessToken;
+
+    @Value(&quot;${xxl.job.executor.appname}&quot;)
+    private String appname;
+
+    @Value(&quot;${xxl.job.executor.logpath}&quot;)
+    private String logPath;
+
+    @Bean
+    public XxlJobSpringExecutor xxlJobExecutor() {
+        log.info(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; xxl-job config init.&quot;);
+        XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
+        xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
+        xxlJobSpringExecutor.setAccessToken(accessToken);
+        xxlJobSpringExecutor.setAppname(appname);
+        xxlJobSpringExecutor.setLogPath(logPath);
+        return xxlJobSpringExecutor;
+    }
+
+}
+</code></pre></div><h2 id="接口开发"><a href="#接口开发" class="header-anchor">#</a> 接口开发</h2> <h3 id="接口规约"><a href="#接口规约" class="header-anchor">#</a> 接口规约</h3> <ol><li><p>协议：生产环境必须使用 HTTPS。</p></li> <li><p>路径：每一个 API 需对应一个路径，表示 API 具体的请求地址：</p> <p>a） 代表一种资源，只能为名词，推荐使用复数，不能为动词，请求方法已经表达动作意义。</p> <p>b） URL 路径不能使用大写，单词如果需要分隔，统一使用下划线。</p> <p>c） 路径禁止携带表示请求内容类型的后缀，比如&quot;.json&quot;,&quot;.xml&quot;，通过 accept 头表达即可。</p></li> <li><p>请求方法：对具体操作的定义，常见的请求方法如下：</p> <p>a） GET：从服务器取出资源。</p> <p>b） POST：在服务器新建一个资源。</p> <p>c） PUT：在服务器更新资源。</p> <p>d） DELETE：从服务器删除资源。</p></li> <li><p>请求内容： URL 带的参数必须无敏感信息或符合安全要求； body 里带参数时必须设置 Content-Type。</p></li> <li><p>响应体：响应体 body 可放置多种数据类型，由 Content-Type 头来确定。</p></li></ol> <h3 id="service-dao-层方法命名规约"><a href="#service-dao-层方法命名规约" class="header-anchor">#</a> Service/DAO 层方法命名规约</h3> <ol><li><p>获取单个对象的方法用 get 做前缀。</p></li> <li><p>获取多个对象的方法用 list 做前缀，复数结尾，如： listObjects。</p></li> <li><p>获取统计值的方法用 count 做前缀。</p></li> <li><p>插入的方法用 save/insert 做前缀。</p></li> <li><p>删除的方法用 remove/delete 做前缀。</p></li> <li><p>修改的方法用 update 做前缀。</p></li></ol> <h3 id="首页相关接口开发"><a href="#首页相关接口开发" class="header-anchor">#</a> 首页相关接口开发</h3> <p>首页 UI 图如下：</p> <p><img src="/img/novel/home.png" alt="首页 UI 图"></p> <p>从上图可以看出首页包括 <code>小说推荐</code>（包括轮播图、周推、强推等）、<code>新闻公告</code>、<code>点击榜</code>、<code>新书榜</code>、<code>更新榜</code>（包括最新更新列表） 和 <code>友情链接</code> 6个内容区域的展示，所以我们需要开发 6 个相关的 API 查询接口以提供数据给前端。</p> <p>首先，我们需要在 controller、service、service.impl 包下创建首页模块、新闻模块和小说模块的 API 控制器 Controller、业务服务类 Service 以及服务实现类 ServiceImpl。</p> <p><strong>注：首页是我们小说门户的入口，承载着我们系统很大一部分流量，并且内容不需要实时更新。所以首页相关内容的查询最好都做缓存处理。</strong></p> <h4 id="首页小说推荐查询接口开发"><a href="#首页小说推荐查询接口开发" class="header-anchor">#</a> 首页小说推荐查询接口开发</h4> <p>首页小说推荐的数据主要保存在在数据库**home_book [<strong>首页小说推荐</strong>]**表中，该查询是一个从服务器取出资源的操作，所以该请求方法需要使用 GET 类型。具体实现步骤如下：</p> <ol><li>首先我们需要在<code>io.github.xxyopen.novel.manager</code>包下创建首页推荐小说的缓存管理类如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 首页推荐小说 缓存管理类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+@Component
+@RequiredArgsConstructor
+public class HomeBookCacheManager {
+
+    private final HomeBookMapper homeBookMapper;
+
+    private final BookInfoMapper bookInfoMapper;
+
+    /**
+     * 查询首页小说推荐，并放入缓存中
+     */
+    @Cacheable(cacheManager = CacheConsts.CAFFEINE_CACHE_MANAGER
+            , value = CacheConsts.HOME_BOOK_CACHE_NAME)
+    public List&lt;HomeBookRespDto&gt; listHomeBooks() {
+        // 从首页小说推荐表中查询出需要推荐的小说
+        List&lt;HomeBook&gt; homeBooks = homeBookMapper.selectList(null);
+
+        // 获取推荐小说ID列表
+        if (!CollectionUtils.isEmpty(homeBooks)) {
+            List&lt;Long&gt; bookIds = homeBooks.stream()
+                    .map(HomeBook::getBookId)
+                    .toList();
+
+            // 根据小说ID列表查询相关的小说信息列表
+            QueryWrapper&lt;BookInfo&gt; bookInfoQueryWrapper = new QueryWrapper&lt;&gt;();
+            bookInfoQueryWrapper.in(&quot;id&quot;, bookIds);
+            List&lt;BookInfo&gt; bookInfos = bookInfoMapper.selectList(bookInfoQueryWrapper);
+
+            // 组装 HomeBookRespDto 列表数据并返回
+            if(!CollectionUtils.isEmpty(bookInfos)){
+                Map&lt;Long, BookInfo&gt; bookInfoMap = bookInfos.stream()
+                        .collect(Collectors.toMap(BookInfo::getId, Function.identity()));
+                return homeBooks.stream().map(v -&gt; {
+                    BookInfo bookInfo = bookInfoMap.get(v.getBookId());
+                    HomeBookRespDto bookRespDto = new HomeBookRespDto();
+                    bookRespDto.setBookId(v.getBookId());
+                    bookRespDto.setBookName(bookInfo.getBookName());
+                    bookRespDto.setPicUrl(bookInfo.getPicUrl());
+                    bookRespDto.setAuthorName(bookInfo.getAuthorName());
+                    bookRespDto.setBookDesc(bookInfo.getBookDesc());
+                    return bookRespDto;
+                }).toList();
+
+            }
+
+        }
+
+        return Collections.emptyList();
+    }
+
+}
+</code></pre></div><p>该缓存管理类包含了一个查询首页小说推荐数据的方法，该方法执行数据库查询逻辑并进行简单的处理得到我们需要的数据格式并通过 @Cacheable 注解缓存起来。
+该方法下次再被调用时会直接从缓存中拿取数据而不需要再一次查询数据库并处理，大大减轻了数据库的压力。</p> <ol start="2"><li>然后我们在首页模块业务类<code>HomeService</code>中定义首页小说推荐查询的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 首页模块 服务类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/13
+ */
+public interface HomeService {
+
+    /**
+     * 查询首页小说推荐列表
+     *
+     * @return 首页小说推荐列表的 rest 响应结果
+     * */
+    RestResp&lt;List&lt;HomeBookRespDto&gt;&gt; listHomeBooks();
+}
+</code></pre></div><ol start="3"><li>接着我们在首页模块业务实现类<code>HomeServiceImpl</code>中实现<code>HomeService</code>中定义的抽象方法，通过调用<code>HomeBookCacheManager</code>的<code>listHomeBooks</code>方法获取到所需数据并返回：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 首页模块 服务实现类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/13
+ */
+@Service
+@RequiredArgsConstructor
+public class HomeServiceImpl implements HomeService {
+
+    private final HomeBookCacheManager homeBookCacheManager;
+
+    @Override
+    public RestResp&lt;List&lt;HomeBookRespDto&gt;&gt; listHomeBooks() {
+        return RestResp.ok(homeBookCacheManager.listHomeBooks());
+    }
+}
+</code></pre></div><ol start="4"><li>最后我们在首页模块的 API 控制器<code>HomeController</code>中定义 GET 类型的查询接口，调用 service 中的相应业务方法获得首页小说推荐数据并返回给前端：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 首页模块 API 接口
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+@RestController
+@RequestMapping(ApiRouterConsts.API_FRONT_HOME_URL_PREFIX)
+@RequiredArgsConstructor
+public class HomeController {
+
+    private final HomeService homeService;
+
+    /**
+     * 首页小说推荐查询接口
+     * */
+    @GetMapping(&quot;books&quot;)
+    public RestResp&lt;List&lt;HomeBookRespDto&gt;&gt; listHomeBooks(){
+        return homeService.listHomeBooks();
+    }
+}
+</code></pre></div><h3 id="登录注册相关接口开发"><a href="#登录注册相关接口开发" class="header-anchor">#</a> 登录注册相关接口开发</h3> <p>JWT（JSON Web Token）是一种开放的<a href="https://datatracker.ietf.org/doc/html/rfc7519" target="_blank" rel="noopener noreferrer">RFC 7519<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>行业标准方法，它定义了一种紧凑的、自包含的方式，用于作为 JSON 对象在各方之间安全地传输信息。该信息可以被验证和信任，因为它是数字签名的。服务端只生成和验证 JWT，客户端保存 JWT，所以 JWT 是无状态的。</p> <p>由于 JWT 的无状态性，特别适用于分布式站点的单点登录（SSO）场景，已经成为了目前分布式服务权限控制解决方案的事实标准。我们 novel 项目是一个多系统并且后期会拓展为微服务架构的项目，所以使用 JWT 来实现登录认证。</p> <p><a href="https://github.com/jwtk/jjwt" target="_blank" rel="noopener noreferrer">JJWT<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个在 JVM 和 Android 上创建和验证 JWT 非常易于使用和理解的库，JJWT 是完全基于 JWT、JWS、JWE、JWK 和 JWA RFC 规范的纯 Java 实现，并且在 Apache 2.0 许可条款下开源，目前在 JAVA 应用程序中广泛使用。novel 项目集成了该库以实现 JWT 的生成和验证。</p> <p>注册和登录的 UI 图如下：</p> <p><img src="/img/novel/register.png" alt="注册 UI 图"></p> <p><img src="/img/novel/login.png" alt="登录 UI 图"></p> <h4 id="获取图片验证码接口开发"><a href="#获取图片验证码接口开发" class="header-anchor">#</a> 获取图片验证码接口开发</h4> <p>从注册的 UI 图中可以看出我们需要一个图形验证码来防止用户利用机器人自动注册。该图形验证码由服务端生成，当用户申请注册时必须带上验证码，由服务端来校验验证码的有效性，只有验证码匹配才能允许用户注册。获取图片验证码接口开发步骤如下：</p> <ol><li><p>图形验证码属于一种图片资源，所以我们首先需要在 controller、service、service.impl 包下创建资源（Resource，处理图片/视频/文档等）模块的 API 控制器 Controller、业务服务类 Service 以及服务实现类 ServiceImpl。</p></li> <li><p>接着我们需要在<code>io.github.xxyopen.novel.core.common.util</code>包下创建图形验证码工具类来生成随机校验码和对应的 Base64 编码后的图片：</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 图片验证码工具类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/17
+ */
+@UtilityClass
+public class ImgVerifyCodeUtils {
+
+    /**
+     * 随机产生只有数字的字符串
+     */
+    private final String randNumber = &quot;0123456789&quot;;
+
+    /**
+     * 图片宽
+     */
+    private final int width = 100;
+
+    /**
+     * 图片高
+     */
+    private final int height = 38;
+
+    private final Random random = new Random();
+
+    /**
+     * 获得字体
+     */
+    private Font getFont() {
+        return new Font(&quot;Fixed&quot;, Font.PLAIN, 23);
+    }
+
+
+    /**
+     * 生成校验码图片
+     */
+    public String genVerifyCodeImg(String verifyCode) throws IOException {
+        // BufferedImage类是具有缓冲区的Image类,Image类是用于描述图像信息的类
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_BGR);
+        // 产生Image对象的Graphics对象,改对象可以在图像上进行各种绘制操作
+        Graphics g = image.getGraphics();
+        //图片大小
+        g.fillRect(0, 0, width, height);
+        //字体大小
+        //字体颜色
+        g.setColor(new Color(204, 204, 204));
+        // 绘制干扰线
+        // 干扰线数量
+        int lineSize = 40;
+        for (int i = 0; i &lt;= lineSize; i++) {
+            drawLine(g);
+        }
+        // 绘制随机字符
+        drawString(g, verifyCode);
+        g.dispose();
+        //将图片转换成Base64字符串
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        ImageIO.write(image, &quot;JPEG&quot;, stream);
+        return Base64.getEncoder().encodeToString(stream.toByteArray());
+    }
+
+    /**
+     * 绘制字符串
+     */
+    private void drawString(Graphics g, String verifyCode) {
+        for (int i = 1; i &lt;= verifyCode.length(); i++) {
+            g.setFont(getFont());
+            g.setColor(new Color(random.nextInt(101), random.nextInt(111), random
+                    .nextInt(121)));
+            g.translate(random.nextInt(3), random.nextInt(3));
+            g.drawString(String.valueOf(verifyCode.charAt(i - 1)), 13 * i, 23);
+        }
+    }
+
+    /**
+     * 绘制干扰线
+     */
+    private void drawLine(Graphics g) {
+        int x = random.nextInt(width);
+        int y = random.nextInt(height);
+        int xl = random.nextInt(13);
+        int yl = random.nextInt(15);
+        g.drawLine(x, y, x + xl, y + yl);
+    }
+
+    /**
+     * 获取随机的校验码
+     */
+    public String getRandomVerifyCode(int num) {
+        int randNumberSize = randNumber.length();
+        StringBuilder verifyCode = new StringBuilder();
+        for (int i = 0; i &lt; num; i++) {
+            String rand = String.valueOf(randNumber.charAt(random.nextInt(randNumberSize)));
+            verifyCode.append(rand);
+        }
+        return verifyCode.toString();
+    }
+
+}
+</code></pre></div><ol start="3"><li>然后，我们在<code>io.github.xxyopen.novel.manager</code>包下创建验证码管理类，用于生成、校验和删除验证码（不限于图形验证码）：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 验证码 管理类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/12
+ */
+@Component
+@RequiredArgsConstructor
+@Slf4j
+public class VerifyCodeManager {
+
+    private final StringRedisTemplate stringRedisTemplate;
+
+    /**
+     * 生成图形验证码，并放入 Redis 中
+     */
+    public String genImgVerifyCode(String sessionId) throws IOException {
+        String verifyCode = ImgVerifyCodeUtils.getRandomVerifyCode(4);
+        String img = ImgVerifyCodeUtils.genVerifyCodeImg(verifyCode);
+        stringRedisTemplate.opsForValue().set(CacheConsts.IMG_VERIFY_CODE_CACHE_KEY + sessionId
+                , verifyCode, Duration.ofMinutes(5));
+        return img;
+    }
+
+    /**
+     * 校验图形验证码
+     */
+    public boolean imgVerifyCodeOk(String sessionId, String verifyCode) {
+        return Objects.equals(
+                stringRedisTemplate.opsForValue().get(CacheConsts.IMG_VERIFY_CODE_CACHE_KEY + sessionId)
+                , verifyCode);
+    }
+
+    /**
+     * 从 Redis 中删除验证码
+     */
+    public void removeImgVerifyCode(String sessionId) {
+        stringRedisTemplate.delete(CacheConsts.IMG_VERIFY_CODE_CACHE_KEY + sessionId);
+    }
+</code></pre></div><p><strong>注：我们在保存验证码的时候需要一个全局唯一的 sessionId 字符串用于标识该验证码属于哪个浏览器会话，该 sessionId 会在验证码返回给前端的时候一并返回，在用户提交注册的时候，该 sessionId 会和验证码一起提交用于校验</strong></p> <ol start="4"><li>接着，我们在资源模块业务类<code>ResourceService</code>中定义获取图片验证码的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 获取图片验证码
+ *
+ * @throws IOException 验证码图片生成失败
+ * @return Base64编码的图片
+ */
+RestResp&lt;ImgVerifyCodeRespDto&gt; getImgVerifyCode() throws IOException;
+</code></pre></div><ol start="5"><li>接着，我们在资源模块业务实现类<code>ResourceServiceImpl</code>中实现<code>ResourceService</code>中定义的抽象方法，调用<code>VerifyCodeManager</code>中获取图形验证码方法并返回结果：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;ImgVerifyCodeRespDto&gt; getImgVerifyCode() throws IOException {
+    String sessionId = IdWorker.get32UUID();
+    return RestResp.ok(ImgVerifyCodeRespDto.builder()
+            .sessionId(sessionId)
+            .img(verifyCodeManager.genImgVerifyCode(sessionId))
+            .build());
+}
+</code></pre></div><ol start="6"><li>最后，我们在资源模块的 API 控制器<code>ResourceController</code>中定义 GET 类型的查询接口，调用 service 中的相应业务方法获得图形验证码数据并返回给前端：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 获取图片验证码接口
+ */
+@GetMapping(&quot;img_verify_code&quot;)
+public RestResp&lt;ImgVerifyCodeRespDto&gt; getImgVerifyCode() throws IOException {
+    return resourceService.getImgVerifyCode();
+}
+</code></pre></div><h4 id="注册接口开发"><a href="#注册接口开发" class="header-anchor">#</a> 注册接口开发</h4> <p>用户注册需要在在数据库**user_info [<strong>用户信息</strong>]**表中插入一条用户数据，是一个在服务器新建资源的操作，所以该请求方法需要使用 POST 类型。具体实现步骤如下：</p> <ol><li>首先我们在配置文件<code>application.yml</code>中定义 JWT 相关配置：</li></ol> <div class="language- extra-class"><pre class="language-text"><code># 项目配置
+novel:
+  # JWT 密钥
+  jwt:
+    secret: E66559580A1ADF48CDD928516062F12E
+</code></pre></div><p><strong>注：目前只有 JWT 密钥的配置，后期会拓展过期时间等其他配置</strong></p> <ol start="2"><li>然后，我们在<code>io.github.xxyopen.novel.core.util</code>包下创建 JWT 工具类，用于 JWT 的生成和解析：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * JWT 工具类
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/17
+ */
+@ConditionalOnProperty(&quot;novel.jwt.secret&quot;)
+@Component
+@Slf4j
+public class JwtUtils {
+
+    /**
+     * 注入JWT加密密钥
+     */
+    @Value(&quot;${novel.jwt.secret}&quot;)
+    private String secret;
+
+    /**
+     * 定义系统标识头常量
+     */
+    private static final String HEADER_SYSTEM_KEY = &quot;systemKeyHeader&quot;;
+
+    /**
+     * 根据用户 ID 生成 JWT
+     * @param uid 用户 ID
+     * @param systemKey 系统标识
+     * @return JWT
+     */
+    public String generateToken(Long uid, String systemKey) {
+        return Jwts.builder()
+                .setHeaderParam(HEADER_SYSTEM_KEY, systemKey)
+                .setSubject(uid.toString())
+                .signWith(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))
+                .compact();
+    }
+
+    /**
+     * 解析 JWT 返回用户 ID
+     * @param token JWT
+     * @param systemKey 系统标识
+     * @return 用户 ID
+     */
+    public Long parseToken(String token, String systemKey) {
+        Jws&lt;Claims&gt; claimsJws;
+        try {
+            claimsJws = Jwts.parserBuilder()
+                    .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))
+                    .build()
+                    .parseClaimsJws(token);
+            // OK, we can trust this JWT
+            // 判断该 JWT 是否属于指定系统
+            if (Objects.equals(claimsJws.getHeader().get(HEADER_SYSTEM_KEY), systemKey)) {
+                return Long.parseLong(claimsJws.getBody().getSubject());
+            }
+        } catch (JwtException e) {
+            log.warn(&quot;JWT解析失败:{}&quot;, token);
+            // don't trust the JWT!
+        }
+        return null;
+    }
+
+}
+</code></pre></div><ol start="3"><li>接着我们需要在用户模块业务类<code>UserService</code>中定义注册的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 用户注册
+ *
+ * @param dto 注册参数
+ * @return JWT
+ */
+RestResp&lt;UserRegisterRespDto&gt; register(UserRegisterReqDto dto);
+</code></pre></div><ol start="4"><li>接着我们在用户模块业务实现类<code>UserServiceImpl</code>中实现<code>UserService</code>中定义的抽象方法，对验证码、手机号进行校验。校验成功，则保存用户信息到数据库，并删除验证码和使用 JWT 工具类生成 JWT 字符串返回；校验失败，则返回相应的错误码给前端，具体代码如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;UserRegisterRespDto&gt; register(UserRegisterReqDto dto) {
+    // 校验图形验证码是否正确
+    if (!verifyCodeManager.imgVerifyCodeOk(dto.getSessionId(), dto.getVelCode())) {
+        // 图形验证码校验失败
+        throw new BusinessException(ErrorCodeEnum.USER_VERIFY_CODE_ERROR);
+    }
+
+    // 校验手机号是否已注册
+    QueryWrapper&lt;UserInfo&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+    queryWrapper.eq(DatabaseConsts.UserInfoTable.COLUMN_USERNAME, dto.getUsername())
+            .last(DatabaseConsts.SqlEnum.LIMIT_1.getSql());
+    if (userInfoMapper.selectCount(queryWrapper) &gt; 0) {
+        // 手机号已注册
+        throw new BusinessException(ErrorCodeEnum.USER_NAME_EXIST);
+    }
+
+    // 注册成功，保存用户信息
+    UserInfo userInfo = new UserInfo();
+    userInfo.setPassword(DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8)));
+    userInfo.setUsername(dto.getUsername());
+    userInfo.setNickName(dto.getUsername());
+    userInfo.setCreateTime(LocalDateTime.now());
+    userInfo.setUpdateTime(LocalDateTime.now());
+    userInfo.setSalt(&quot;0&quot;);
+    userInfoMapper.insert(userInfo);
+
+    // 删除验证码
+    verifyCodeManager.removeImgVerifyCode(dto.getSessionId());
+
+    // 生成JWT 并返回
+    return RestResp.ok(
+            UserRegisterRespDto.builder()
+                    .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY))
+                    .uid(userInfo.getId())
+                    .build()
+    );
+
+}
+</code></pre></div><ol start="5"><li>最后，我们在用户模块 API 控制器<code>UserController</code>中定义 POST 类型的注册接口，调用用户模块 service 中的相应业务方法注册用户：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+    * 用户注册接口
+    */
+@PostMapping(&quot;register&quot;)
+public RestResp&lt;UserRegisterRespDto&gt; register(@Valid @RequestBody UserRegisterReqDto dto) {
+    return userService.register(dto);
+}
+</code></pre></div><h4 id="登录接口开发"><a href="#登录接口开发" class="header-anchor">#</a> 登录接口开发</h4> <p>用户登录是一个特殊接口，不是单独请求一个资源，而是对于用户信息验证，创建一个 JWT，而且登录提交的数据中还包含敏感数据（密码）。URL 带的参数必须无敏感信息或符合安全要求，所以我们需要定义 POST 类型的接口来处理登录请求。具体实现步骤如下：</p> <ol><li>首先我们需要在用户模块业务类<code>UserService</code>中定义登录的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 用户登录
+ *
+ * @param dto 登录参数
+ * @return JWT + 昵称
+*/
+RestResp&lt;UserLoginRespDto&gt; login(UserLoginReqDto dto);
+</code></pre></div><ol start="2"><li>接着我们在用户模块业务实现类<code>UserServiceImpl</code>中实现<code>UserService</code>中定义的抽象方法，对登录用户名密码进行校验。校验通过，则生成 JWT 字符串返回；校验失败，则返回对应的错误码：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;UserLoginRespDto&gt; login(UserLoginReqDto dto) {
+    // 查询用户信息
+    QueryWrapper&lt;UserInfo&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+    queryWrapper.eq(DatabaseConsts.UserInfoTable.COLUMN_USERNAME, dto.getUsername())
+            .last(DatabaseConsts.SqlEnum.LIMIT_1.getSql());
+    UserInfo userInfo = userInfoMapper.selectOne(queryWrapper);
+    if (Objects.isNull(userInfo)) {
+        // 用户不存在
+        throw new BusinessException(ErrorCodeEnum.USER_ACCOUNT_NOT_EXIST);
+    }
+
+    // 判断密码是否正确
+    if (!Objects.equals(userInfo.getPassword()
+            , DigestUtils.md5DigestAsHex(dto.getPassword().getBytes(StandardCharsets.UTF_8)))) {
+        // 密码错误
+        throw new BusinessException(ErrorCodeEnum.USER_PASSWORD_ERROR);
+    }
+
+    // 登录成功，生成JWT并返回
+    return RestResp.ok(UserLoginRespDto.builder()
+            .token(jwtUtils.generateToken(userInfo.getId(), SystemConfigConsts.NOVEL_FRONT_KEY))
+            .uid(userInfo.getId())
+            .nickName(userInfo.getNickName()).build());
+}
+</code></pre></div><ol start="3"><li>最后，我们在用户模块 API 控制器<code>UserController</code>中定义 POST 类型的登录接口，调用用户模块 service 中的相应业务方法：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 用户登录接口
+ */
+@PostMapping(&quot;login&quot;)
+public RestResp&lt;UserLoginRespDto&gt; login(@Valid @RequestBody UserLoginReqDto dto) {
+    return userService.login(dto);
+}
+
+</code></pre></div><h3 id="小说详情页相关接口开发"><a href="#小说详情页相关接口开发" class="header-anchor">#</a> 小说详情页相关接口开发</h3> <p>小说详情页 UI 图如下：</p> <p><img src="/img/novel/book_detail.png" alt="小说详情页 UI 图"></p> <p>从上图可以看出小说详情页包括 <code>小说信息</code>（包括作家信息）、<code>最新章节</code>、<code>作品评论</code>、<code>同类推荐</code>四个内容区域的展示，而评论区还包含了评论发表、评论修改和评论删除的功能。所以我们需要开发与小说详情页相关的 4 个 API 查询接口、1 个 API 增加接口、1 个 API 修改接口和 1 个 API 删除接口提供给前端。</p> <h4 id="小说评论发表接口开发"><a href="#小说评论发表接口开发" class="header-anchor">#</a> 小说评论发表接口开发</h4> <p>评论发表需要在数据库**book_comment [<strong>小说评论</strong>]**表中插入一条评论数据，是一个在服务器新建资源的操作，所以该请求方法需要使用 POST 类型。具体实现步骤如下：</p> <ol><li>首先我们需要在小说模块业务类<code>BookService</code>中定义发表评论的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 发表评论
+ *
+ * @param dto 评论相关 DTO
+ * @return void
+ */
+RestResp&lt;Void&gt; saveComment(UserCommentReqDto dto);
+</code></pre></div><ol start="2"><li>接着我们在小说模块业务实现类<code>BookServiceImpl</code>中实现<code>BookService</code>中定义的抽象方法，将用户对小说的评论数据保存到数据库中：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;Void&gt; saveComment(UserCommentReqDto dto) {
+    // 校验用户是否已发表评论
+    QueryWrapper&lt;BookComment&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+    queryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID,dto.getUserId())
+            .eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID,dto.getBookId());
+    if(bookCommentMapper.selectCount(queryWrapper) &gt; 0){
+        // 用户已发表评论
+        return RestResp.fail(ErrorCodeEnum.USER_COMMENTED);
+    }
+    BookComment bookComment = new BookComment();
+    bookComment.setBookId(dto.getBookId());
+    bookComment.setUserId(dto.getUserId());
+    bookComment.setCommentContent(dto.getCommentContent());
+    bookComment.setCreateTime(LocalDateTime.now());
+    bookComment.setUpdateTime(LocalDateTime.now());
+    bookCommentMapper.insert(bookComment);
+    return RestResp.ok();
+}
+</code></pre></div><p><strong>注：保存评论之前我们需要对用户是否已发表评论进行校验，每个用户只能对同一本书发表一条评论。</strong></p> <ol start="3"><li>最后，由于发表评论的行为属于用户（需要校验登录权限），所以我们在用户模块 API 控制器<code>UserController</code>中定义 POST 类型的增加接口，调用小说模块 service 中的相应业务方法保存小说评论数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 发表评论接口
+ */
+@PostMapping(&quot;comment&quot;)
+public RestResp&lt;Void&gt; comment(@Valid @RequestBody UserCommentReqDto dto) {
+    dto.setUserId(UserHolder.getUserId());
+    return bookService.saveComment(dto);
+}
+</code></pre></div><h4 id="小说评论修改接口开发"><a href="#小说评论修改接口开发" class="header-anchor">#</a> 小说评论修改接口开发</h4> <p>评论修改需要更新数据库**book_comment [<strong>小说评论</strong>]**表中的评论数据，是一个在服务器更新资源的操作，所以该请求方法需要使用 PUT 类型。具体实现步骤如下：</p> <ol><li>首先我们需要在小说模块业务类<code>BookService</code>中定义修改评论的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 修改评论
+ * @param userId 用户ID
+ * @param id 评论ID
+ * @param content 修改后的评论内容
+ * @return void
+ * */
+RestResp&lt;Void&gt; updateComment(Long userId, Long id, String content);
+</code></pre></div><ol start="2"><li>接着我们在小说模块业务实现类<code>BookServiceImpl</code>中实现<code>BookService</code>中定义的抽象方法，更新数据表中的评论数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;Void&gt; updateComment(Long userId, Long id, String content) {
+    QueryWrapper&lt;BookComment&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+    queryWrapper.eq(DatabaseConsts.CommonColumnEnum.ID.getName(), id)
+            .eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID,userId);
+    BookComment bookComment = new BookComment();
+    bookComment.setCommentContent(content);
+    bookCommentMapper.update(bookComment,queryWrapper);
+    return RestResp.ok();
+}
+</code></pre></div><p><strong>注：用户只能更新自己的小说评论，所以更新评论表中数据的 where 条件不但需要小说ID还需要加上用户ID</strong></p> <ol start="3"><li>最后，由于修改评论的行为属于用户（需要校验登录权限），所以我们在用户模块 API 控制器<code>UserController</code>中定义 PUT 类型的修改接口，调用小说模块 service 中的相应业务方法来更新小说评论数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 修改评论接口
+ */
+@PutMapping(&quot;comment/{id}&quot;)
+public RestResp&lt;Void&gt; updateComment(@PathVariable Long id, String content) {
+    return bookService.updateComment(UserHolder.getUserId(), id, content);
+}
+</code></pre></div><h4 id="小说评论删除接口开发"><a href="#小说评论删除接口开发" class="header-anchor">#</a> 小说评论删除接口开发</h4> <p>评论删除需要删除数据库**book_comment [<strong>小说评论</strong>]**表中的评论数据，是一个从服务器删除资源的操作，所以该请求方法需要使用 DELETE 类型。具体实现步骤如下：</p> <ol><li>首先我们需要在小说模块业务类<code>BookService</code>中定义删除评论的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 删除评论
+ * @param userId 评论用户ID
+ * @param commentId 评论ID
+ * @return void
+ * */
+RestResp&lt;Void&gt; deleteComment(Long userId, Long commentId);
+</code></pre></div><ol start="2"><li>接着我们在小说模块业务实现类<code>BookServiceImpl</code>中实现<code>BookService</code>中定义的抽象方法，删除数据表中的评论数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;Void&gt; deleteComment(Long userId, Long commentId) {
+    QueryWrapper&lt;BookComment&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+    queryWrapper.eq(DatabaseConsts.CommonColumnEnum.ID.getName(), commentId)
+            .eq(DatabaseConsts.BookCommentTable.COLUMN_USER_ID,userId);
+        bookCommentMapper.delete(queryWrapper);
+    return RestResp.ok();
+}
+</code></pre></div><p><strong>注：用户只能删除自己的小说评论，所以删除评论表中数据的 where 条件不但需要小说ID还需要加上用户ID</strong></p> <ol start="3"><li>最后，由于删除评论的行为属于用户（需要校验登录权限），所以我们在用户模块 API 控制器<code>UserController</code>中定义 DELETE 类型的删除接口，调用小说模块 service 中的相应业务方法来删除小说评论数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 删除评论接口
+ */
+@DeleteMapping(&quot;comment/{id}&quot;)
+public RestResp&lt;Void&gt; deleteComment(@PathVariable Long id) {
+    return bookService.deleteComment(UserHolder.getUserId(), id);
+}
+</code></pre></div><h4 id="小说最新评论列表查询接口开发"><a href="#小说最新评论列表查询接口开发" class="header-anchor">#</a> 小说最新评论列表查询接口开发</h4> <p>最新评论列表查询需要查询数据库**book_comment [<strong>小说评论</strong>]**表中的评论数据，是一个从服务器取出资源的操作，所以该请求方法需要使用 GET 类型。具体实现步骤如下：</p> <ol><li>首先我们需要在小说模块业务类<code>BookService</code>中定义查询最新评论列表的业务方法如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 小说最新评论查询
+ *
+ * @param bookId 小说ID
+ * @return 小说最新评论数据
+ */
+RestResp&lt;BookCommentRespDto&gt; listNewestComments(Long bookId);
+</code></pre></div><ol start="2"><li>接着我们在小说模块业务实现类<code>BookServiceImpl</code>中实现<code>BookService</code>中定义的抽象方法，查询数据表中的最新评论列表数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Override
+public RestResp&lt;BookCommentRespDto&gt; listNewestComments(Long bookId) {
+    // 查询评论总数
+    QueryWrapper&lt;BookComment&gt; commentCountQueryWrapper = new QueryWrapper&lt;&gt;();
+    commentCountQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID, bookId);
+    Long commentTotal = bookCommentMapper.selectCount(commentCountQueryWrapper);
+    BookCommentRespDto bookCommentRespDto = BookCommentRespDto.builder().commentTotal(commentTotal).build();
+    if (commentTotal &gt; 0) {
+
+        // 查询最新的评论列表
+        QueryWrapper&lt;BookComment&gt; commentQueryWrapper = new QueryWrapper&lt;&gt;();
+        commentQueryWrapper.eq(DatabaseConsts.BookCommentTable.COLUMN_BOOK_ID, bookId)
+                .orderByDesc(DatabaseConsts.CommonColumnEnum.CREATE_TIME.getName())
+                .last(DatabaseConsts.SqlEnum.LIMIT_5.getSql());
+        List&lt;BookComment&gt; bookComments = bookCommentMapper.selectList(commentQueryWrapper);
+
+        // 查询评论用户信息，并设置需要返回的评论用户名
+        List&lt;Long&gt; userIds = bookComments.stream().map(BookComment::getUserId).toList();
+        List&lt;UserInfo&gt; userInfos = userDaoManager.listUsers(userIds);
+        Map&lt;Long, String&gt; userInfoMap = userInfos.stream().collect(Collectors.toMap(UserInfo::getId, UserInfo::getUsername));
+        List&lt;BookCommentRespDto.CommentInfo&gt; commentInfos = bookComments.stream()
+                .map(v -&gt; BookCommentRespDto.CommentInfo.builder()
+                        .id(v.getId())
+                        .commentUserId(v.getUserId())
+                        .commentUser(userInfoMap.get(v.getUserId()))
+                        .commentContent(v.getCommentContent())
+                        .commentTime(v.getCreateTime()).build()).toList();
+        bookCommentRespDto.setComments(commentInfos);
+    } else {
+        bookCommentRespDto.setComments(Collections.emptyList());
+    }
+    return RestResp.ok(bookCommentRespDto);
+}
+</code></pre></div><ol start="3"><li>最后，我们在小说模块 API 控制器<code>BookController</code>中定义 GET 类型的查询接口，调用 service 中的相应业务方法来查询小说最新评论列表数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 小说最新评论查询接口
+ */
+@GetMapping(&quot;comment/newest_list&quot;)
+public RestResp&lt;BookCommentRespDto&gt; listNewestComments(Long bookId) {
+    return bookService.listNewestComments(bookId);
+}
+</code></pre></div><ol start="4"><li>因为小说评论的用户名（手机号）属于敏感数据，我们不应该直接返回给前端。所以我们还需要定义一个 JSON 序列化器在 Spring MVC 序列化我们返回的 Java 对象为 JSON 字符串时格式化一下用户名，隐藏中间的 4 位数字为 <code>****</code>。代码如下：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 用户名序列化器（敏感信息，不应该在页面上完全显示）
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/20
+ */
+public class UsernameSerializer extends JsonSerializer&lt;String&gt; {
+
+    @Override
+    public void serialize(String s, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+        jsonGenerator.writeString(s.substring(0,4) + &quot;****&quot; + s.substring(8));
+    }
+
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>/**
+ * 小说评论 响应DTO
+ * @author xiongxiaoyang
+ * @date 2022/5/17
+ */
+@Data
+@Builder
+public class BookCommentRespDto {
+
+    private Long commentTotal;
+
+    private List&lt;CommentInfo&gt; comments;
+
+    @Data
+    @Builder
+    public static class CommentInfo {
+
+        private Long id;
+
+        private String commentContent;
+
+        @JsonSerialize(using = UsernameSerializer.class)
+        private String commentUser;
+
+        private Long commentUserId;
+
+        @JsonFormat(pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)
+        private LocalDateTime commentTime;
+
+    }
+
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">21 days ago</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/course/novel/3.html" class="prev">
+        数据库设计
+      </a></span> <span class="next"><a href="/course/novel/9.html">
+        项目优化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div><div></div></div></div>
+    <script src="/assets/js/app.09e306c7.js" defer></script><script src="/assets/js/2.99247de7.js" defer></script><script src="/assets/js/14.d3b12aa4.js" defer></script>
+  </body>
+</html>

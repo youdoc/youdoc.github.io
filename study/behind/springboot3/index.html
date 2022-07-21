@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Boot 入门 | 小说精品屋</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script crossorigin="anonymous" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"></script>
+    <script src="/redirect.js"></script>
+    <meta name="description" content="小说精品屋项目开发文档,JAVA学习教程,JAVA开源项目,JAVA项目实战教程,手把手教你开发上线一个生产级别的小说系统">
+    
+    <link rel="preload" href="/assets/css/0.styles.f109e9b6.css" as="style"><link rel="preload" href="/assets/js/app.09e306c7.js" as="script"><link rel="preload" href="/assets/js/2.99247de7.js" as="script"><link rel="preload" href="/assets/js/27.ba19a09d.js" as="script"><link rel="prefetch" href="/assets/js/10.0074f0b6.js"><link rel="prefetch" href="/assets/js/11.a30c50a6.js"><link rel="prefetch" href="/assets/js/12.8b56d8ab.js"><link rel="prefetch" href="/assets/js/13.c749534f.js"><link rel="prefetch" href="/assets/js/14.d3b12aa4.js"><link rel="prefetch" href="/assets/js/15.74294d9c.js"><link rel="prefetch" href="/assets/js/16.6da0ac7a.js"><link rel="prefetch" href="/assets/js/17.1ab88373.js"><link rel="prefetch" href="/assets/js/18.8875335c.js"><link rel="prefetch" href="/assets/js/19.4939c52f.js"><link rel="prefetch" href="/assets/js/20.34025d9d.js"><link rel="prefetch" href="/assets/js/21.7cce32ee.js"><link rel="prefetch" href="/assets/js/22.11440c86.js"><link rel="prefetch" href="/assets/js/23.e192cd17.js"><link rel="prefetch" href="/assets/js/24.45216f10.js"><link rel="prefetch" href="/assets/js/25.3be12542.js"><link rel="prefetch" href="/assets/js/26.4fbe7fce.js"><link rel="prefetch" href="/assets/js/28.8fee7490.js"><link rel="prefetch" href="/assets/js/29.1393ab46.js"><link rel="prefetch" href="/assets/js/3.d1f014c5.js"><link rel="prefetch" href="/assets/js/30.d7fe8f4e.js"><link rel="prefetch" href="/assets/js/31.3e268b35.js"><link rel="prefetch" href="/assets/js/4.c866ff58.js"><link rel="prefetch" href="/assets/js/5.1dabba3b.js"><link rel="prefetch" href="/assets/js/6.2b9e04ea.js"><link rel="prefetch" href="/assets/js/7.da8e9de0.js"><link rel="prefetch" href="/assets/js/8.f14eb728.js"><link rel="prefetch" href="/assets/js/9.89a7523c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f109e9b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="小说精品屋" class="logo"> <span class="site-name can-hide">小说精品屋</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study/behind/springboot3/" aria-current="page" class="active sidebar-link">Spring Boot 入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/behind/springboot3/#spring-boot-介绍" class="sidebar-link">Spring Boot 介绍</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/#spring-boot-3-系统要求" class="sidebar-link">Spring Boot 3 系统要求</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/#spring-boot-3-应用程序开发" class="sidebar-link">Spring Boot 3 应用程序开发</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/#spring-boot-升级" class="sidebar-link">Spring Boot 升级</a></li></ul></li><li><a href="/study/behind/springboot3/1.html" class="sidebar-link">Spring Boot 使用</a></li><li><a href="/study/behind/springboot3/2.html" class="sidebar-link">核心功能</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="spring-boot-入门"><a href="#spring-boot-入门" class="header-anchor">#</a> Spring Boot 入门</h1> <h2 id="spring-boot-介绍"><a href="#spring-boot-介绍" class="header-anchor">#</a> Spring Boot 介绍</h2> <p>Spring Boot 可以帮助我们创建独立运行、生产级别的基于 Spring 的应用程序。Spring Boot 遵循约定大于配置的思想，以便我们可以轻松上手。大多数 Spring Boot 应用程序只需要很少的 Spring 配置。</p> <p>使用 Spring Boot，我们可以通过 java -jar 的方式或更传统的 war 包方式部署来启动 Java 应用程序。Spring Boot 没有什么特别之处，它只是我们可以使用的另一个库。</p> <p>Spring Boot 主要特性如下：</p> <ol><li><p>为所有 Spring 应用程序开发提供根本上更快且可广泛使用的入门体验。</p></li> <li><p>开箱即用，但随着需求快速变化，我们需要开始修改默认配置。</p></li> <li><p>提供大型项目（例如嵌入式服务器、安全、性能指标、健康检查和外部化配置等）通用的一系列非功能性特性。</p></li> <li><p>绝对没有代码生成，也不需要 XML 配置。</p></li></ol> <h2 id="spring-boot-3-系统要求"><a href="#spring-boot-3-系统要求" class="header-anchor">#</a> Spring Boot 3 系统要求</h2> <p>Spring Boot 3 开始，Java 17 是最低要求，还需要 Spring Framework 6.0.0 或更高版本，并且为以下构建工具提供了显式构建支持：</p> <table><thead><tr><th style="text-align:left;">Build Tool</th> <th style="text-align:left;">Version</th></tr></thead> <tbody><tr><td style="text-align:left;">Maven</td> <td style="text-align:left;">3.5+</td></tr> <tr><td style="text-align:left;">Gradle</td> <td style="text-align:left;">7.x (7.4 或更高版本)</td></tr></tbody></table> <p>Spring Boot 3 支持以下嵌入式 servlet 容器：</p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Servlet Version</th></tr></thead> <tbody><tr><td style="text-align:left;">Tomcat 10.0</td> <td style="text-align:left;">5.0</td></tr> <tr><td style="text-align:left;">Jetty 11.0</td> <td style="text-align:left;">5.1</td></tr> <tr><td style="text-align:left;">Undertow 2.2（Jakarta EE 9 variant）</td> <td style="text-align:left;">5.0</td></tr></tbody></table> <p>我们还可以将 Spring Boot 3 应用程序部署到任何 servlet 5.0+ 兼容的容器中。</p> <h2 id="spring-boot-3-应用程序开发"><a href="#spring-boot-3-应用程序开发" class="header-anchor">#</a> Spring Boot 3 应用程序开发</h2> <p>Spring Boot 不需要与任何特殊工具集成，我们可以使用任何 IDE 甚至文本编辑器开发。Spring Boot 应用程序没有什么特别之处，我们可以像运行任何其他 Java 程序一样运行和调试 Spring Boot 应用程序。</p> <p>在开发之前，使用以下命令来检查当前的 Java 安装：</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -version
+</code></pre></div><p><strong>Spring 3.0.0 需要 Java 17 或更高版本。</strong></p> <ol><li>Maven 安装</li></ol> <p>Spring Boot 3 支持使用 Apache Maven 3.5+ 来构建。如果我们还没有安装 Maven，可以按照 maven.apache.org 上的文档进行安装。</p> <ol start="2"><li>创建 POM 文件</li></ol> <p>创建项目的 Maven 构建文件 pom.xml，并添加以下内容：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;io.github.xxyopen&lt;/groupId&gt;
+    &lt;artifactId&gt;novel&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;3.0.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;!-- Additional lines to be added here... --&gt;
+
+    &lt;!-- (you do not need this if you are using a .RELEASE version) --&gt;
+    &lt;repositories&gt;
+        &lt;repository&gt;
+            &lt;id&gt;spring-snapshots&lt;/id&gt;
+            &lt;url&gt;https://repo.spring.io/snapshot&lt;/url&gt;
+            &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/snapshots&gt;
+        &lt;/repository&gt;
+        &lt;repository&gt;
+            &lt;id&gt;spring-milestones&lt;/id&gt;
+            &lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
+        &lt;/repository&gt;
+    &lt;/repositories&gt;
+    &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+            &lt;id&gt;spring-snapshots&lt;/id&gt;
+            &lt;url&gt;https://repo.spring.io/snapshot&lt;/url&gt;
+        &lt;/pluginRepository&gt;
+        &lt;pluginRepository&gt;
+            &lt;id&gt;spring-milestones&lt;/id&gt;
+            &lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
+        &lt;/pluginRepository&gt;
+    &lt;/pluginRepositories&gt;
+&lt;/project&gt;
+</code></pre></div><p>Spring Boot 依赖项使用 org.springframework.boot groupId，我们需要在 Maven POM 文件中继承 spring-boot-starter-parent 项目，Spring Boot 提供了许多 Starters（启动器），Starter 提供了我们在开发特定类型的应用程序时可能需要的依赖项，可以批量将相关的依赖 jar 添加到 classpath 类路径中。spring-boot-starter-parent 是一个特殊的 Starter，它提供了有用的 Maven 默认值（java 版本、源码编码等）、合理的插件配置以及一个从 POM 继承来的 dependency-management 部分，方便我们可以省略很多公共依赖项的 version 标签，因为目前使用的是snapshots（快照）版本，所以我们还需要在 repositories 和   pluginRepositories 元素中添加适当的 napshots repositorie 和 napshots pluginRepository。</p> <p>我们可以通过运行以下命令来查看我们项目当前拥有的依赖树</p> <div class="language- extra-class"><pre class="language-text"><code>$ mvn dependency:tree
+
+[INFO] io.github.xxyopen:novel:jar:0.0.1-SNAPSHOT
+</code></pre></div><ol start="3"><li>添加 Maven 依赖</li></ol> <p>因为我们正在开发 Web 应用程序，所以我们需要在 POM 文件中添加一个 spring-boot-starter-web 依赖项</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre></div><p>再次运行 mvn dependency:tree 查看依赖树，我们会发现多了许多依赖项，包括 Tomcat、Spring Boot 等。</p> <div class="language- extra-class"><pre class="language-text"><code>[INFO] io.github.xxyopen:novel:jar:0.0.1-SNAPSHOT
+[INFO] \- org.springframework.boot:spring-boot-starter-web:jar:3.0.0-SNAPSHOT:compile
+[INFO]    +- org.springframework.boot:spring-boot-starter:jar:3.0.0-SNAPSHOT:compile
+[INFO]    |  +- org.springframework.boot:spring-boot:jar:3.0.0-SNAPSHOT:compile
+[INFO]    |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.0.0-SNAPSHOT:compile
+[INFO]    |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.0.0-SNAPSHOT:compile
+[INFO]    |  |  +- ch.qos.logback:logback-classic:jar:1.2.11:compile
+[INFO]    |  |  |  +- ch.qos.logback:logback-core:jar:1.2.11:compile
+[INFO]    |  |  |  \- org.slf4j:slf4j-api:jar:1.7.36:compile
+[INFO]    |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
+[INFO]    |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
+[INFO]    |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
+[INFO]    |  +- jakarta.annotation:jakarta.annotation-api:jar:2.0.0:compile
+[INFO]    |  +- org.springframework:spring-core:jar:6.0.0-SNAPSHOT:compile
+[INFO]    |  |  \- org.springframework:spring-jcl:jar:6.0.0-SNAPSHOT:compile
+[INFO]    |  \- org.yaml:snakeyaml:jar:1.30:compile
+[INFO]    +- org.springframework.boot:spring-boot-starter-json:jar:3.0.0-SNAPSHOT:compile
+[INFO]    |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.2.1:compile
+[INFO]    |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.2:compile
+[INFO]    |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.2:compile
+[INFO]    |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.2:compile
+[INFO]    |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.2:compile
+[INFO]    |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.2:compile
+[INFO]    +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.0.0-SNAPSHOT:compile
+[INFO]    |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.0.18:compile
+[INFO]    |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.0.18:compile
+[INFO]    |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.0.18:compile
+[INFO]    +- org.springframework:spring-web:jar:6.0.0-SNAPSHOT:compile
+[INFO]    |  \- org.springframework:spring-beans:jar:6.0.0-SNAPSHOT:compile
+[INFO]    \- org.springframework:spring-webmvc:jar:6.0.0-SNAPSHOT:compile
+[INFO]       +- org.springframework:spring-aop:jar:6.0.0-SNAPSHOT:compile
+[INFO]       +- org.springframework:spring-context:jar:6.0.0-SNAPSHOT:compile
+[INFO]       \- org.springframework:spring-expression:jar:6.0.0-SNAPSHOT:compile
+
+</code></pre></div><ol start="4"><li>编写代码</li></ol> <p>创建一个 Java 类文件，添加以下代码：</p> <div class="language- extra-class"><pre class="language-text"><code>import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@EnableAutoConfiguration
+public class NovelApplication {
+
+    @RequestMapping(&quot;/&quot;)
+    String home() {
+        return &quot;Hello World!&quot;;
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(NovelApplication.class, args);
+    }
+
+}
+</code></pre></div><p>NovelApplication 类的第一个注解是 @RestController，它可以看作是 @Controller + @ResponseBody 的组合注解，表明我们的类是一个 Web 控制器，Spring 在处理Http 请求时会扫描它，并且将处理结果作为 json 字符串返回。</p> <p>@RequestMapping 注解提供路由信息。它告诉 Spring 任何带有该路径的 HTTP 请求都应该映射到该 home 方法。</p> <p>@EnableAutoConfiguration 注解开启自动配置，告诉 Spring Boot 根据我们添加的 jar 依赖来推测我们想如何配置 Spring。由于spring-boot-starter-web 添加了 Tomcat 和 Spring MVC，自动配置推测正在开发 Web 应用程序并相应地设置 Spring。</p> <blockquote><p>自动配置旨在与 Starter 配合使用，但这两个概念并没有直接联系。我们可以自由选择 Starter 之外的 jar 依赖项，Spring Boot 仍然会自动配置应用程序。</p></blockquote> <p>main 方法是一种 Java 约定的应用程序入口点标准方法，通过将调用委托给 Spring Boot 的 SpringApplication 类的 run 方法执行。 SpringApplication 引导我们的应用程序，启动 Spring，然后启动自动配置的 Tomcat Web 服务器。我们需要将 NovelApplication.class 作为参数传递给该 run 方法，告诉 SpringApplication 哪个是主要的 Spring 组件。该 args 数组也被传递以公开命令行参数。</p> <ol start="5"><li>运行</li></ol> <p>因为我们项目继承了 spring-boot-starter-parent POM，所以可以直接在项目根目录下通过命令 mvn spring-boot:run 启动应用程序。</p> <div class="language- extra-class"><pre class="language-text"><code>$ mvn spring-boot:run
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::  (v3.0.0-SNAPSHOT)
+....... . . .
+....... . . . (log output here)
+....... . . .
+........ Started NovelApplication in 5.524 seconds (JVM running for 9.373)
+
+</code></pre></div><p>打开 Web 浏览器访问localhost:8080，我们可以看到以下输出：</p> <div class="language- extra-class"><pre class="language-text"><code>Hello World!
+</code></pre></div><p>如果要优雅地退出应用程序，直接按 ctrl + c 即可。</p> <ol start="6"><li>打包</li></ol> <p>spring-boot-maven-plugin 可以帮我们创建一个可以在生产环境中运行的完全独立的可执行 jar 文件，可执行 jars（有时称为“fat jars”）是包含已编译类以及代码需要运行的所有 jar 依赖项的存档。</p> <blockquote><p>Java 不提供加载嵌套 jar 文件（包含在 jar 中的 jar 文件）的标准方法。如果我们希望分发一个独立的应用程序，可能会出现问题。</p> <p>为了解决这个问题，很多开发人员使用 “uber” jars。一个 uber jar 将所有应用程序依赖项中的所有类打包到一个存档中。这种方法的问题是很难看到应用程序中有哪些库。如果在多个 jar 中使用相同的文件名（但内容不同），也可能会出现问题。</p> <p>Spring Boot 采用了不同的方法，让我们可以直接嵌套 jar。</p></blockquote> <p>在项目 POM 文件中添加如下的插件配置：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre></div><p>运行 mvn package 命令打包，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>$ mvn package
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------&lt; io.github.xxyopen:novel &gt;-----------------------
+[INFO] Building novel 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] .... ..
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ novel ---
+[INFO] Building jar: /Users/xiongxiaoyang/java/springboot3/target/novel-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.0.0-SNAPSHOT:repackage (repackage) @ novel ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+</code></pre></div><p>查看 target 目录，可以看到 novel-0.0.1-SNAPSHOT.jar，该文件的大小在 10 MB 左右。</p> <p>target 目录下还有一个小得多的文件 novel-0.0.1-SNAPSHOT.jar.original，这是在被 Spring Boot 重新打包之前 Maven 创建的原始 jar 文件。</p> <p>要运行应用程序，请使用以下 java -jar 命令：</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -jar target/novel-0.0.1-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::  (v3.0.0-SNAPSHOT)
+....... . . .
+....... . . . (log output here)
+....... . . .
+........ Started NovelApplication in 3.187 seconds (JVM running for 9.373)
+</code></pre></div><p>要退出应用程序，请按 ctrl + c。</p> <h2 id="spring-boot-升级"><a href="#spring-boot-升级" class="header-anchor">#</a> Spring Boot 升级</h2> <p>Spring Boot 项目 的 <a href="https://github.com/spring-projects/spring-boot/wiki" target="_blank" rel="noopener noreferrer">wiki<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>上提供了关于如何从早期版本的 Spring Boot 升级的说明，我们可以通过查看<a href="https://github.com/spring-projects/spring-boot/wiki#release-notes" target="_blank" rel="noopener noreferrer">发行说明<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>来获取每个版本的新的主要功能列表。</p> <p>升级到新版本时，某些属性可能已经重命名或移除，Spring Boot 提供了一种在启动时分析应用程序环境和打印诊断信息的功能，还可以在运行时临时迁移属性。要启用该功能，需要将在项目 POM 文件中添加以下依赖项：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-properties-migrator&lt;/artifactId&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre></div><p><strong>完成迁移后，请从项目的依赖项中删除此模块。</strong></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2 months ago</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/study/behind/springboot3/1.html">
+        Spring Boot 使用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div><div></div></div></div>
+    <script src="/assets/js/app.09e306c7.js" defer></script><script src="/assets/js/2.99247de7.js" defer></script><script src="/assets/js/27.ba19a09d.js" defer></script>
+  </body>
+</html>

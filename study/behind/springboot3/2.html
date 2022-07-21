@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>核心功能 | 小说精品屋</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script crossorigin="anonymous" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"></script>
+    <script src="/redirect.js"></script>
+    <meta name="description" content="小说精品屋项目开发文档,JAVA学习教程,JAVA开源项目,JAVA项目实战教程,手把手教你开发上线一个生产级别的小说系统">
+    
+    <link rel="preload" href="/assets/css/0.styles.f109e9b6.css" as="style"><link rel="preload" href="/assets/js/app.09e306c7.js" as="script"><link rel="preload" href="/assets/js/2.99247de7.js" as="script"><link rel="preload" href="/assets/js/26.4fbe7fce.js" as="script"><link rel="prefetch" href="/assets/js/10.0074f0b6.js"><link rel="prefetch" href="/assets/js/11.a30c50a6.js"><link rel="prefetch" href="/assets/js/12.8b56d8ab.js"><link rel="prefetch" href="/assets/js/13.c749534f.js"><link rel="prefetch" href="/assets/js/14.d3b12aa4.js"><link rel="prefetch" href="/assets/js/15.74294d9c.js"><link rel="prefetch" href="/assets/js/16.6da0ac7a.js"><link rel="prefetch" href="/assets/js/17.1ab88373.js"><link rel="prefetch" href="/assets/js/18.8875335c.js"><link rel="prefetch" href="/assets/js/19.4939c52f.js"><link rel="prefetch" href="/assets/js/20.34025d9d.js"><link rel="prefetch" href="/assets/js/21.7cce32ee.js"><link rel="prefetch" href="/assets/js/22.11440c86.js"><link rel="prefetch" href="/assets/js/23.e192cd17.js"><link rel="prefetch" href="/assets/js/24.45216f10.js"><link rel="prefetch" href="/assets/js/25.3be12542.js"><link rel="prefetch" href="/assets/js/27.ba19a09d.js"><link rel="prefetch" href="/assets/js/28.8fee7490.js"><link rel="prefetch" href="/assets/js/29.1393ab46.js"><link rel="prefetch" href="/assets/js/3.d1f014c5.js"><link rel="prefetch" href="/assets/js/30.d7fe8f4e.js"><link rel="prefetch" href="/assets/js/31.3e268b35.js"><link rel="prefetch" href="/assets/js/4.c866ff58.js"><link rel="prefetch" href="/assets/js/5.1dabba3b.js"><link rel="prefetch" href="/assets/js/6.2b9e04ea.js"><link rel="prefetch" href="/assets/js/7.da8e9de0.js"><link rel="prefetch" href="/assets/js/8.f14eb728.js"><link rel="prefetch" href="/assets/js/9.89a7523c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f109e9b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="小说精品屋" class="logo"> <span class="site-name can-hide">小说精品屋</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="http://47.106.243.172:8888" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.aliyun.com/ebook/read/394" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  开发规约
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://www.xxyopen.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  技术博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project Menu" class="dropdown-title"><span class="title">项目实战</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project Menu" class="mobile-dropdown-title"><span class="title">项目实战</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/course/novel/" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/course/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Log Menu" class="dropdown-title"><span class="title">更新日志</span> <span class="arrow down"></span></button> <button type="button" aria-label="Log Menu" class="mobile-dropdown-title"><span class="title">更新日志</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/log/novel.html" class="nav-link">
+  novel
+</a></li><li class="dropdown-item"><!----> <a href="/log/novelcloud.html" class="nav-link">
+  novel-cloud
+</a></li></ul></div></div><div class="nav-item"><a href="/suport/" class="nav-link">
+  💖支持
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub Menu" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow down"></span></button> <button type="button" aria-label="GitHub Menu" class="mobile-dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/201206030/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Gitee Menu" class="dropdown-title"><span class="title">码云</span> <span class="arrow down"></span></button> <button type="button" aria-label="Gitee Menu" class="mobile-dropdown-title"><span class="title">码云</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-plus" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-plus
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/novel_dev_team/novel-cloud" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  novel-cloud
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/study/behind/springboot3/" aria-current="page" class="sidebar-link">Spring Boot 入门</a></li><li><a href="/study/behind/springboot3/1.html" class="sidebar-link">Spring Boot 使用</a></li><li><a href="/study/behind/springboot3/2.html" aria-current="page" class="active sidebar-link">核心功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#springapplication" class="sidebar-link">SpringApplication</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#启动失败分析" class="sidebar-link">启动失败分析</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#延迟初始化" class="sidebar-link">延迟初始化</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#自定义-banner" class="sidebar-link">自定义 banner</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#自定义-springapplication" class="sidebar-link">自定义 SpringApplication</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#springapplicationbuilder" class="sidebar-link">SpringApplicationBuilder</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#可用性状态" class="sidebar-link">可用性状态</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#事件和监听器" class="sidebar-link">事件和监听器</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#web-环境" class="sidebar-link">Web 环境</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#访问应用程序参数" class="sidebar-link">访问应用程序参数</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#启动时任务" class="sidebar-link">启动时任务</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#应用程序退出" class="sidebar-link">应用程序退出</a></li></ul></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#配置" class="sidebar-link">配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#命令行属性" class="sidebar-link">命令行属性</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#json-应用属性" class="sidebar-link">JSON 应用属性</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#外部应用属性" class="sidebar-link">外部应用属性</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#配置随机值" class="sidebar-link">配置随机值</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#配置系统环境属性" class="sidebar-link">配置系统环境属性</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#类型安全的配置属性" class="sidebar-link">类型安全的配置属性</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#profiles" class="sidebar-link">Profiles</a></li></ul></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#日志" class="sidebar-link">日志</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#日志格式" class="sidebar-link">日志格式</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#控制台输出" class="sidebar-link">控制台输出</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#文件输出" class="sidebar-link">文件输出</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#文件轮换" class="sidebar-link">文件轮换</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#日志级别" class="sidebar-link">日志级别</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#日志分组" class="sidebar-link">日志分组</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#自定义日志配置" class="sidebar-link">自定义日志配置</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#logback-扩展" class="sidebar-link">Logback 扩展</a></li></ul></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#json" class="sidebar-link">JSON</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#jackson" class="sidebar-link">Jackson</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#gson" class="sidebar-link">Gson</a></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#json-b" class="sidebar-link">JSON-B</a></li></ul></li><li class="sidebar-sub-header"><a href="/study/behind/springboot3/2.html#任务执行与调度" class="sidebar-link">任务执行与调度</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="核心功能"><a href="#核心功能" class="header-anchor">#</a> 核心功能</h1> <h2 id="springapplication"><a href="#springapplication" class="header-anchor">#</a> SpringApplication</h2> <p>SpringApplication 类提供了一种方便的方法用来引导从 main() 方法启动的 Spring 应用程序。我们可以直接委托给静态方法 SpringApplication.run ，如下所示</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+public class NovelApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(NovelApplication.class, args);
+    }
+
+}
+</code></pre></div><p>应用启动时会看到如下输出：</p> <div class="language- extra-class"><pre class="language-text"><code>  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v3.0.0-SNAPSHOT)
+
+2022-05-07T10:16:13.116+08:00  INFO 33212 --- [  restartedMain] i.github.xxyopen.novel.NovelApplication  : Starting NovelApplication using Java 17.0.3 on xiongxiaoyangdeMacBook-Air.local with PID 33212 (/Users/xiongxiaoyang/java/springboot3/target/classes started by xiongxiaoyang in /Users/xiongxiaoyang/java/springboot3)
+2022-05-07T10:16:13.120+08:00  INFO 33212 --- [  restartedMain] i.github.xxyopen.novel.NovelApplication  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-05-07T10:16:13.247+08:00  INFO 33212 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-07T10:16:13.248+08:00  INFO 33212 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-07T10:16:15.136+08:00  INFO 33212 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-07T10:16:15.164+08:00  INFO 33212 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-07T10:16:15.164+08:00  INFO 33212 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.18]
+2022-05-07T10:16:15.291+08:00  INFO 33212 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-07T10:16:15.294+08:00  INFO 33212 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2042 ms
+2022-05-07T10:16:15.896+08:00  INFO 33212 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-07T10:16:15.948+08:00  INFO 33212 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-07T10:16:15.960+08:00  INFO 33212 --- [  restartedMain] i.github.xxyopen.novel.NovelApplication  : Started NovelApplication in 8.561 seconds (JVM running for 9.373)
+</code></pre></div><p>默认情况下，控制台会显示 INFO 级别的日志信息，包括一些相关的启动详细信息。我们可以通过设置 spring.main.log-startup-info=false 属性来关闭启动日志信息。</p> <p>我们如果想添加额外的启动日志，可以在 SpringApplication 子类中重写 logStartupInfo(boolean) 方法：</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+public class NovelApplication {
+
+    public static void main(String[] args) {
+        SpringApplication application = new SpringApplication(NovelApplication.class){
+            @Override
+            protected void logStartupInfo(boolean isRoot) {
+                getApplicationLog().info(&quot;小说精品屋开始启动啦。。。&quot;);
+                super.logStartupInfo(isRoot);
+            }
+        };
+        application.run(args);
+    }
+
+}
+</code></pre></div><h3 id="启动失败分析"><a href="#启动失败分析" class="header-anchor">#</a> 启动失败分析</h3> <p>如果应用程序启动失败，我们通过注册的 FailureAnalyzers 能够得到一个错误消息描述和具体的解决方案。例如，启动 web 应用的端口号 8080 被占用了，我们会看到如下的消息：</p> <div class="language- extra-class"><pre class="language-text"><code>***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+</code></pre></div><p>Spring Boot 提供了很多 FailureAnalyzer 的实现，我们也可以在 META-INF/spring.factories 中添加自己的 FailureAnalyzer 实现：</p> <div class="language- extra-class"><pre class="language-text"><code># Failure analyzers
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+org.springframework.boot.autoconfigure.data.redis.RedisUrlSyntaxFailureAnalyzer,\
+org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer,\
+org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer,\
+org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer,\
+org.springframework.boot.autoconfigure.jdbc.HikariDriverConfigurationFailureAnalyzer,\
+org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer,\
+org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer,\
+org.springframework.boot.autoconfigure.r2dbc.MissingR2dbcPoolDependencyFailureAnalyzer,\
+org.springframework.boot.autoconfigure.r2dbc.MultipleConnectionPoolConfigurationsFailureAnalzyer,\
+org.springframework.boot.autoconfigure.r2dbc.NoConnectionFactoryBeanFailureAnalyzer,\
+org.springframework.boot.autoconfigure.session.NonUniqueSessionRepositoryFailureAnalyzer
+</code></pre></div><p>如果 FailureAnalyzers 不能处理我们的异常，可以通过设置 debug 属性或者给 org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 设置 DEBUG 级别的日志来查看完整的错误报告以更好的了解问题所在。</p> <p>设置 debug 属性：</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -jar target/novel-0.0.1-SNAPSHOT.jar --debug
+</code></pre></div><p>设置 DEBUG 级别日志：</p> <div class="language- extra-class"><pre class="language-text"><code>logging.level.org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener=debug
+</code></pre></div><h3 id="延迟初始化"><a href="#延迟初始化" class="header-anchor">#</a> 延迟初始化</h3> <p>SpringApplication 允许我们的应用延迟初始化。当延迟初始化开启后，beans 不是在应用启动期间而是在需要时创建，这样会减少应用的启动时间。在一个 web 应用中，开启延迟初始化将导致许多 web 相关的 beans 在 HTTP 请求到来时才会创建。</p> <p>延迟初始化的一个不足之处在于不能及时发现应用的问题，如果一个错误配置的 bean 被延迟初始化，那么应用启动期间将不再发生错误，而是仅仅当 bean 初始化的时候才会暴露问题，而且还必须要注意保证 JVM 有足够的内存来容纳应用程序的所有 beans 而不是仅仅在应用启动期间初始化的那些 beans。基于这些原因，延迟初始化默认情况下是关闭的，并且建议在启用延迟初始化之前对 JVM 的堆大小进行微调。</p> <p>延迟初始化可以通过 SpringApplicationBuilder 的 lazyInitialization 方法或 SpringApplication 的 setLazyInitialization 方法等编程式方式开启，也可以通过设置 spring.main.lazy-initialization 属性的方式来开启：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.main.lazy-initialization=true
+</code></pre></div><p>如果想在使用延迟初始化的时候禁用某些特定 beans 的延迟初始化，我们可以通过 @Lazy(false) 注解将其延迟属性显式设置为 false。</p> <h3 id="自定义-banner"><a href="#自定义-banner" class="header-anchor">#</a> 自定义 banner</h3> <p>我们可以通过在 classpath 下添加一个 banner.txt 文件或者设置 spring.banner.location 属性为另外一个文件的路径来改变应用启动时打印的 banner。如果文件的编码不是 UTF-8，还可以设置 spring.banner.charset 属性。我们还可以通过调用 SpringApplication.setBanner(…​) 方法或实现 org.springframework.boot.Banner 接口的 printBanner 方法等编程方式来改变 banner。以下是一个 banner 内容的示例：</p> <div class="language- extra-class"><pre class="language-text"><code>${AnsiColor.CYAN}
+
+--------------------------------------------------------------------------------
+${AnsiColor.RED}
+||   / |  / /
+||  /  | / /  ___     //  ___      ___      _   __
+|| / /||/ / //___) ) // //   ) ) //   ) ) // ) )  ) )
+||/ / |  / //       // //       //   / / // / /  / /
+|  /  | / ((____   // ((____   ((___/ / // / /  / /   小说精品屋欢迎您！！！
+
+                                               -------Powered By XXY
+${AnsiColor.CYAN}
+--------------------------------------------------------------------------------
+${AnsiColor.BRIGHT_YELLOW}
+::: Spring-Boot ${spring-boot.formatted-version} :::
+</code></pre></div><h3 id="自定义-springapplication"><a href="#自定义-springapplication" class="header-anchor">#</a> 自定义 SpringApplication</h3> <p>如果我们想改变 SpringApplication 的默认配置，可以不直接调用静态方法 SpringApplication.run ，而是创建 SpringApplication 的本地实例并对其进行自定义。例如，要关闭横幅，可以如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+public class NovelApplication {
+
+    public static void main(String[] args) {
+        SpringApplication application = new SpringApplication(NovelApplication.class);
+        application.setBannerMode(Banner.Mode.OFF);
+        application.run(args);
+    }
+
+}
+</code></pre></div><p>传递给 SpringApplication 的构造参数是 Spring beans 的配置源。大多数情况下，是一个 @Configuration 类，也可以是 @Component 类。</p> <p>SpringApplication 也可以通过 application.properties 配置文件配置：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.main.banner-mode=off
+</code></pre></div><h3 id="springapplicationbuilder"><a href="#springapplicationbuilder" class="header-anchor">#</a> SpringApplicationBuilder</h3> <p>如果想构建一个有层次的 ApplicationContext（具有父/子关系的多个上下文）或者更想使用流利的构建器 API，那么可以使用 SpringApplicationBuilder。</p> <p>SpringApplicationBuilder 可以让我们链式调用多个包含 parent 和 child 在内的有层次结构的方法，如下代码所示：</p> <div class="language- extra-class"><pre class="language-text"><code>new SpringApplicationBuilder()
+        .sources(Parent.class)
+        .child(Application.class)
+        .bannerMode(Banner.Mode.OFF)
+        .run(args);
+
+</code></pre></div><h3 id="可用性状态"><a href="#可用性状态" class="header-anchor">#</a> 可用性状态</h3> <p>当应用部署在平台上时，可以使用类似于 Kubernetes Probes 的基础设施提供其可用性的信息。Spring Boot 包含了对常用的 liveness（活跃状态） 和 readiness（就绪状态） 等可用性状态的开箱即用支持。如果我们使用了 Spring Boot 的 actuator，那么这些状态将作为健康组（health）的端点暴露出来。</p> <p>此外，我们还可以通过注入 ApplicationAvailability 接口到我们自己的 bean 中来获取可用性状态信息：</p> <div class="language- extra-class"><pre class="language-text"><code>@RestController
+@SpringBootApplication
+public class NovelApplication {
+
+    private final ApplicationAvailability applicationAvailability;
+
+    public NovelApplication(ApplicationAvailability applicationAvailability) {
+        this.applicationAvailability = applicationAvailability;
+    }
+
+    @RequestMapping(&quot;/state&quot;)
+    String state() {
+        return &quot;活跃状态：&quot; + applicationAvailability.getLivenessState()
+                + &quot;，就绪状态：&quot; + applicationAvailability.getReadinessState();
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(NovelApplication.class, args);
+    }
+
+}
+</code></pre></div><p>访问 localhost:8080/state 得到：</p> <div class="language- extra-class"><pre class="language-text"><code>活跃状态：CORRECT，就绪状态：ACCEPTING_TRAFFIC
+</code></pre></div><p>应用程序的 Liveness 状态表明其内部是否允许其正常工作或者是否从错误中自行恢复。一个 BROKEN Liveness 状态意味着应用程序处于无法恢复的状态，基础设施应该重新启动应用程序。</p> <p>一般来说，Liveness 状态不应基于外部检查，如果这样做的话，一个失败的外部系统（数据库、Web API、外部缓存等）将触发大规模重启和跨平台的级联故障。</p> <p>应用程序的就绪状态表明应用程序是否已准备好处理流量。失败的就绪状态告诉平台现在不应该将流量路由到应用程序。这通常发生在应用启动期间正在处理 CommandLineRunner 和 ApplicationRunner 组件，或者在应用程序太忙而无法获得额外流量的任何时刻。</p> <p>一旦处理完成 CommandLineRunner 和 ApplicationRunner 组件，就认为应用程序已准备就绪。</p> <p>如果我们有程序启动时任务要执行，应该由 CommandLineRunner 和 ApplicationRunner 组件来执行而不是使用类似 @PostConstruct 注解的 Spring 组件的生命周期回调：</p> <div class="language- extra-class"><pre class="language-text"><code>@Bean
+public CommandLineRunner commandLineRunner(){
+    return args -&gt; log.info(&quot;在此执行任务程序启动时任务！&quot;);
+}
+</code></pre></div><p>我们可以通过 @EventListener 注解来监听状态更新事件：</p> <div class="language- extra-class"><pre class="language-text"><code>@EventListener
+public void onStateChange(AvailabilityChangeEvent&lt;ReadinessState&gt; event) {
+    log.info(&quot;应用程序就绪状态改变啦！最新状态为{}&quot;,event.getState());
+    switch (event.getState()) {
+        case ACCEPTING_TRAFFIC:
+            // do something
+            break;
+        case REFUSING_TRAFFIC:
+            // do something
+            break;
+    }
+}
+</code></pre></div><p>我们还可以在应用中断且无法恢复时更新应用的状态：</p> <div class="language- extra-class"><pre class="language-text"><code>@Component
+public class MyLocalCacheVerifier {
+
+    private final ApplicationEventPublisher eventPublisher;
+
+    public MyLocalCacheVerifier(ApplicationEventPublisher eventPublisher) {
+        this.eventPublisher = eventPublisher;
+    }
+
+    public void checkLocalCache() {
+        try {
+            // ...
+        }
+        catch (CacheCompletelyBrokenException ex) {
+            AvailabilityChangeEvent.publish(this.eventPublisher, ex, LivenessState.BROKEN);
+        }
+    }
+
+}
+</code></pre></div><h3 id="事件和监听器"><a href="#事件和监听器" class="header-anchor">#</a> 事件和监听器</h3> <p>除了常见的 Spring Framework 事件，比如 ContextRefreshedEvent，SpringApplication 也发布了一些额外的应用事件。</p> <p>某些事件是在 ApplicationContext 创建之前触发的，不能在这些事件上将监听器注册为 @Bean，但是可以通过 SpringApplication.addListeners(…​) 方法或 SpringApplicationBuilder.listeners(…​) 方法注册它们的监听器。</p> <p>如果想自动注册这些监听器，无论应用创建的方式如何，我们可以在项目中添加一个 META-INF/spring.factories 文件，并且在文件中通过 org.springframework.context.ApplicationListener 作为 key 来引用它，如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>org.springframework.context.ApplicationListener=com.example.project.MyListener
+</code></pre></div><p>应用程序运行时，应用事件按照以下顺序发送：</p> <ol><li><p>ApplicationStartingEvent：在应用开始运行，除了监听器和初始化程序注册的任何处理之前发送。</p></li> <li><p>ApplicationEnvironmentPreparedEvent：在上下文中使用的环境已经准备好，上下文创建之前发送。</p></li> <li><p>ApplicationContextInitializedEvent：在 ApplicationContext 准备好， ApplicationContextInitializers 被调用，bean 定义加载之前发送。</p></li> <li><p>ApplicationPreparedEvent：在 bean 定义加载之后，上下文 refresh 之前发送。</p></li> <li><p>ApplicationStartedEvent：在上下文 refresh 之后，任何 CommandLineRunner 和 ApplicationRunner 组件调用之前发送。</p></li> <li><p>AvailabilityChangeEvent：紧随其后立即发送一个带有 LivenessState.CORRECT 的事件，表明应用程序是活跃的。</p></li> <li><p>ApplicationReadyEvent：在任意 CommandLineRunner 和 ApplicationRunner 组件调用之后发送。</p></li> <li><p>AvailabilityChangeEvent：紧随其后立即发送一个带有 ReadinessState.ACCEPTING_TRAFFIC 的事件，表示应用程序已准备好为请求提供服务。</p></li> <li><p>ApplicationFailedEvent：启动时出现异常则发送。</p></li></ol> <p>在内部，Spring Boot 使用事件来处理各种任务。默认情况下，事件监听器不应该运行可能冗长的任务，因为它们在同一线程中执行。应该考虑使用 CommandLineRunner 和 ApplicationRunner。</p> <p>应用事件是使用 Spring Framework 的事件发布机制发送的。该发布机制的一部分确保了在子上下文中发布给监听器的事件也会发布给任何祖先上下文中的监听器。因此，如果应用程序使用了有层次结构的SpringApplication 实例，同一个监听器可能会收到相同应用事件类型的多个实例。为了让监听器区分父子上下文的事件，监听器应该注入其应用程序上下文，然后将注入的上下文与事件的上下文进行比较。可以通过实现 ApplicationContextAware 接口来注入上下文，或者如果监听器是一个 Spring bean，那么可以通过 @Autowired 注解来注入。示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code>private static class MyAppListener implements ApplicationListener&lt;ApplicationPreparedEvent&gt;, ApplicationContextAware {
+
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    @Override
+    public void onApplicationEvent(ApplicationPreparedEvent event) {
+
+        if(event.getApplicationContext() == applicationContext){
+            
+            // do something
+            
+        }
+
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+
+        this.applicationContext = applicationContext;
+
+    }
+    
+}
+</code></pre></div><h3 id="web-环境"><a href="#web-环境" class="header-anchor">#</a> Web 环境</h3> <p>SpringApplication 尝试创建正确类型的 ApplicationContext，用于确定 WebApplicationType 的算法如下:</p> <ul><li><p>如果存在 Spring MVC，会创建 AnnotationConfigServletWebServerApplicationContext</p></li> <li><p>如果不存在 Spring MVC 但是存在 Spring WebFlux，会创建 AnnotationConfigReactiveWebServerApplicationContext</p></li> <li><p>其它情况会创建 AnnotationConfigApplicationContext</p></li></ul> <p>这意味着如果在同一个应用中使用 Spring MVC 和来自 Spring WebFlux 的新 WebClient，默认情况下将使用 Spring MVC。可以通过调用 setWebApplicationType(WebApplicationType) 方法来改变它。</p> <p>我们也可以通过调用 setApplicationContextClass(…​) 方法来完全控制使用的 ApplicationContext 类型。</p> <p>在 JUnit 测试中使用 SpringApplication 时，通常需要调用 setWebApplicationType(WebApplicationType.NONE) 方法。</p> <h3 id="访问应用程序参数"><a href="#访问应用程序参数" class="header-anchor">#</a> 访问应用程序参数</h3> <p>如果需要访问传递给 SpringApplication.run(…​) 的应用程序参数，我们可以注入一个 org.springframework.boot.ApplicationArguments bean。该 ApplicationArguments 接口提供对原始 String[] 参数以及解析后的 option 和 non-option 参数的访问，如以下示例所示：</p> <div class="language- extra-class"><pre class="language-text"><code>@Component
+public class MyBean {
+
+    public MyBean(ApplicationArguments args) {
+        boolean debug = args.containsOption(&quot;debug&quot;);
+        List&lt;String&gt; files = args.getNonOptionArgs();
+        if (debug) {
+            System.out.println(files);
+        }
+        // if run with &quot;--debug logfile.txt&quot; prints [&quot;logfile.txt&quot;]
+    }
+
+}
+</code></pre></div><p>Spring Boot 还在 Spring 环境中注册了一个 CommandLinePropertySource。这个可以让我们使用 @Value 注解注入单个应用程序参数。</p> <h3 id="启动时任务"><a href="#启动时任务" class="header-anchor">#</a> 启动时任务</h3> <p>如果我们需要在 SpringApplication 启动后运行某些特定代码，可以通过实现 ApplicationRunner 或 CommandLineRunner 接口。这两个接口以相同的方式工作并提供一个run方法，该方法在 SpringApplication.run(…​) 完成之前调用。这种方式非常适合在应用程序启动之后开始接受流量之前运行的任务。</p> <p>CommandLineRunner 接口提供一种以字符串数组形式来访问应用程序参数的方式，而 ApplicationRunner 使用前面讨论的 ApplicationArguments 接口来访问。</p> <p>如果定义了必须按特定顺序调用的多个 CommandLineRunner 或 ApplicationRunner beans，可以另外实现 ApplicationRunnerorg.springframework.core.Ordered 接口或使用 org.springframework.core.annotation.Order 注解。</p> <h3 id="应用程序退出"><a href="#应用程序退出" class="header-anchor">#</a> 应用程序退出</h3> <p>每个 SpringApplication 都会向 JVM 注册一个关闭钩子，以确保 ApplicationContext 在退出时正常关闭，所有标准的 Spring 生命周期回调（例如 DisposableBean 接口或 @PreDestroy 注解）都可以使用。如果希望在调用 SpringApplication.exit() 时返回特定的退出码，可以注册一个实现 org.springframework.boot.ExitCodeGenerator 接口的 bean。</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+public class NovelApplication {
+
+    @Bean
+    public ExitCodeGenerator exitCodeGenerator() {
+        return () -&gt; 42;
+    }
+
+    public static void main(String[] args) {
+        System.exit(SpringApplication.exit(SpringApplication.run(NovelApplication.class, args)));
+    }
+
+}
+</code></pre></div><p>ExitCodeGenerator 接口可能会被异常实现. 当遇到这样的异常时, Spring Boot 会返回 getExitCode() 实现方法提供的退出码。</p> <p>如果有多个 ExitCodeGenerator，则使用第一个生成的非零退出码。要控制生成器调用的顺序，可以另外实现 org.springframework.core.Ordered 接口或使用 org.springframework.core.annotation.Order 注解。</p> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p>Spring Boot 允许我们将配置外部化，以便可以在不同的环境中使用相同的应用程序代码。我们可以使用包括 Java properties 文件、YAML 文件、环境变量和命令行参数在内的各种外部配置源。</p> <p>对于配置属性值的访问，我们可以使用 @Value 注解直接注入进我们的 Spring beans、通过 Spring 的 Environment 接口访问或通过 @ConfigurationProperties 注解绑定到结构化对象上。</p> <p>例如我们在 properties 配置文件中添加了如下的数据源配置：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.datasource.url=jdbc:mysql://127.0.0.1:3306/novel?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai
+spring.datasource.username=test
+spring.datasource.password=test123456
+</code></pre></div><p>在 Spring bean 中使用 @Value 注解注入的示例代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>@Value(&quot;${spring.datasource.url}&quot;)
+private String url;
+
+@Value(&quot;${spring.datasource.username}&quot;)
+private String username;
+
+@Value(&quot;${spring.datasource.password}&quot;)
+private String password;
+</code></pre></div><p>通过 Environment 接口访问的示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code>@Bean
+public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+
+    return args -&gt; {
+
+        Environment environment = ctx.getEnvironment();
+        String url = environment.getProperty(&quot;spring.datasource.url&quot;);
+        String username = environment.getProperty(&quot;spring.datasource.username&quot;);
+        String password = environment.getProperty(&quot;spring.datasource.password&quot;);
+        log.info(&quot;url:{},username:{},password:{}&quot;,url,username,password);
+
+    };
+
+}
+</code></pre></div><p>通过 @ConfigurationProperties 注解绑定的示例代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>@ConfigurationProperties(prefix = &quot;spring.datasource&quot;)
+public class DataSourceProperties {
+
+    private String url;
+
+    private String username;
+
+    private String password;
+
+    // getter method
+
+    // setter method
+}
+</code></pre></div><p>Spring Boot 使用了一种特定的属性源加载顺序，旨在允许灵活地覆盖属性值。按照以下顺序加载（后面的会覆盖前面的）：</p> <ol><li><p>由 SpringApplication.setDefaultProperties 设置的默认属性。</p></li> <li><p>@Configuration 类上的 @PropertySource 注解。注意，在应用程序上下文刷新之前，不会将此类属性源添加到 Environment 中。所以不能够配置 logging.* 和 spring.main.* 这类应用程序上下文刷新之前就读取的属性。</p></li> <li><p>配置文件配置的数据（例如 application.properties 文件）。</p></li> <li><p>仅具有 random.* 属性的 RandomValuePropertySource。</p></li> <li><p>操作系统环境变量。</p></li> <li><p>Java 系统属性 ( System.getProperties())。</p></li> <li><p>来自 java:comp/env 的 JNDI 属性.</p></li> <li><p>ServletContext 初始化参数。</p></li> <li><p>ServletConfig 初始化参数。</p></li> <li><p>来自于 SPRING_APPLICATION_JSON（嵌入在环境变量或系统属性中的内联 JSON）的属性。</p></li> <li><p>命令行参数。</p></li> <li><p>测试中的 properties 属性。可用于 @SpringBootTest 和测试程序特定部分的测试注解。</p></li> <li><p>测试中的 @TestPropertySource 注解。</p></li> <li><p>当 devtools 可用时，在 $HOME/.config/spring-boot目录中的设置的全局属性。</p></li></ol> <p>配置文件的属性按以下顺序加载：</p> <ol><li><p>打包在 jar 中的应用程序属性（application.properties 或 YAML 变体）。</p></li> <li><p>打包在 jar 中特定配置的应用程序属性（application-{profile}.properties 或 YAML 变体）。</p></li> <li><p>打包在 jar 之外的应用程序属性（application.properties 或 YAML 变体）。</p></li> <li><p>打包的 jar 之外特定配置的应用程序属性（application-{profile}.properties 或 YAML 变体）。</p></li></ol> <p><strong>注：建议在整个应用程序中使用同一种格式的配置文件。如果在同一位置同时有 .properties 和 .yml 格式的配置文件，则优先考虑 .properties。</strong></p> <h3 id="命令行属性"><a href="#命令行属性" class="header-anchor">#</a> 命令行属性</h3> <p>默认情况下，SpringApplication 将任意的命令行参数（以 -- 开头，例如 --server.port=80）转换成一个 property 并添加到 Spring Environment。命令行属性始终优先于基于文件的属性源。</p> <p>我们可以通过 SpringApplication.setAddCommandLineProperties(false) 方法来禁用命令行参数。</p> <h3 id="json-应用属性"><a href="#json-应用属性" class="header-anchor">#</a> JSON 应用属性</h3> <p>环境变量和系统属性经常有着某些属性名称不能使用的限制，为了解决这个问题，Spring Boot 允许将属性块编码为单个 JSON 结构。</p> <p>当应用程序启动时，任意的 spring.application.json 或 SPRING_APPLICATION_JSON 属性都将被解析并添加到 Environment。</p> <p>例如，SPRING_APPLICATION_JSON 可以在 UN*X shell 的命令行中将属性作为环境变量提供：</p> <div class="language- extra-class"><pre class="language-text"><code>$ SPRING_APPLICATION_JSON='{&quot;my&quot;:{&quot;name&quot;:&quot;test&quot;}}' java -jar myapp.jar
+</code></pre></div><p>最终，我们在 Spring 的 Environment 中得到 my.name=test 的结果。</p> <p>同样的 JSON 也可以作为系统属性提供：</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -Dspring.application.json='{&quot;my&quot;:{&quot;name&quot;:&quot;test&quot;}}' -jar myapp.jar
+</code></pre></div><p>或者可以使用命令行参数提供 JSON：</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -jar myapp.jar --spring.application.json='{&quot;my&quot;:{&quot;name&quot;:&quot;test&quot;}}'
+</code></pre></div><p><strong>注：虽然来自 JSON 中的 null 值会被添加到生成的属性源中，但 PropertySourcesPropertyResolver 将 null 视为缺失值，不会使用 null 值来覆盖来自低优先级属性源的属性。</strong></p> <h3 id="外部应用属性"><a href="#外部应用属性" class="header-anchor">#</a> 外部应用属性</h3> <p>当应用程序启动时，Spring Boot 将自动从以下位置查找并加载 application.properties 或 application.yaml 配置文件。</p> <ol><li><p>从 classpath 类路径</p> <p>a. 类路径根包</p> <p>b. 类路径下的 /config 包</p></li> <li><p>从当前目录</p> <p>a. 当前目录</p> <p>b. 当前目录中的 /config 子目录</p> <p>c. /config 子目录的直接子目录</p></li></ol> <p>加载文件中的文档作为 PropertySources 被添加到 Spring Environment 中，后面的属性值会覆盖前面的。</p> <p>我们可以通过指定 environment 属性 spring.config.name 来更改 application 配置文件名为另一个文件名。例如，要查找 novel.properties 和 novel.yaml 配置文件，可以按如下方式运行应用程序：</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -jar novel.jar --spring.config.name=novel
+</code></pre></div><p>我们还可以通过使用 environment 属性 spring.config.location 来引用一个确切的路径。该属性接受以逗号分隔的一个或多个要检查的路径列表。</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -jar novel.jar --spring.config.location=\
+    optional:classpath:/default.properties,\
+    optional:classpath:/override.properties
+
+</code></pre></div><p>optional 表示该位置是可选的，无论它们是否存在。</p> <p>如果我们想添加其它路径，而不是替换它们，可以使用 spring.config.additional-location，从其他位置加载的属性可以覆盖默认路径中的属性。</p> <p><strong>注：spring.config.name, spring.config.location, 和spring.config.additional-location 很早就用于确定要加载哪些文件。它们必须定义为 environment 属性（通常是操作系统环境变量、系统属性或命令行参数）。</strong></p> <p>如果 spring.config.location 包含目录（而不是文件），应该以 / 结尾，加载之前它们会加上从 spring.config.name 得到的文件名，而 spring.config.location 中指定的文件会直接被导入。</p> <h4 id="可选路径"><a href="#可选路径" class="header-anchor">#</a> 可选路径</h4> <p>默认情况下，当指定的配置文件位置不存在时，Spring Boot 会抛出一个 ConfigDataLocationNotFoundException 并且应用程序启动失败。</p> <p>如果我们想指定一个路径，又不介意它是否存在，可以使用 optional: 前缀。我们可以将此前缀与 spring.config.location 和 spring.config.additional-location 属性以及 spring.config.import 声明一起使用。</p> <p>例如，spring.config.import 的值 optional:file:./myconfig.properties 允许应用程序即使在 myconfig.properties 文件不存在的情况下也能启动。</p> <p>如果我们想忽略所有的 ConfigDataLocationNotFoundExceptions，继续启动应用程序，可以使用 spring.config.on-not-found 属性。通过 SpringApplication.setDefaultProperties(…​) 或使用一个系统/环境变量将值设置为 ignore。</p> <h4 id="通配符路径"><a href="#通配符路径" class="header-anchor">#</a> 通配符路径</h4> <p>如果配置文件路径最后一个路径段中包含 * 的字符，就可以被视为通配符路径。加载配置时会扩展通配符，以便同时检查直接子目录。当有多个配置属性来源时，通配符路径特别有用。</p> <p>例如，如果我们有一些 Redis 配置和一些 MySQL 配置，我们希望将这两个配置分开，同时要求它们都存在于一个叫做 application.properties 的文件中。这可能会导致两个单独的 application.properties 文件安装在不同的位置，例如 /config/redis/application.properties 和 /config/mysql/application.properties. 在这种情况下，通配符位置 config/*/ 将导致两个文件都被处理。</p> <p>Spring Boot 默认搜索位置中包括 config/*/，jar 外部 /config 目录中的所有子目录都会被搜索。</p> <p>我们可以通过 spring.config.location 和 spring.config.additional-location 属性设置自己的通配符路径。</p> <p><strong>注：通配符路径必须只包含一个 <code>*</code> 并以 <code>*/</code>（搜索路径是目录） 或 <code>*/&lt;filename&gt;</code>（搜索路径是文件）结尾，带有通配符的路径按照文件名绝对路径的字母顺序排序。并且通配符路径仅适用于外部目录，不能在 classpath: 中使用通配符。</strong></p> <h4 id="特定配置属性文件"><a href="#特定配置属性文件" class="header-anchor">#</a> 特定配置属性文件</h4> <p>除了 application 属性文件，Spring Boot 还使用命名约定 application-{profile} 来加载特定配置的属性文件。例如，如果应用程序激活了一个名为 prod 的配置并且使用的是 YAML 配置文件，那么 application.yml 和 application-prod.yml 都会被加载。</p> <p>特定配置文件的加载路径和标准的 application.properties 配置文件一样，特定配置文件的属性总是会覆盖非特定配置文件。如果指定了多个特定配置文件，则应用最后获胜策略。例如，如果 spring.profiles.active 属性指定了配置文件 prod,live，则 application-prod.properties 中的值总是被 application-live.properties 中的值覆盖。</p> <p>如果没有 active 任何 profile 特定配置文件的话，默认会使用 application-default（如果存在） 的属性。</p> <h4 id="导入额外配置"><a href="#导入额外配置" class="header-anchor">#</a> 导入额外配置</h4> <p>我们可以通过使用 spring.config.import 属性从其它的路径导入更多的配置数据，导入被视为在声明导入文件的下方插入附加文件。</p> <p>例如，如果类路径下的 application.properties 配置文件中包含以下内容：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.application.name=myapp
+spring.config.import=optional:file:./dev.properties
+</code></pre></div><p>那么当前目录中 dev.properties 文件将会被导入（如果存在这样的文件），从 dev.properties 中导入的属性值将优先于触发导入的 application.properties 文件中的属性值 ，dev.properties 可以重新定义 spring.application.name 的属性值。</p> <p>一个 import 无论被声明多少次，都只会有一次导入，并且在单个 properties/yaml 文件中定义的导入顺序无关紧要。例如，下面的两个示例将产生相同的结果：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.config.import=my.properties
+my.property=value
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>my.property=value
+spring.config.import=my.properties
+</code></pre></div><p>在上述两个示例中，my.properties 文件中的属性值将优先于触发其导入的文件。</p> <p>我们还可以通过 spring.config.import 属性指定多个导入路径，按照定义的顺序进行处理，后面的导入优先。</p> <p>Spring Boot 支持配置各种不同位置数据​的可插拔 API。默认情况下，我们可以使用 Java 属性、YAML 和 配置树。</p> <p>第三方 jar 可以提供对其他技术的支持（不需要文件是本地的）。例如，我们能够假定配置数据来自外部存储，例如 Consul、Apache ZooKeeper、Netflix Archaius 或 Nacos 等。</p> <p>如果我们想自定义自己的配置数据位置，可以参考 org.springframework.boot.context.config 包下的 ConfigDataLocationResolver 和 ConfigDataLoader类。</p> <h4 id="导入无扩展名文件"><a href="#导入无扩展名文件" class="header-anchor">#</a> 导入无扩展名文件</h4> <p>某些云平台无法为卷挂载文件添加文件扩展名。要导入这些无扩展名的文件，我们需要给 Spring Boot 一个提示来让它知道如何加载它们。我们可以通过将扩展提示放在方括号中来做到这一点。</p> <p>例如，有一个 /etc/config/myconfig 文件要导入为 yaml。我们可以使用以下代码在 application.properties 中导入它：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.config.import=file:/etc/config/myconfig[.yaml]
+</code></pre></div><h4 id="使用配置树"><a href="#使用配置树" class="header-anchor">#</a> 使用配置树</h4> <p>在云平台（例如 Kubernetes）上运行应用程序时，通常需要读取平台提供的配置值。将环境变量用于此类的目的并不少见，但这可能会有缺点，尤其是在值应该保密的情况下。</p> <p>作为环境变量的替代方案，许多云平台现在允许我们将配置映射到挂载的数据卷。例如，Kubernetes 可以同时挂载 ConfigMaps 和 Secrets。</p> <p>我们可以使用两种常见的卷挂载模式：</p> <ol><li><p>包含一组完整属性的单个文件（通常写为 YAML）。</p></li> <li><p>多个文件被写入目录树，文件名作为 key，内容作为 value。</p></li></ol> <p>对于第一种情况，我们可以使用配置属性 spring.config.import 的方法直接导入 YAML 或属性文件。对于第二种情况，我们需要使用配置树：Spring Boot 知道它需要将哪些文件公开为属性的前缀。</p> <p>例如，假设 Kubernetes 挂载了以下卷：</p> <div class="language- extra-class"><pre class="language-text"><code>etc/
+  config/
+    myapp/
+      username
+      password
+</code></pre></div><p>username 文件的内容将是一个配置值，password 文件的内容将会加密。</p> <p>要导入这些属性，我们可以在 application.properties 或 application.yaml 文件中添加以下内容：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.config.import=optional:configtree:/etc/config/
+</code></pre></div><p>然后，我们能够以一种常用的方式从 Environment 中访问或者注入 myapp.username 和 myapp.password 属性。</p> <p>配置树的值可以绑定到 String 和 byte[] 类型。</p> <h4 id="属性占位符"><a href="#属性占位符" class="header-anchor">#</a> 属性占位符</h4> <p>application.properties 和 application.yml 中的值在使用时会通过已有环境过滤，所以我们可以参考之前已经定义的值（例如，来自系统属性或环境变量）。标准的 ${name} 属性占位符语法可以在值内的任何地方使用，属性占位符还可以使用<code>:</code>来指定默认值，例如${name:default}。</p> <p>以下示例显示了使用和不使用默认值的占位符：</p> <div class="language- extra-class"><pre class="language-text"><code>app.name=MyApp
+app.description=${app.name} is a Spring Boot application written by ${username:Unknown}
+</code></pre></div><p>如果 username 属性还没有在其它地方设置，app.description 的值为 MyApp is a Spring Boot application written by Unknown。</p> <h4 id="多文档文件"><a href="#多文档文件" class="header-anchor">#</a> 多文档文件</h4> <p>Spring Boot 允许我们将单个物理文件拆分为多个独立添加的逻辑文档，文档从上到下按顺序处理。后面的文档可以覆盖前面文档中定义的属性。</p> <p>对于 application.yml 文件，使用标准的 YAML 多文档语法。三个连续的连字符<code>---</code>代表上一个文档的结束以及下一个文档的开始。</p> <div class="language- extra-class"><pre class="language-text"><code>spring:
+  application:
+    name: &quot;MyApp&quot;
+---
+spring:
+  application:
+    name: &quot;MyCloudApp&quot;
+  config:
+    activate:
+      on-cloud-platform: &quot;kubernetes&quot;
+</code></pre></div><p>对于 application.properties 文件， <code>#---</code> 作为文档的分割符。</p> <div class="language- extra-class"><pre class="language-text"><code>spring.application.name=MyApp
+#---
+spring.application.name=MyCloudApp
+spring.config.activate.on-cloud-platform=kubernetes
+</code></pre></div><p><strong>注：属性文件分隔符不能有任何前导空格，并且必须正好有三个连字符，分隔符前后的行不能是注释。并且不能使用 @PropertySource 或 @TestPropertySource 注解加载多文档属性文件。</strong></p> <p>多文档属性文件通常与激活属性结合使用，例如 spring.config.activate.on-profile。</p> <h4 id="激活属性"><a href="#激活属性" class="header-anchor">#</a> 激活属性</h4> <p>有时候仅仅在满足某些条件才激活一组属性的方式是非常有用，我们可以通过使用 spring.config.activate.* 属性有条件地激活属性文档。</p> <p>我们可以使用以下的激活属性：</p> <div class="language- extra-class"><pre><code>1. on-profile：表达式与当前 profiles 匹配才能被激活
+2. on-cloud-platform：检测到 CloudPlatform 才能被激活.
+</code></pre></div><p>例如，以下内容指定当程序运行在 Kubernetes 上并且 prod 或 staging 配置处于激活状态时，第二个文档才会被激活。</p> <div class="language- extra-class"><pre class="language-text"><code>myprop=always-set
+#---
+spring.config.activate.on-cloud-platform=kubernetes
+spring.config.activate.on-profile=prod | staging
+myotherprop=sometimes-set
+</code></pre></div><h4 id="yaml-使用"><a href="#yaml-使用" class="header-anchor">#</a> YAML 使用</h4> <p>YAML 是 JSON 的超集，一种用于指定分层配置数据的便捷格式。只要类路径中有 SnakeYAML 库，SpringApplication 类就会自动支持 YAML 作为 properties 的替代方案。只要我们使用了 Starters ，spring-boot-starter 自动提供了 SnakeYAML。</p> <p>YAML 文档需要从分层格式转换为 Spring Environment 可以使用的平面结构。如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>environments:
+  dev:
+    url: &quot;https://dev.example.com&quot;
+    name: &quot;Developer Setup&quot;
+  prod:
+    url: &quot;https://another.example.com&quot;
+    name: &quot;My Cool App&quot;
+</code></pre></div><p>Spring Environment 为了访问以上这些属性, 会转换成如下的格式:</p> <div class="language- extra-class"><pre class="language-text"><code>environments.dev.url=https://dev.example.com
+environments.dev.name=Developer Setup
+environments.prod.url=https://another.example.com
+environments.prod.name=My Cool App
+</code></pre></div><p>同样的，YAML 列表也需要展平。它们会被转换成带有[index]符号的属性 key。如下：</p> <div class="language- extra-class"><pre class="language-text"><code>my:
+ servers:
+ - &quot;dev.example.com&quot;
+ - &quot;another.example.com&quot;
+</code></pre></div><p>转换后的结果：</p> <div class="language- extra-class"><pre class="language-text"><code>my.servers[0]=dev.example.com
+my.servers[1]=another.example.com
+</code></pre></div><p>使用该[index]符号的属性可以使用 Spring Boot 的 Binder 类绑定到 Java List 或 Set 对象。</p> <p><strong>注：YAML 文件不能使用 @PropertySource 或 @TestPropertySource 注解加载。如果我们想以这种方式加载属性值，需要使用 properties 文件。</strong></p> <p>Spring Framework 提供了两个方便的类用于加载 YAML 文档：</p> <ol><li>YamlPropertiesFactoryBean： 将 YAML 加载为 Properties 对象</li> <li>YamlMapFactoryBean：将 YAML 加载为 Map 对象.</li></ol> <p>如果我们想将 YAML 加载为一个 Spring PropertySource，可以直接使用 YamlPropertySourceLoader 类。</p> <h3 id="配置随机值"><a href="#配置随机值" class="header-anchor">#</a> 配置随机值</h3> <p>RandomValuePropertySource 对于注入随机值很有用（例如，注入密钥或测试用例）。它可以生成整数、长整数、uuid 或字符串。</p> <div class="language- extra-class"><pre class="language-text"><code>my.secret=${random.value}
+my.number=${random.int}
+my.bignumber=${random.long}
+my.uuid=${random.uuid}
+my.number-less-than-ten=${random.int(10)}
+my.number-in-range=${random.int[1024,65536]}
+
+</code></pre></div><h3 id="配置系统环境属性"><a href="#配置系统环境属性" class="header-anchor">#</a> 配置系统环境属性</h3> <p>Spring Boot 支持为环境属性设置前缀。这对于多个不同配置要求的 Spring Boot 应用程序共享系统环境是非常有用的，系统环境属性的前缀可以直接通过 SpringApplication 设置。</p> <div class="language- extra-class"><pre class="language-text"><code>public static void main(String[] args) {
+    SpringApplication springApplication = new SpringApplication(NovelApplication.class);
+    springApplication.setEnvironmentPrefix(&quot;prod&quot;);
+    springApplication.run(args);
+}
+</code></pre></div><h3 id="类型安全的配置属性"><a href="#类型安全的配置属性" class="header-anchor">#</a> 类型安全的配置属性</h3> <p>使用 @Value(&quot;${property}&quot;) 注解来注入配置属性有时会很麻烦，特别是在在使用多个属性或者数据本质上是分层的时候。Spring Boot 提供了一种使用属性的替代方法，可以让强类型的 bean 来管理和验证应用程序的配置。</p> <h4 id="javabean-属性绑定"><a href="#javabean-属性绑定" class="header-anchor">#</a> JavaBean 属性绑定</h4> <p>我们可以绑定一个标准 Java Bean 属性声明的 bean，如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>@ConfigurationProperties(&quot;my.service&quot;)
+public class MyProperties {
+
+    private boolean enabled;
+
+    private InetAddress remoteAddress;
+
+    private final Security security = new Security();
+
+    public boolean isEnabled() {
+        return this.enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public InetAddress getRemoteAddress() {
+        return this.remoteAddress;
+    }
+
+    public void setRemoteAddress(InetAddress remoteAddress) {
+        this.remoteAddress = remoteAddress;
+    }
+
+    public Security getSecurity() {
+        return this.security;
+    }
+
+    public static class Security {
+
+        private String username;
+
+        private String password;
+
+        private List&lt;String&gt; roles = new ArrayList&lt;&gt;(Collections.singleton(&quot;USER&quot;));
+
+        public String getUsername() {
+            return this.username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return this.password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+
+        public List&lt;String&gt; getRoles() {
+            return this.roles;
+        }
+
+        public void setRoles(List&lt;String&gt; roles) {
+            this.roles = roles;
+        }
+
+    }
+
+}
+</code></pre></div><p>上面的 POJO 定义了以下属性:</p> <ul><li><p>my.service.enabled</p></li> <li><p>my.service.remote-address</p></li> <li><p>my.service.security.username</p></li> <li><p>my.service.security.password</p></li> <li><p>my.service.security.roles</p></li></ul> <p>我们还可以通过构造函数注入的方式来绑定我们的配置属性：</p> <div class="language- extra-class"><pre class="language-text"><code>@ConfigurationProperties(&quot;my.service&quot;)
+public class MyProperties {
+
+    private final boolean enabled;
+
+    private final InetAddress remoteAddress;
+
+    private final Security security;
+
+    public MyProperties(boolean enabled, InetAddress remoteAddress, Security security) {
+        this.enabled = enabled;
+        this.remoteAddress = remoteAddress;
+        this.security = security;
+    }
+
+    public boolean isEnabled() {
+        return this.enabled;
+    }
+
+    public InetAddress getRemoteAddress() {
+        return this.remoteAddress;
+    }
+
+    public Security getSecurity() {
+        return this.security;
+    }
+
+    public static class Security {
+
+        private final String username;
+
+        private final String password;
+
+        private final List&lt;String&gt; roles;
+
+        public Security(String username, String password, @DefaultValue(&quot;USER&quot;) List&lt;String&gt; roles) {
+            this.username = username;
+            this.password = password;
+            this.roles = roles;
+        }
+
+        public String getUsername() {
+            return this.username;
+        }
+
+        public String getPassword() {
+            return this.password;
+        }
+
+        public List&lt;String&gt; getRoles() {
+            return this.roles;
+        }
+
+    }
+
+}
+</code></pre></div><h4 id="启用-configurationproperties-bean"><a href="#启用-configurationproperties-bean" class="header-anchor">#</a> 启用 @ConfigurationProperties bean</h4> <p>Spring Boot 提供了 @ConfigurationProperties 配置属性绑定并将它们注册为 bean 的基础设施。我们可以按类启用配置属性，也可以启用与组件扫描类似的配置属性扫描。</p> <p>有时候，带有 @ConfigurationProperties 注解的类可能不适合扫描。例如，开发自己的自动配置类或者希望有条件地启用某些配置。在这些情况下，我们可以使用 @EnableConfigurationProperties 注解指定要处理的 @ConfigurationProperties 类列表，可以在任何 @Configuration 类上完成。</p> <div class="language- extra-class"><pre class="language-text"><code>@Configuration(proxyBeanMethods = false)
+@EnableConfigurationProperties(SomeProperties.class)
+public class MyConfiguration {
+
+}
+</code></pre></div><p>要启用配置属性扫描，需要将 @ConfigurationPropertiesScan 注解添加到应用程序。通常，它被添加到带有 @SpringBootApplication 注解的应用程序主类上，也可以添加到任何 @Configuration 类上。默认情况下，扫描将从声明注解类的包下进行，也可以自定义要扫描的包。</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+@ConfigurationPropertiesScan({ &quot;com.example.app&quot;, &quot;com.example.another&quot; })
+public class MyApplication {
+
+}
+</code></pre></div><h4 id="使用-configurationproperties-bean"><a href="#使用-configurationproperties-bean" class="header-anchor">#</a> 使用 @ConfigurationProperties bean</h4> <p>如果我们要使用 @ConfigurationProperties beans，可以像注入任何其他 Spring bean 一样注入它们。</p> <div class="language- extra-class"><pre class="language-text"><code>@Service
+public class MyService {
+
+    private final SomeProperties properties;
+
+    public MyService(SomeProperties properties) {
+        this.properties = properties;
+    }
+
+    public void openConnection() {
+        Server server = new Server(this.properties.getRemoteAddress());
+        server.start();
+        // ...
+    }
+
+    // ...
+
+}
+</code></pre></div><h4 id="第三方配置"><a href="#第三方配置" class="header-anchor">#</a> 第三方配置</h4> <p>@ConfigurationProperties 注解除了用于类上，还可以在公共的 @Bean 方法上使用它，我们可以通过这种方式将属性绑定到无法控制的第三方组件（例如 MySQL 多数据源配置）。</p> <div class="language- extra-class"><pre class="language-text"><code>@Bean
+@Primary 
+@ConfigurationProperties(prefix = &quot;book.datasource&quot;) 
+public DataSource bookDataDataSource() {
+    return DataSourceBuilder.create().build();
+}
+
+@Bean
+@ConfigurationProperties(prefix = &quot;user.datasource&quot;) 
+public DataSource userDataSource() {
+    return DataSourceBuilder.create().build();
+}
+</code></pre></div><h4 id="宽松绑定"><a href="#宽松绑定" class="header-anchor">#</a> 宽松绑定</h4> <p>Spring Boot 使用一些宽松的规则将 Environment 属性绑定到 bean ，因此 Environment 属性名称和 @ConfigurationProperties bean 属性名称之间不需要完全匹配。常见示例包括破折号分隔的 Environment 属性（例如，context-path 绑定到 contextPath）和大写 Environment 属性（例如，PORT 绑定到 port）。</p> <h4 id="属性转换"><a href="#属性转换" class="header-anchor">#</a> 属性转换</h4> <p>Spring Boot 在绑定外部应用程序属性到 @ConfigurationProperties bean 时会尝试将属性强制转换为正确的类型。如果我们需要自定义类型转换，可以提供一个 ConversionService bean（带有名为    conversionService 的 bean）或自定义属性编辑器（通过一个 CustomEditorConfigurer bean），还可以自定义 Converters（带有 @ConfigurationPropertiesBinding 注解的 bean 定义）。</p> <h4 id="configurationproperties-校验"><a href="#configurationproperties-校验" class="header-anchor">#</a> @ConfigurationProperties 校验</h4> <p>当我们在 @ConfigurationProperties 类上使用 Spring 的 @Validated 注解时，Spring Boot 会尝试校验该类。我们可以直接在配置类上使用 JSR-303 javax.validation 的约束注解，使用之前应该确保类路径中存在兼容的 JSR-303 实现，然后将约束注解添加到字段上。</p> <div class="language- extra-class"><pre class="language-text"><code>@ConfigurationProperties(&quot;my.service&quot;)
+@Validated
+public class MyProperties {
+
+   @NotNull
+   private InetAddress remoteAddress;
+
+   @Valid
+   private final Security security = new Security();
+
+   public InetAddress getRemoteAddress() {
+       return this.remoteAddress;
+   }
+
+   public void setRemoteAddress(InetAddress remoteAddress) {
+       this.remoteAddress = remoteAddress;
+   }
+
+   public Security getSecurity() {
+       return this.security;
+   }
+
+   public static class Security {
+
+       @NotEmpty
+       private String username;
+
+       public String getUsername() {
+           return this.username;
+       }
+
+       public void setUsername(String username) {
+           this.username = username;
+       }
+
+   }
+
+}
+</code></pre></div><p>我们还可以通过创建一个名为 configurationPropertiesValidator 的 bean 定义来添加自定义的 Spring 校验器。</p> <p>spring-boot-actuator 模块包含了一个公开所有 @ConfigurationProperties bean 的端点。</p> <h3 id="profiles"><a href="#profiles" class="header-anchor">#</a> Profiles</h3> <p>Spring Profiles 提供了一种分离应用程序配置部分并使其仅在某些环境中可用的方法。任意的 @Component，@Configuration 或 @ConfigurationProperties 都可以被 @Profile 标记来限制它们的加载。</p> <div class="language- extra-class"><pre class="language-text"><code>@Configuration
+@Profile(&quot;production&quot;)
+public class ProductionConfiguration {
+
+    // ...
+
+}
+</code></pre></div><p>@ConfigurationProperties bean 如果是通过 @EnableConfigurationProperties 注册的，@Profile 需要在带有 @EnableConfigurationProperties 注解的 @Configuration 类上指定。如果是自动扫描注册的，@Profile 直接在 @ConfigurationProperties 类上指定。</p> <p>我们可以使用 Environment 属性 spring.profiles.active 来指定哪些 profiles 处于激活状态，例如，在 application.properties 配置文件中激活 dev 和 hsqldb：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.profiles.active=dev,hsqldb
+</code></pre></div><p>我们也可以通过命令行参数的方式激活它们：</p> <div class="language- extra-class"><pre class="language-text"><code>--spring.profiles.active=dev,hsqldb
+</code></pre></div><p>如果没有 profile 处于激活状态，会启用一个默认的 profile。默认 profile 的名称是 default，可以通过 Environment 属性 spring.profiles.default进行调整。如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.profiles.default=none
+</code></pre></div><p>spring.profiles.active 和 spring.profiles.default 只能用在非特定配置的文档中，它们不能包含在特定配置文件（application-{profile}）或由 spring.config.activate.on-profile 激活的文档中。</p> <p>如下所示，第二个文档是无效的：</p> <div class="language- extra-class"><pre class="language-text"><code># this document is valid
+spring.profiles.active=prod
+#---
+# this document is invalid
+spring.config.activate.on-profile=prod
+spring.profiles.active=metrics
+</code></pre></div><h2 id="日志"><a href="#日志" class="header-anchor">#</a> 日志</h2> <p>Spring Boot 使用 <a href="https://commons.apache.org/proper/commons-logging/" target="_blank" rel="noopener noreferrer">Commons Logging<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 进行所有内部日志记录，但开放底层日志实现，为 Java Util Logging、Log4J2 和 Logback 提供了默认配置。在每种情况下，都预先配置为使用控制台输出，还提供可选的文件输出。Spring Boot 默认使用的是 Logback 日志实现。</p> <h3 id="日志格式"><a href="#日志格式" class="header-anchor">#</a> 日志格式</h3> <p>Spring Boot 默认的日志输出格式如下：</p> <div class="language- extra-class"><pre class="language-text"><code>2022-05-07T10:16:13.116+08:00  INFO 33212 --- [  restartedMain] i.github.xxyopen.novel.NovelApplication  : Starting NovelApplication using Java 17.0.3 on xiongxiaoyangdeMacBook-Air.local with PID 33212 (/Users/xiongxiaoyang/java/springboot3/target/classes started by xiongxiaoyang in /Users/xiongxiaoyang/java/springboot3)
+2022-05-07T10:16:13.120+08:00  INFO 33212 --- [  restartedMain] i.github.xxyopen.novel.NovelApplication  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-05-07T10:16:13.247+08:00  INFO 33212 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-07T10:16:13.248+08:00  INFO 33212 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-07T10:16:15.136+08:00  INFO 33212 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-07T10:16:15.164+08:00  INFO 33212 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-07T10:16:15.164+08:00  INFO 33212 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.18]
+2022-05-07T10:16:15.291+08:00  INFO 33212 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-07T10:16:15.294+08:00  INFO 33212 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2042 ms
+2022-05-07T10:16:15.896+08:00  INFO 33212 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-07T10:16:15.948+08:00  INFO 33212 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-07T10:16:15.960+08:00  INFO 33212 --- [  restartedMain] i.github.xxyopen.novel.NovelApplication  : Started NovelApplication in 8.561 seconds (JVM running for 9.373)
+</code></pre></div><ul><li><p>日期和时间：毫秒精度，易于排序。</p></li> <li><p>日志级别：ERROR、WARN、INFO、DEBUG 或 TRACE。</p></li> <li><p>进程 ID。</p></li> <li><p>用于区分日志实际信息开始的<code>---</code>分隔符。</p></li> <li><p>线程名称：方括号[]中（可能会被截断）。</p></li> <li><p>记录器名称：通常是源类名称（经常缩写）。</p></li> <li><p>日志信息。</p></li></ul> <p><strong>注：Logback 没有 FATAL 级别，直接映射到 ERROR</strong></p> <h3 id="控制台输出"><a href="#控制台输出" class="header-anchor">#</a> 控制台输出</h3> <p>默认的日志配置在写入时会将信息回显到控制台。默认情况下，会记录 ERROR、WARN 和INFO 级别的日志，还可以通过在启动应用程序的时候使用 --debug 标志来开启“调试”模式。</p> <div class="language- extra-class"><pre class="language-text"><code>$ java -jar myapp.jar --debug
+</code></pre></div><p>我们也可以在 application.properties 配置文件中设置 debug=true。</p> <p>启用调试模式后，会配置一系列核心记录器（嵌入式容器、Hibernate 和 Spring Boot）输出更多信息。启用调试模式不会将应用程序配置成记录所有 DEBUG 级别的日志。</p> <p>或者，我们可以通过使用 --trace 标志（或在 application.properties 中设置 trace=true）开启 trace 模式来为一系列核心记录器启用 trace 日志记录。</p> <p>如果我们的终端支持 ANSI，可以使用颜色输出来提高可读性。通过设置 spring.output.ansi.enabled 为支持的值以覆盖自动检测。</p> <h3 id="文件输出"><a href="#文件输出" class="header-anchor">#</a> 文件输出</h3> <p>默认情况下，Spring Boot 仅记录日志到控制台，不会写入日志文件。如果我们想在控制台输出之外写入日志文件，我们需要设置 logging.file.name 或者 logging.file.path 属性。</p> <p>日志文件在达到 10 MB 时会轮换，并且与控制台输出一样，默认情况下会记录 ERROR、WARN 和INFO 级别的日志。</p> <h3 id="文件轮换"><a href="#文件轮换" class="header-anchor">#</a> 文件轮换</h3> <p>如果我们使用的是 Logback，可以使用 application.properties 或 application.yaml 配置文件来微调日志轮换设置。对于其他所有的日志记录系统，需要自己配置日志轮换设置（例如，如果使用了 Log4J2，那么可以添加一个 log4j2.xml 或 log4j2-spring.xml 文件）。</p> <table><thead><tr><th style="text-align:left;"><strong>Name</strong></th> <th style="text-align:left;"><strong>Description</strong></th></tr></thead> <tbody><tr><td style="text-align:left;"><code>logging.logback.rollingpolicy.file-name-pattern</code></td> <td style="text-align:left;">用于创建日志存档的文件名模式</td></tr> <tr><td style="text-align:left;"><code>logging.logback.rollingpolicy.clean-history-on-start</code></td> <td style="text-align:left;">是否在应用程序启动时进行日志存档清理</td></tr> <tr><td style="text-align:left;"><code>logging.logback.rollingpolicy.max-file-size</code></td> <td style="text-align:left;">归档前日志文件的最大大小</td></tr> <tr><td style="text-align:left;"><code>logging.logback.rollingpolicy.total-size-cap</code></td> <td style="text-align:left;">被删之前日志存档可以占用的最大大小</td></tr> <tr><td style="text-align:left;"><code>logging.logback.rollingpolicy.max-history</code></td> <td style="text-align:left;">要保留的日志存档文件的最大数量（默认为 7）</td></tr></tbody></table> <h3 id="日志级别"><a href="#日志级别" class="header-anchor">#</a> 日志级别</h3> <p>Spring Environment 中所有受支持的日志系统都可以通过使用 <code>logging.level.&lt;logger-name&gt;=&lt;level&gt;</code> 来设置 TRACE、DEBUG、INFO、WARN、ERROR、FATAL 或 OFF 的日志级别 ，root 日志可以通过使用 logging.level.root 来配置。在 application.properties 文件中设置示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code>logging.level.root=warn
+logging.level.org.springframework.web=debug
+logging.level.org.hibernate=error
+</code></pre></div><p>我们也可以使用环境变量来设置日志级别。例如，LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB=DEBUG 将设置 org.springframework.web 包下的日志级别为 DEBUG。</p> <p>上述使用环境变量的方式仅适用于包级别的日志记录。由于宽松绑定总是将环境变量转换为小写，因此无法以这种方式为单个类配置日志。如果我们要为类配置日志，可以使用 SPRING_APPLICATION_JSON 变量。</p> <h3 id="日志分组"><a href="#日志分组" class="header-anchor">#</a> 日志分组</h3> <p>如果能够将相关的日志记录器组合在一起以便可以同时配置它们是非常有用的。例如，我们可能会经常更改所有 Tomcat 相关记录器的日志级别，但不能轻易记住顶级包。</p> <p>为了解决这个问题，Spring Boot 允许我们在 Spring Environment 中定义日志分组。例如，我们可以在 application.properties 中定义一个 tomcat 组：</p> <div class="language- extra-class"><pre class="language-text"><code>logging.group.tomcat=org.apache.catalina,org.apache.coyote,org.apache.tomcat
+</code></pre></div><p>如下所示，我们可以轻易地更改分组中所有记录器的日志级别：</p> <div class="language- extra-class"><pre class="language-text"><code>logging.level.tomcat=trace
+</code></pre></div><p>Spring Boot 预定义了以下开箱即用的日志记录组：</p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Loggers</th></tr></thead> <tbody><tr><td style="text-align:left;">web</td> <td style="text-align:left;"><code>org.springframework.core.codec</code>, <code>org.springframework.http</code>, <code>org.springframework.web</code>, <code>org.springframework.boot.actuate.endpoint.web</code>, <code>org.springframework.boot.web.servlet.ServletContextInitializerBeans</code></td></tr> <tr><td style="text-align:left;">sql</td> <td style="text-align:left;"><code>org.springframework.jdbc.core</code>, <code>org.hibernate.SQL</code>, <code>org.jooq.tools.LoggerListener</code></td></tr></tbody></table> <h3 id="自定义日志配置"><a href="#自定义日志配置" class="header-anchor">#</a> 自定义日志配置</h3> <p>我们可以通过在 classpath 类路径中加入适当的库来激活各种日志记录系统，并且可以通过在类路径根目录中或 Spring Environment 属性 logging.config 指定的位置中提供合适的配置文件来进一步定制。</p> <p>我们还可以使用系统属性 org.springframework.boot.logging.LoggingSystem 来强制 Spring Boot 使用特定的日志系统。该属性值是 LoggingSystem 实现的完全限定类名，如果使用 none 值将完全禁用 Spring Boot 的日志配置。</p> <p><strong>注：日志初始化是在 ApplicationContext 创建之前，无法从 Spring @Configuration 的 @PropertySources 中控制日志。更改日志系统或完全禁用它的唯一方法是通过系统属性。</strong></p> <p>根据日志系统类型，将加载如下文件：</p> <table><thead><tr><th style="text-align:left;">日志系统</th> <th style="text-align:left;">加载文件</th></tr></thead> <tbody><tr><td style="text-align:left;">Logback</td> <td style="text-align:left;"><code>logback-spring.xml</code>, <code>logback-spring.groovy</code>, <code>logback.xml</code> 或 <code>logback.groovy</code></td></tr> <tr><td style="text-align:left;">Log4j2</td> <td style="text-align:left;"><code>log4j2-spring.xml</code> 或 <code>log4j2.xml</code></td></tr> <tr><td style="text-align:left;">JDK (Java Util Logging)</td> <td style="text-align:left;"><code>logging.properties</code></td></tr></tbody></table> <h3 id="logback-扩展"><a href="#logback-扩展" class="header-anchor">#</a> Logback 扩展</h3> <p>Spring Boot 包含许多对 Logback 的扩展来帮助我们进行高级配置。我们可以在 logback-spring.xml 配置文件中使用这些扩展。</p> <p><strong>注：标准的 logback.xml 配置文件加载得太早，不能在其中使用扩展，需要使用 logback-spring.xml 或定义 logging.config 属性。</strong></p> <h4 id="特定配置"><a href="#特定配置" class="header-anchor">#</a> 特定配置</h4> <p><code>&lt;springProfile&gt;</code> 标签允许我们根据激活的 Spring profiles 选择性地包含或排除部分配置，<code>&lt;configuration&gt;</code> 元素中的任何位置都支持该标签。使用 name 属性来指定哪个 profile 接受这部分配置。 <code>&lt;springProfile&gt;</code> 标签可以包含 profile 名称（例如 prod）或 profile 表达式（例如 test | prod）。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;springProfile name=&quot;staging&quot;&gt;
+    &lt;!-- configuration to be enabled when the &quot;staging&quot; profile is active --&gt;
+&lt;/springProfile&gt;
+
+&lt;springProfile name=&quot;dev | staging&quot;&gt;
+    &lt;!-- configuration to be enabled when the &quot;dev&quot; or &quot;staging&quot; profiles are active --&gt;
+&lt;/springProfile&gt;
+
+&lt;springProfile name=&quot;!production&quot;&gt;
+    &lt;!-- configuration to be enabled when the &quot;production&quot; profile is not active --&gt;
+&lt;/springProfile&gt;
+</code></pre></div><h4 id="environment-属性"><a href="#environment-属性" class="header-anchor">#</a> Environment 属性</h4> <p><code>&lt;springProperty&gt;</code> 标签允许我们在 Logback 中使用 Spring Environment 公开的属性。例如，我们想在 Logback 配置文件中访问 application.properties 文件中的值。该标签与 Logback 标准标签 <code>&lt;property&gt;</code> 的工作方式类似，不同的是，我们不是直接指定值，而是指定属性的来源（来自 Environment）。如果要将属性存储在 local 范围以外的某个地方，可以使用 scope 属性。如果需要一个备用值（Environment 没有设置该属性），可以使用 defaultValue 属性。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;springProperty scope=&quot;context&quot; name=&quot;fluentHost&quot; source=&quot;myapp.fluentd.host&quot;
+        defaultValue=&quot;localhost&quot;/&gt;
+&lt;appender name=&quot;FLUENT&quot; class=&quot;ch.qos.logback.more.appenders.DataFluentAppender&quot;&gt;
+    &lt;remoteHost&gt;${fluentHost}&lt;/remoteHost&gt;
+    ...
+&lt;/appender&gt;
+</code></pre></div><h2 id="json"><a href="#json" class="header-anchor">#</a> JSON</h2> <p>Spring Boot 提供了与以下三种 JSON 映射库的集成：</p> <ul><li><p>Gson</p></li> <li><p>Jackson</p></li> <li><p>JSON-B</p></li></ul> <p>Jackson 是 Spring Boot 首选的默认库。</p> <h3 id="jackson"><a href="#jackson" class="header-anchor">#</a> Jackson</h3> <p>Spring Boot 提供了 Jackson 的自动配置，当 Jackson 在 classpath 类路径上时，ObjectMapper bean 会自动配置。Jackson 是 spring-boot-starter-json 启动器的一部分。</p> <div class="language- extra-class"><pre class="language-text"><code>@AutoConfiguration
+@ConditionalOnClass({ObjectMapper.class})
+public class JacksonAutoConfiguration {
+    // ... 省略
+}
+</code></pre></div><h4 id="自定义序列化和反序列化器"><a href="#自定义序列化和反序列化器" class="header-anchor">#</a> 自定义序列化和反序列化器</h4> <p>如果我们使用 Jackson 来序列化和反序列化 JSON 数据，有时需要自定义 JsonSerializer（序列化） 和 JsonDeserializer（反序列化） 类来处理一些复杂的数据类型转换、数字/日期格式化等情况（例如，Long 类型序列化成 String 类型后返回给浏览器以避免精度损失、String 类型反序列化时转义特殊字符以避免 XSS 攻击等  ）。自定义序列化程序一般需要通过一个模块向 Jackson 注册，Spring Boot 提供了一个替代方案 @JsonComponent 注解，能够更轻松地直接注册 Spring Beans。</p> <p>我们可以直接在 JsonSerializer，JsonDeserializer 或 KeyDeserializer 的实现类上使用 @JsonComponent 注解，还可以在包含 serializers/deserializers 作为内部类的类上使用它，如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>@JsonComponent
+public class MyJsonComponent {
+
+    public static class Serializer extends JsonSerializer&lt;MyObject&gt; {
+
+        @Override
+        public void serialize(MyObject value, JsonGenerator jgen, SerializerProvider serializers) throws IOException {
+            jgen.writeStartObject();
+            jgen.writeStringField(&quot;name&quot;, value.getName());
+            jgen.writeNumberField(&quot;age&quot;, value.getAge());
+            jgen.writeEndObject();
+        }
+
+    }
+
+    public static class Deserializer extends JsonDeserializer&lt;MyObject&gt; {
+
+        @Override
+        public MyObject deserialize(JsonParser jsonParser, DeserializationContext ctxt) throws IOException {
+            ObjectCodec codec = jsonParser.getCodec();
+            JsonNode tree = codec.readTree(jsonParser);
+            String name = tree.get(&quot;name&quot;).textValue();
+            int age = tree.get(&quot;age&quot;).intValue();
+            return new MyObject(name, age);
+        }
+
+    }
+
+}
+</code></pre></div><p>ApplicationContext 中的所有 @JsonComponent bean 都会自动向 Jackson 注册。因为 @JsonComponent 是带有 @Component 元注解的注解，一般的组件扫描规则都能应用。</p> <p>我们还可以直接使用 Spring Boot 提供的 JsonObjectSerializer 和 JsonObjectDeserializer 基类来自定义我们的序列化和反序列化器：</p> <div class="language- extra-class"><pre class="language-text"><code>@JsonComponent
+public class MyJsonComponent {
+
+    public static class Serializer extends JsonObjectSerializer&lt;MyObject&gt; {
+
+        @Override
+        protected void serializeObject(MyObject value, JsonGenerator jgen, SerializerProvider provider)
+                throws IOException {
+            jgen.writeStringField(&quot;name&quot;, value.getName());
+            jgen.writeNumberField(&quot;age&quot;, value.getAge());
+        }
+
+    }
+
+    public static class Deserializer extends JsonObjectDeserializer&lt;MyObject&gt; {
+
+        @Override
+        protected MyObject deserializeObject(JsonParser jsonParser, DeserializationContext context, ObjectCodec codec,
+                JsonNode tree) throws IOException {
+            String name = nullSafeValue(tree.get(&quot;name&quot;), String.class);
+            int age = nullSafeValue(tree.get(&quot;age&quot;), Integer.class);
+            return new MyObject(name, age);
+        }
+
+    }
+
+}
+</code></pre></div><p>以下是一个通过自定义 JSON 反序列化器来解决 XSS 攻击的例子：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * JSON 全局反序列化器
+ *
+ * @author xiongxiaoyang
+ * @date 2022/5/21
+ */
+@JsonComponent
+public class GlobalJsonDeserializer {
+
+    /**
+     * 字符串反序列化器
+     * 转义特殊字符，解决 XSS 攻击
+     */
+    public static class StringDeserializer extends JsonDeserializer&lt;String&gt; {
+
+        @Override
+        public String deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
+            return jsonParser.getValueAsString()
+                    .replace(&quot;&lt;&quot;, &quot;&amp;lt;&quot;)
+                    .replace(&quot;&gt;&quot;, &quot;&amp;gt;&quot;);
+        }
+    }
+}
+</code></pre></div><h3 id="gson"><a href="#gson" class="header-anchor">#</a> Gson</h3> <p>Spring Boot 提供了 Gson 的自动配置，当 Gson 在 classpath 类路径下时，Gson bean 会自动配置。我们可以通过 spring.gson.* 配置属性来自定义 Gson 的配置，如果想要更多的控制，我们可以使用一个或多个 GsonBuilderCustomizer bean。</p> <h3 id="json-b"><a href="#json-b" class="header-anchor">#</a> JSON-B</h3> <p>Spring Boot 提供了 JSON-B 的自动配置。当 JSON-B API 和实现在 classpath 类路径上时，Jsonb bean 将自动配置。首选的 JSON-B 实现是 Eclipse Yasson，它提供了依赖管理。</p> <h2 id="任务执行与调度"><a href="#任务执行与调度" class="header-anchor">#</a> 任务执行与调度</h2> <p>如果 Spring Boot 没有在上下文中检测到 Executor bean，会自动配置一个带有合理默认值的 ThreadPoolTaskExecutor，并且会关联到异步任务执行（@EnableAsync）和 Spring MVC 异步请求处理。如果我们在上下文中自定义了 Executor，则异步任务执行（@EnableAsync）会使用它，但 Spring MVC 不会，因为它需要一个 AsyncTaskExecutor 的实现（名为 applicationTaskExecutor）。</p> <div class="language- extra-class"><pre class="language-text"><code>@ConditionalOnClass({ThreadPoolTaskExecutor.class})
+@AutoConfiguration
+@EnableConfigurationProperties({TaskExecutionProperties.class})
+public class TaskExecutionAutoConfiguration {
+    public static final String APPLICATION_TASK_EXECUTOR_BEAN_NAME = &quot;applicationTaskExecutor&quot;;
+
+    public TaskExecutionAutoConfiguration() {
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public TaskExecutorBuilder taskExecutorBuilder(TaskExecutionProperties properties, ObjectProvider&lt;TaskExecutorCustomizer&gt; taskExecutorCustomizers, ObjectProvider&lt;TaskDecorator&gt; taskDecorator) {
+        Pool pool = properties.getPool();
+        TaskExecutorBuilder builder = new TaskExecutorBuilder();
+        builder = builder.queueCapacity(pool.getQueueCapacity());
+        builder = builder.corePoolSize(pool.getCoreSize());
+        builder = builder.maxPoolSize(pool.getMaxSize());
+        builder = builder.allowCoreThreadTimeOut(pool.isAllowCoreThreadTimeout());
+        builder = builder.keepAlive(pool.getKeepAlive());
+        Shutdown shutdown = properties.getShutdown();
+        builder = builder.awaitTermination(shutdown.isAwaitTermination());
+        builder = builder.awaitTerminationPeriod(shutdown.getAwaitTerminationPeriod());
+        builder = builder.threadNamePrefix(properties.getThreadNamePrefix());
+        Stream var10001 = taskExecutorCustomizers.orderedStream();
+        Objects.requireNonNull(var10001);
+        builder = builder.customizers(var10001::iterator);
+        builder = builder.taskDecorator((TaskDecorator)taskDecorator.getIfUnique());
+        return builder;
+    }
+
+    @Lazy
+    @Bean(
+        name = {&quot;applicationTaskExecutor&quot;, &quot;taskExecutor&quot;}
+    )
+    @ConditionalOnMissingBean({Executor.class})
+    public ThreadPoolTaskExecutor applicationTaskExecutor(TaskExecutorBuilder builder) {
+        return builder.build();
+    }
+}
+</code></pre></div><p>默认的 Executor 线程池使用 8 个核心线程，可以根据负载增长和收缩。这些默认设置可以通过设置 spring.task.execution.* 相关属性来进行微调：</p> <div class="language- extra-class"><pre class="language-text"><code>spring.task.execution.pool.max-size=16
+spring.task.execution.pool.queue-capacity=100
+spring.task.execution.pool.keep-alive=10s
+</code></pre></div><p>使用 @EnableScheduling 注解（@Import({SchedulingConfiguration.class})）开启任务调度时，Spring Boot 会自动配置一个 ThreadPoolTaskScheduler。线程池默认使用一个线程，可以通过设置 spring.task.scheduling.* 相关属性来进行微调。</p> <div class="language- extra-class"><pre class="language-text"><code>@ConditionalOnClass({ThreadPoolTaskScheduler.class})
+@AutoConfiguration(
+    after = {TaskExecutionAutoConfiguration.class}
+)
+@EnableConfigurationProperties({TaskSchedulingProperties.class})
+public class TaskSchedulingAutoConfiguration {
+    public TaskSchedulingAutoConfiguration() {
+    }
+
+    @Bean
+    @ConditionalOnBean(
+        name = {&quot;org.springframework.context.annotation.internalScheduledAnnotationProcessor&quot;}
+    )
+    @ConditionalOnMissingBean({SchedulingConfigurer.class, TaskScheduler.class, ScheduledExecutorService.class})
+    public ThreadPoolTaskScheduler taskScheduler(TaskSchedulerBuilder builder) {
+        return builder.build();
+    }
+
+    @Bean
+    public static LazyInitializationExcludeFilter scheduledBeanLazyInitializationExcludeFilter() {
+        return new ScheduledBeanLazyInitializationExcludeFilter();
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public TaskSchedulerBuilder taskSchedulerBuilder(TaskSchedulingProperties properties, ObjectProvider&lt;TaskSchedulerCustomizer&gt; taskSchedulerCustomizers) {
+        TaskSchedulerBuilder builder = new TaskSchedulerBuilder();
+        builder = builder.poolSize(properties.getPool().getSize());
+        Shutdown shutdown = properties.getShutdown();
+        builder = builder.awaitTermination(shutdown.isAwaitTermination());
+        builder = builder.awaitTerminationPeriod(shutdown.getAwaitTerminationPeriod());
+        builder = builder.threadNamePrefix(properties.getThreadNamePrefix());
+        builder = builder.customizers(taskSchedulerCustomizers);
+        return builder;
+    }
+}
+</code></pre></div><p>如果需要自定义执行器或调度器，可以使用 TaskExecutorBuilder bean 和 TaskSchedulerBuilder bean。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2 months ago</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study/behind/springboot3/1.html" class="prev">
+        Spring Boot 使用
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div><div></div></div></div>
+    <script src="/assets/js/app.09e306c7.js" defer></script><script src="/assets/js/2.99247de7.js" defer></script><script src="/assets/js/26.4fbe7fce.js" defer></script>
+  </body>
+</html>
